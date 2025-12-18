@@ -9,14 +9,13 @@ body {
   color: var(--color-gruvbox-light1);
 }
 
-h1, h2, h3 {
+h2, h3 {
   color: var(--color-gruvbox-light0);
   margin-bottom: 1em;
 }
 
 h1 {
-  font-size: var(--text-xl);
-  font-size: 2em;
+  font-size: var(--text-3xl);
   padding-bottom: 0.4rem;
   color: var(--color-gruvbox-bright-blue);
 }
@@ -27,13 +26,18 @@ h2 {
   padding-bottom: 0.4rem;
 }
 
+p{
+  text-align: justify;
+}
+
 a {
-  transition: 200ms ease-in 0s color;
+  transition: 200ms ease-in 0s all;
   color: var(--color-gruvbox-bright-blue);
 }
 
 a:hover {
   color: var(--color-gruvbox-blue);
+  text-decoration: underline;
 }
 
 ul {
@@ -71,6 +75,10 @@ strong {
   font-style: normal;
   font-weight: 400;
   src: url('$lib/assets/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf');
+}
+.ascii-art {
+  font-family: 'CascidaCode', 'NerdIcons';
+  white-space: pre;
 }
 
 @theme {
