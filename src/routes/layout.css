@@ -63,6 +63,7 @@ strong {
 .icon {
   margin-right: 0.4rem;
   font-size: var(--text-lg);
+  color: var(--color-gruvbox-bright-aqua);
 }
 
 @font-face {

@@ -25,11 +25,11 @@
 
 <p class="mt-4">
   <span class="icon"></span> Cybersecurity & Networking student<br />
-  <span class="icon"></span> Arch Linux • Hyprland • Neovim
+  <span class="icon"></span> Arch Linux • Hyprland • Neovim, joyer
 </p>
 
 <h2><span class="icon">󰞋</span> About Me</h2>
-<p>
+<p class="pl-2">
   I'm a computer science student focused on <strong>cybersecurity</strong> and <strong>networking</strong>,
   with a strong interest in low-level systems, Linux, and open‑source software.
   I enjoy learning how things work under the hood — from memory management
@@ -39,9 +39,9 @@
 <h2><span class="icon">󰈙</span> Programming Languages</h2>
 <div class="grid">
   <div class="card"><span class="icon"></span> Rust</div>
-  <div class="card"><span class="icon"></span> Zig</div>
+  <div class="card"><span class="icon"></span> Zig (0.15)</div>
   <div class="card"><span class="icon"></span> JavaScript</div>
-  <div class="card"><span class="icon"></span> Lua (basic)</div>
+  <div class="card"><span class="icon"></span> Lua (basic)</div>
   <div class="card"><span class="icon"></span> Python (basic)</div>
 </div>
 
@@ -51,7 +51,7 @@
   <div class="card"><span class="icon"></span> Svelte</div>
 </div>
 
-<h2>󰊢 Featured Projects</h2>
+<h2><span class="icon">󰊢</span> Featured Projects</h2>
 <ul>
   <li><b>Whatsdown</b> – CLI Messaging app built Python</li>
   <li><b>Rust CLI Tool</b> – Systems-level utility</li>
@@ -75,15 +75,17 @@
   <div class="card"><span class="icon"></span> CaskaydiaCove (Nerd Font)</div>
 </div>
 
-<h2><span class="icon">󰋜</span> Philosophy</h2>
-<p>
-  I believe in continuous learning, simplicity, and building strong foundations.
-  I prefer tools that respect user freedom, transparency, and performance.
+<h2><span class="icon">󰧑</span> Philosophy</h2>
+<p class="pl-2">
+  I believe in continuous learning (not thorw Youtube courses obviously ), simplicity, and building strong foundations.
+  I prefer tools that respect user freedom, transparency, and <strong>*performance</strong>.
 </p>
 
-<h2>󰍡 Connect</h2>
+<h2><span class="icon">󰍡</span> Connect</h2>
+<div class="pl-2">
   <p> GitHub: <a href="https://github.com/ex-jandal" target="_blank">@ex-jandal</a></p>
   <p>󰇮 Email: <a href="mailto:sultan.majed@proton.me">Sultan Majed</a></p>
+</div>
 
 <footer>
   <p class="comment">// "Talk is cheap. Show me the code." — Linus Torvalds</p>
