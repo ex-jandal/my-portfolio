@@ -11,7 +11,7 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
 <div class="max-w-257 m-auto">
-  <header class="bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-md text-gruvbox-bright-orange m-1">
+  <header class="bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-md text-gruvbox-bright-orange m-5">
     <nav class="flex flex-row justify-between items-center pl-2 pr-4 py-2">
       <div class="flex flex-row items-center gap-2">
           <img src="{favicon256}" class="h-12 hidden sm:inline pr-2 border-r border-gruvbox-green" alt="">
@@ -34,7 +34,7 @@
     </nav>
   </header>
 
-  <main class="m-5 p-5 bg-gruvbox-dark1">
+  <main class="m-5 mt-0 p-5 bg-gruvbox-dark1">
     {@render children()}
   </main>
   <div style="display:none">
