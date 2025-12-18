@@ -54,6 +54,11 @@ strong {
   color: var(--color-gruvbox-yellow);
 }
 
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
 .comment {
   font-style: italic;
   color: var(--color-gruvbox-light4);
