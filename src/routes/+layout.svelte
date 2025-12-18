@@ -43,10 +43,10 @@ a:playing {
 
               {#if (menu_clecked.valueOf())}
                 <button in:slide={{ duration: 400 }} out:blur={{ duration: 400 }} onclick={() => menu_clecked = false} class="absolute h-screen w-screen top-0 left-0 backdrop-opacity-70">
-                  <div class="absolute w-40 top-20 left-30 bg-gruvbox-dark0 flex flex-col items-baseline p-5 rounded-4xl">
-                    <a href="/">./</a>
-                    <a href="/projects">./projects</a>
-                    <a href="/contact">./contact</a>
+                  <div class="absolute text-start w-40 top-20 left-30 bg-gruvbox-dark0 flex flex-col items-baseline p-5 rounded-4xl">
+                    <a class="block w-full" href="/">./</a>
+                    <a class="block w-full" href="/projects">./projects</a>
+                    <a class="block w-full" href="/contact">./contact</a>
                   </div>
                 </button>
               {/if}
