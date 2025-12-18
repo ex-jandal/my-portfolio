@@ -12,14 +12,14 @@
 
 <div class="max-w-257 m-auto">
   <header class="bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-md text-gruvbox-bright-orange m-5">
-    <nav class="flex flex-row justify-between items-center pl-2 pr-4 py-2">
+    <nav class="flex flex-row justify-between items-center pl-2 pr-2 py-2">
       <div class="flex flex-row items-center gap-2">
           <img src="{favicon256}" class="h-12 hidden sm:inline pr-2 border-r border-gruvbox-green" alt="">
         <!-- <h1>It's me. Abu_jandal </h1> -->
 
-        <div class="text-lg">
+        <div class="text-md">
           <div class="align-middle">
-            <span class="text-gruvbox-bright-yellow text-[21px] bg-none"></span><span class="bg-gruvbox-bright-yellow text-gruvbox-dark0">󰪢 21s</span><span class="text-gruvbox-bright-yellow text-[21px] bg-none"></span><span class="text-gruvbox-light0">•</span><span class="text-gruvbox-bright-yellow text-[21px] bg-none"></span><span class="bg-gruvbox-bright-yellow text-gruvbox-dark0">󰉋  ../abu_jandal</span><span class="text-gruvbox-bright-yellow text-[21px] bg-none"></span><br/>
+            <span class="text-gruvbox-bright-yellow text-[18.5px] bg-none"></span><span class="bg-gruvbox-bright-yellow text-gruvbox-dark0">󰪢 22s</span><span class="text-gruvbox-bright-yellow text-[18.5px] bg-none"></span><span class="text-gruvbox-light0">•</span><span class="text-gruvbox-bright-yellow text-[18.5px] bg-none"></span><span class="bg-gruvbox-bright-yellow text-gruvbox-dark0">󰉋  ../abu_jandal</span><span class="text-gruvbox-bright-yellow text-[18.5px] bg-none"></span><br/>
           </div>
 
           <div class="ml-4">
