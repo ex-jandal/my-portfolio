@@ -65,13 +65,6 @@ strong {
 }
 
 @font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  src: url('$lib/assets/Rubik/static/Rubik-Regular.ttf');
-}
-
-@font-face {
   font-family: 'NerdIcons';
   font-style: normal;
   font-weight: 400;
@@ -80,8 +73,7 @@ strong {
 
 @theme {
   --default-font-family: 'CascidaCode', 'NerdIcons', monospace;
-  --font-main: 'CascidaCode', monospace; /* CascidaCode font*/
-  --font-second: 'Rubik', 'CascidaCode', 'NerdIcons', monospace;
+  --font-main: 'CascidaCode', 'NerdIcons', monospace; /* CascidaCode font*/
   --font-icons: 'NerdIcons';
 
   /* Gruvbox Dark Background */
