@@ -1,0 +1,117 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@import './CascidaCodeFont.css';
+
+body {
+  background-color: var(--color-gruvbox-dark0);
+  color: var(--color-gruvbox-light1);
+}
+
+h1, h2, h3 {
+  color: var(--color-gruvbox-light0);
+}
+
+h1 {
+  font-size: var(--text-xl);
+  font-size: 2em;
+  padding-bottom: 0.4rem;
+  color: var(--color-gruvbox-bright-blue);
+}
+
+h2 {
+  margin-top: 2.5rem;
+  border-bottom: 1px solid var(--color-gruvbox-bright-orange);
+  padding-bottom: 0.4rem;
+}
+
+a {
+  transition: 200ms ease-in 0s color;
+  color: var(--color-gruvbox-bright-blue);
+}
+
+a:hover {
+  color: var(--color-gruvbox-blue);
+}
+
+ul {
+  list-style: disc inside;
+  margin-left: 0.5em;
+}
+
+ol {
+  list-style: decimal inside;
+  margin-left: 0.5em;
+}
+
+strong {
+  color: var(--color-gruvbox-yellow);
+}
+
+.comment {
+  font-style: italic;
+  color: var(--color-gruvbox-light4);
+}
+
+.card {
+  background: var(--color-gruvbox-dark0);
+  border: 1px solid var(--color-gruvbox-orange);
+  padding: 1em;
+}
+.icon {
+  margin-right: 0.4rem;
+  font-size: var(--text-lg);
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('$lib/assets/Rubik/static/Rubik-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'NerdIcons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('$lib/assets/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf');
+}
+
+@theme {
+  --default-font-family: 'CascidaCode', 'NerdIcons', monospace;
+  --font-main: 'CascidaCode', monospace; /* CascidaCode font*/
+  --font-second: 'Rubik', 'CascidaCode', 'NerdIcons', monospace;
+  --font-icons: 'NerdIcons';
+
+  /* Gruvbox Dark Background */
+  --color-gruvbox-dark0: #282828;
+  --color-gruvbox-dark1: #3c3836;
+  --color-gruvbox-dark2: #504945;
+  --color-gruvbox-dark3: #665c54;
+  --color-gruvbox-dark4: #7c6f64;
+
+  /* Gruvbox Light Background */
+  --color-gruvbox-light0: #fbf1c7;
+  --color-gruvbox-light1: #ebdbb2;
+  --color-gruvbox-light2: #d5c4a1;
+  --color-gruvbox-light3: #bdae93;
+  --color-gruvbox-light4: #a89984;
+
+  /* Gruvbox Colors */
+  --color-gruvbox-gray: #928374;
+  --color-gruvbox-red: #cc241d;
+  --color-gruvbox-bright-red: #fb4934;
+  --color-gruvbox-green: #98971a;
+  --color-gruvbox-bright-green: #b8bb26;
+  --color-gruvbox-yellow: #d79921;
+  --color-gruvbox-bright-yellow: #fabd2f;
+  --color-gruvbox-blue: #458588;
+  --color-gruvbox-bright-blue: #83a598;
+  --color-gruvbox-purple: #b16286;
+  --color-gruvbox-bright-purple: #d3869b;
+  --color-gruvbox-aqua: #689d6a;
+  --color-gruvbox-bright-aqua: #8ec07c;
+  --color-gruvbox-orange: #d65d0e;
+  --color-gruvbox-bright-orange: #fe8019;
+}

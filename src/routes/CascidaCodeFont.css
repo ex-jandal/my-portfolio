@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: normal;
+  font-weight: 100;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: normal;
+  font-weight: 200;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-Light.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: normal;
+  font-weight: 400;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: normal;
+  font-weight: 500;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: normal;
+  font-weight: 600;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: normal;
+  font-weight: 800;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: italic;
+  font-weight: 100;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-ExtraLightItalic.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: italic;
+  font-weight: 200;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-LightItalic.ttf');
+}
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: italic;
+  font-weight: 400;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: italic;
+  font-weight: 500;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-MediumItalic.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: italic;
+  font-weight: 600;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-SemiBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'CascidaCode';
+  font-style: italic;
+  font-weight: 800;
+  src: url('$lib/assets/CascadiaCode/static/CascadiaCode-BoldItalic.ttf');
+}
+
