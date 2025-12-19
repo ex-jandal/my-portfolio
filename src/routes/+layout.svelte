@@ -37,7 +37,7 @@ a:playing {
           <div class="ml-4 flex flex-row">
             <img src="{favicon256}" class="h-6 inline sm:hidden pr-2 mr-2 border-r border-gruvbox-green" alt="">
             <div class="text-gruvbox-bright-green flex flex-row gap-1">
-              <span>󱆃 cat</span>
+              <span>󱆃 cd</span>
               <span class="sm:ml-5 ml-2">[</span>
               <button onclick={() => menu_clecked = true} 
                 class="sm:hidden relative translate-y-0.5 scale-[75%] text-gruvbox-gray hover:cursor-pointer bg-gruvbox-dark1 opacity-70 hover:opacity-100 transition-all duration-200 rounded-xl px-3">󰇘</button>

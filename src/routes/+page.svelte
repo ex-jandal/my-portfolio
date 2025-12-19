@@ -33,7 +33,7 @@
   }
 </style>
 
-<div in:slide={{ duration: 1500 }}>
+<div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
   <h1> It's me. Abu_jandal</h1>
 
   <div class="bg-gruvbox-dark0 py-10 sm:px-0 px-5 flex sm:flex-row flex-col items-center rounded-sm">
