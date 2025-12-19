@@ -115,7 +115,7 @@
 
   <h2><span class="icon">󰘳</span> Programming Languages</h2>
   <div class="grid">
-    <div class="card"><span class="icon"></span> Rust</div>
+    <div class="card"><span class="icon"></span> Rust</div>
     <div class="card"><span class="icon"></span> Zig (0.15)</div>
     <div class="card"><span class="icon"></span> JavaScript</div>
     <div class="card"><span class="icon"></span> Lua</div>
@@ -158,7 +158,7 @@
     <div class="card"><span class="icon"></span> Arch Linux</div>
     <div class="card"><span class="icon"></span> Hyprland</div>
     <div class="card"><span class="icon"></span> Neovim (NvChad)</div>
-    <div class="card"><span class="icon">󰙀</span> Tmux</div>
+    <div class="card"><span class="icon"></span> Tmux</div>
     <div class="card"><span class="icon"></span> CaskaydiaCove (Nerd Font)</div>
   </div>
 
