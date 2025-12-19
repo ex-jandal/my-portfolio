@@ -23,7 +23,7 @@ a:playing {
 </style>
 
 <div class="max-w-257 m-auto">
-  <header class="bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-md text-gruvbox-bright-orange m-5">
+  <header class="bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-5 rounded-sm">
     <nav class="flex flex-row justify-between items-center pl-2 pr-2 py-2">
       <div class="flex flex-row items-center gap-2">
           <img src="{favicon256}" class="h-12 hidden sm:inline pr-2 border-r border-gruvbox-green" alt="">
@@ -36,42 +36,43 @@ a:playing {
 
           <div class="ml-4 flex flex-row">
             <img src="{favicon256}" class="h-6 inline sm:hidden pr-2 mr-2 border-r border-gruvbox-green" alt="">
-            <div class="text-gruvbox-bright-green flex flex-row gap-2">
+            <div class="text-gruvbox-bright-green flex flex-row gap-1">
               <span>󱆃 cat</span>
+              <span class="sm:ml-5 ml-2">[</span>
               <button onclick={() => menu_clecked = true} 
-                class="sm:hidden relative -translate-x-3 translate-y-0.5 scale-[60%] text-gruvbox-gray hover:cursor-pointer bg-gruvbox-dark1 opacity-70 hover:opacity-100 transition-all duration-200 rounded-xl px-3">󰇘</button>
+                class="sm:hidden relative translate-y-0.5 scale-[75%] text-gruvbox-gray hover:cursor-pointer bg-gruvbox-dark1 opacity-70 hover:opacity-100 transition-all duration-200 rounded-xl px-3">󰇘</button>
 
               {#if (menu_clecked.valueOf())}
-                <button in:slide={{ duration: 400 }} out:blur={{ duration: 400 }} onclick={() => menu_clecked = false} class="absolute h-screen w-screen top-0 left-0 backdrop-opacity-70">
-                  <div class="absolute text-start w-40 top-20 left-30 bg-gruvbox-dark0 flex flex-col items-baseline p-5 rounded-4xl">
+                <button in:blur={{ duration: 400 }} out:blur={{ duration: 400 }} onclick={() => menu_clecked = false} class="fixed h-screen w-screen top-0 left-0 bg-gruvbox-dark1 opacity-50">&af;
+                </button>
+                  <button onclick={() => menu_clecked = false} in:slide={{ duration: 400 }} out:blur={{ duration: 400 }} class="absolute text-start w-40 top-20 left-30 bg-gruvbox-dark0 flex flex-col gap-3 items-baseline p-5 border border-gruvbox-orange rounded-sm">
                     <a class="block w-full" href="/">./</a>
                     <a class="block w-full" href="/projects">./projects</a>
                     <a class="block w-full" href="/contact">./contact</a>
-                  </div>
-                </button>
+                  </button>
               {/if}
 
-              <div class="hidden sm:flex flex-row ml-5 gap-6">
+              <div class="hidden sm:flex flex-row gap-6">
                 <a href="/">
-                  ./ 
+                  ./<span class="text-gruvbox-light2">,</span>
                 </a>
                 <a href="/projects">
-                  ./projects
+                  ./projects<span class="text-gruvbox-light2">,</span>
                 </a>
                 <a href="/contact">
                   ./contact
                 </a>
               </div>
+              <span>]</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex flex-row items-center gap-2">
-      </div>
+      <div class="flex flex-row items-center gap-2"></div>
     </nav>
   </header>
 
-  <main class="m-5 mt-0 p-5 bg-gruvbox-dark1">
+  <main class="m-5 mt-0 p-5 bg-gruvbox-dark1 rounded-sm">
     {@render children()}
     <footer>
       <p class="comment">// "Talk is cheap. Show me the code." — Linus Torvalds</p>

@@ -36,7 +36,7 @@
 <div in:slide={{ duration: 1500 }}>
   <h1> It's me. Abu_jandal</h1>
 
-  <div class="bg-gruvbox-dark0 py-10 sm:px-0 px-5 flex sm:flex-row flex-col items-center">
+  <div class="bg-gruvbox-dark0 py-10 sm:px-0 px-5 flex sm:flex-row flex-col items-center rounded-sm">
     <div class="sm:min-w-70 flex justify-center items-center">
       <pre class="ascii-art text-[10px]">
                         ________
