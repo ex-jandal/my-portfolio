@@ -19,8 +19,21 @@
     height: 200px;
   }
   .pro-card_title {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bolder;
+  }
+  .pro-card_info {
+    font-size: 12px;
+    padding-left: 12px;
+  }
+  .pro-card_description {
+    margin-top: 5px;
+    font-size: 12px;
+    overflow: hidden;
+    font-display: block;
+  }
+  a {
+    color: var(--color-gruvbox-light3);
   }
   a:hover {
     text-decoration: none;
@@ -34,20 +47,28 @@
   <h2 class="frist-h2"><span class="icon"></span> Projects</h2>
   <div class="grid sm:grid-cols-2 grid-cols-1 mt-10 gap-4">
     <a href="https://github.com/ex-jandal/whatsdown" class="pro-card">
-      <span class="icon"></span> 
-      <span class="pro-card_title">ex-jandal/whatsdown</span>
+      <div class="pro-card_title">
+        <span class="icon"></span> 
+        <span>whatsdown</span>
+      </div>
+      <div class="pro-card_info">
+        <span>󰗑</span>
+        <span>GPL-3.0 license </span>
+      </div>
+
+      <div class="pro-card_description">
+      </div>
     </a>
-    <a href="https://github.com/ex-jandal/whatsdown" class="pro-card">
-      <span class="icon"></span> 
-      <span class="pro-card_title">ex-jandal/whatsdown</span>
-    </a>
-    <a href="https://github.com/ex-jandal/whatsdown" class="pro-card">
-      <span class="icon"></span> 
-      <span class="pro-card_title">ex-jandal/whatsdown</span>
-    </a>
-    <a href="https://github.com/ex-jandal/whatsdown" class="pro-card">
-      <span class="icon"></span> 
-      <span class="pro-card_title">ex-jandal/whatsdown</span>
+
+    <a href="https://github.com/ex-jandal/karka-deh" class="pro-card">
+      <div class="pro-card_title">
+        <span class="icon"></span> 
+        <span class="pro-card_title">karka-deh</span>
+      </div>
+      <div class="pro-card_info">
+        <span>󰗑</span>
+        <span>GPL-3.0 license </span>
+      </div>
     </a>
   </div>
 </div>

@@ -34,7 +34,7 @@
 </style>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
-  <h1> It's me. Abu_jandal</h1>
+  <h1> Let's Fetch<span class="pl-1 text-gruvbox-gray text-[18px]"></span></h1>
 
   <div class="bg-gruvbox-dark0 py-10 sm:px-0 px-5 flex sm:flex-row flex-col items-center rounded-sm">
     <div class="sm:min-w-70 flex justify-center items-center">
@@ -113,11 +113,12 @@
     to network protocols — and applying that knowledge in practical projects.
   </p>
 
-  <h2><span class="icon">󰘳</span> Programming Languages</h2>
+  <h2><span class="icon"></span> Programming Languages</h2>
   <div class="grid">
     <div class="card"><span class="icon"></span> Rust</div>
     <div class="card"><span class="icon"></span> Zig (0.15)</div>
     <div class="card"><span class="icon"></span> JavaScript</div>
+    <div class="card"><span class="icon"></span> TypeScript</div>
     <div class="card"><span class="icon"></span> Lua</div>
     <div class="card"><span class="icon"></span> Python</div>
     <div class="card"><span class="icon"></span> PHP</div>
@@ -138,11 +139,18 @@
     <div class="card"><span class="icon"></span> Svelte</div>
   </div>
 
-  <h2><span class="icon">󰊢</span> Featured Projects</h2>
+  <h2><span class="icon"></span>Skills</h2>
+  <div class="grid">
+    <div class="card"><span class="icon"></span> Git</div>
+    <div class="card"><span class="icon"></span> Tailwindcss</div>
+    <div class="card"><span class="icon"></span> SQL</div>
+    <div class="card"><span class="icon"></span> SurrealQL</div>
+  </div>
+
+  <h2><span class="icon"></span> Featured Projects</h2>
   <ul>
-    <li><b>Whatsdown</b> – CLI Messaging app built Python</li>
-    <li><b>Rust CLI Tool</b> – Systems-level utility</li>
-    <li><b>Zig Playground</b> – Low-level experiments</li>
+    <li><strong>Whatsdown</strong> – CLI Messaging app built Python</li>
+    <li><strong>Karka-deh</strong> – Website for articles and more</li>
   </ul>
 
   <h2><span class="icon">󰌢</span> Cybersecurity & Networking</h2>
