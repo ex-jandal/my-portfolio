@@ -89,7 +89,7 @@
             </tr>
             <tr>
               <td><span class="icon"></span> WM:</td>
-              <td>Hyprland</td>
+              <td>Niri</td>
             </tr>
             <tr>
               <td><span class="icon"></span> Shell:</td>
@@ -164,7 +164,7 @@
   <h2><span class="icon">󰆍</span> Environment</h2>
   <div class="grid">
     <div class="card"><span class="icon"></span> Arch Linux</div>
-    <div class="card"><span class="icon"></span> Hyprland</div>
+    <div class="card"><span class="icon">󱘆</span> Niri</div>
     <div class="card"><span class="icon"></span> Neovim (NvChad)</div>
     <div class="card"><span class="icon"></span> Tmux</div>
     <div class="card"><span class="icon"></span> CaskaydiaCove (Nerd Font)</div>
