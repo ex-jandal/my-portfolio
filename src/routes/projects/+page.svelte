@@ -53,7 +53,7 @@
       </div>
       <div class="pro-card_info">
         <span>󰗑</span>
-        <span>GPL-3.0 license </span>
+        <span>MIT license</span>
       </div>
 
       <div class="pro-card_description">
@@ -67,7 +67,7 @@
       </div>
       <div class="pro-card_info">
         <span>󰗑</span>
-        <span>GPL-3.0 license </span>
+        <span>GPL-3.0 license</span>
       </div>
     </a>
   </div>
