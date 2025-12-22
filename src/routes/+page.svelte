@@ -21,12 +21,6 @@
     border-radius: 6px;
     font-size: 0.9rem;
   }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-  }
   td {
     padding-left: 10px;
     min-width: 120px;

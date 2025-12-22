@@ -47,6 +47,7 @@ a:playing {
                 </button>
                   <button onclick={() => menu_clecked = false} in:slide={{ duration: 400 }} out:blur={{ duration: 400 }} class="absolute text-start w-40 top-20 left-30 bg-gruvbox-dark0 flex flex-col gap-3 items-baseline p-5 border border-gruvbox-orange rounded-sm">
                     <a class="block w-full" href="/">./</a>
+                    <a class="block w-full" href="/my-dotfiles">./my-dots</a>
                     <a class="block w-full" href="/projects">./projects</a>
                     <a class="block w-full" href="/contact">./contact</a>
                   </button>
@@ -55,6 +56,9 @@ a:playing {
               <div class="hidden sm:flex flex-row gap-6">
                 <a href="/">
                   ./<span class="text-gruvbox-light2">,</span>
+                </a>
+                <a href="/my-dotfiles">
+                  ./my-dots<span class="text-gruvbox-light2">,</span>
                 </a>
                 <a href="/projects">
                   ./projects<span class="text-gruvbox-light2">,</span>

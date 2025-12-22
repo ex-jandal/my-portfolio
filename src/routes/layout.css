@@ -59,7 +59,26 @@ footer {
   font-size: 0.9rem;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.frist-h2 {
+  margin-top: 0;
+}
+
 .comment {
+  font-style: italic;
+  color: var(--color-gruvbox-light4);
+}
+
+.quote {
+  background: var(--color-gruvbox-dark0);
+  border-left: 4px solid var(--color-gruvbox-bright-green);
+  padding: 1.5rem;
   font-style: italic;
   color: var(--color-gruvbox-light4);
 }

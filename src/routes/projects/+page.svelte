@@ -9,9 +9,6 @@
     border-radius: 6px;
     font-size: 0.9rem;
   }
-  .frist-h2 {
-    margin-top: 0;
-  }
   .pro-card {
     background: var(--color-gruvbox-dark0);
     border: 1px solid var(--color-gruvbox-orange);
@@ -46,7 +43,7 @@
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
   <h2 class="frist-h2"><span class="icon"></span> Projects</h2>
   <div class="grid sm:grid-cols-2 grid-cols-1 mt-10 gap-4">
-    <a href="https://github.com/ex-jandal/whatsdown" class="pro-card">
+    <a href="https://github.com/ex-jandal/whatsdown" target="_blank" class="pro-card">
       <div class="pro-card_title">
         <span class="icon"></span> 
         <span>whatsdown</span>
@@ -60,7 +57,7 @@
       </div>
     </a>
 
-    <a href="https://github.com/ex-jandal/karka-deh" class="pro-card">
+    <a href="https://github.com/ex-jandal/karka-deh" target="_blank" class="pro-card">
       <div class="pro-card_title">
         <span class="icon"></span> 
         <span class="pro-card_title">karka-deh</span>
