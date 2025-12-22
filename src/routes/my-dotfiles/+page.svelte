@@ -24,7 +24,7 @@ import rofi_showcase from "$lib/assets/rofi-showcase.png";
     }
   </style>
 
-<div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
+<div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
   <section class="hero">
     <h2 class="frist-h2"><span class="icon">󰟃</span> Dotfiles</h2>
     <p class="comment">// Minimal, productive, and aesthetic Arch Linux workflow</p>
