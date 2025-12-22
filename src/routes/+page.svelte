@@ -136,6 +136,7 @@
   <h2><span class="icon"></span>Skills</h2>
   <div class="my-grid">
     <div class="card"><span class="icon"></span> Git</div>
+    <div class="card"><span class="icon"></span> Docker</div>
     <div class="card"><span class="icon"></span> Tailwindcss</div>
     <div class="card"><span class="icon"></span> SQL</div>
     <div class="card"><span class="icon"></span> SurrealQL</div>
