@@ -20,8 +20,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="me-wheat-nine.vercel.app">
   <meta property="og:title" content="Abu Jandal - The humble servant of Allah">
-  <meta property="og:description" content="Cybersecurity • Arch Linux • Niri • Rustaceans">
-  <meta property="og:image" content="https://github.com/user-attachments/assets/18d307a0-ab20-4956-9323-921f25d0f3af">
+  <meta property="og:description" content="Cybersecurity • Arch Linux • Rustaceans">
+  <meta property="og:image" content="https://me-wheat-nine.vercel.app/images/me-preview.png">
 
   <meta property="og:site_name" content="Sultan Al-Salahi Portfolio">
 </svelte:head>
