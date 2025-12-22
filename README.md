@@ -1,5 +1,5 @@
-#<img width="1920" height="1080" alt="me-preview" src="https://github.com/user-attachments/assets/18d307a0-ab20-4956-9323-921f25d0f3af" />
- sv
+<img width="1920" height="1080" alt="me-preview" src="https://github.com/user-attachments/assets/18d307a0-ab20-4956-9323-921f25d0f3af" />
+# sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
