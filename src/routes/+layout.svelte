@@ -11,7 +11,10 @@
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+  <link rel="icon" href={favicon} />
+  <title>Abu Jandal - The humble servant of Allah</title>
+</svelte:head>
 
 <style>
 a:hover {
