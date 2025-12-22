@@ -14,16 +14,6 @@
 <svelte:head>
   <link rel="icon" href={favicon} />
   <title>Abu Jandal - The humble servant of Allah</title>
-
-  <meta name="description" content="Cybersecurity student, Arch Linux user, and Rustacean">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="me-wheat-nine.vercel.app">
-  <meta property="og:title" content="Abu Jandal - The humble servant of Allah">
-  <meta property="og:description" content="Cybersecurity • Arch Linux • Rustaceans">
-  <meta property="og:image" content="https://me-wheat-nine.vercel.app/images/me-preview.png">
-
-  <meta property="og:site_name" content="Sultan Al-Salahi Portfolio">
 </svelte:head>
 
 <style>
