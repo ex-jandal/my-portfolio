@@ -108,7 +108,7 @@
   </p>
 
   <h2><span class="icon"></span> Programming Languages</h2>
-  <div class="grid">
+  <div class="my-grid">
     <div class="card"><span class="icon"></span> Rust</div>
     <div class="card"><span class="icon"></span> Zig (0.15)</div>
     <div class="card"><span class="icon"></span> JavaScript</div>
@@ -121,20 +121,20 @@
   </div>
 
   <h2><span class="icon"></span> Markup Languages</h2>
-  <div class="grid">
+  <div class="my-grid">
     <div class="card"><span class="icon"></span> HTML & CSS</div>
     <div class="card"><span class="icon"></span> Markdown</div>
     <div class="card"><span class="icon"></span> LaTeX</div>
   </div>
 
   <h2><span class="icon">󰏓</span> Frontend & Frameworks</h2>
-  <div class="grid">
+  <div class="my-grid">
     <div class="card"><span class="icon"></span> Vue.js</div>
     <div class="card"><span class="icon"></span> Svelte</div>
   </div>
 
   <h2><span class="icon"></span>Skills</h2>
-  <div class="grid">
+  <div class="my-grid">
     <div class="card"><span class="icon"></span> Git</div>
     <div class="card"><span class="icon"></span> Tailwindcss</div>
     <div class="card"><span class="icon"></span> SQL</div>
@@ -156,7 +156,7 @@
   </ul>
 
   <h2><span class="icon">󰆍</span> Environment</h2>
-  <div class="grid">
+  <div class="my-grid">
     <div class="card"><span class="icon"></span> Arch Linux</div>
     <div class="card"><span class="icon">󱘆</span> Niri</div>
     <div class="card"><span class="icon"></span> Neovim (NvChad)</div>

@@ -29,7 +29,7 @@ import rofi_showcase from "$lib/assets/rofi-showcase.png";
 
   <section>
     <h2><span class="icon"></span> Stack</h2>
-    <div class="grid">
+    <div class="my-grid">
       <div class="card"><span class="icon"></span> Arch Linux</div>
       <div class="card"><span class="icon">󱘆</span> Niri (Wayland)</div>
       <div class="card"><span class="icon"></span> Fish Shell</div>

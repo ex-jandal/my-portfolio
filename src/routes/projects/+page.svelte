@@ -42,7 +42,7 @@
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
   <h2 class="frist-h2"><span class="icon"></span> Projects</h2>
-  <div class="grid sm:grid-cols-2 grid-cols-1 mt-10 gap-4">
+  <div class="grid md:grid-cols-2 grid-cols-1 mt-10 gap-4">
     <a href="https://github.com/ex-jandal/whatsdown" target="_blank" class="pro-card">
       <div class="pro-card_title">
         <span class="icon"></span> 
