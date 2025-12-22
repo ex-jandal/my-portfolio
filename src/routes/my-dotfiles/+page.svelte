@@ -4,15 +4,6 @@ import tmux_nvim_showcase from "$lib/assets/tmux-nvim-showcase.png";
 import rofi_showcase from "$lib/assets/rofi-showcase.png";
 </script>
   <style>
-    :root {
-      --bg: #1d2021;
-      --bg-alt: #282828;
-      --fg: #ebdbb2;
-      --fg-dim: #a89984;
-      --accent: #b8bb26;
-      --accent2: #83a598;
-      --border: #3c3836;
-    }
     .features li {
       margin-bottom: 0.75rem;
       padding: 0.75rem 1rem;
@@ -39,26 +30,27 @@ import rofi_showcase from "$lib/assets/rofi-showcase.png";
   <section>
     <h2><span class="icon"></span> Stack</h2>
     <div class="grid">
-      <div class="card">  Arch Linux</div>
-      <div class="card">󱘆  Niri (Wayland)</div>
-      <div class="card">  Fish Shell</div>
-      <div class="card">  Neovim</div>
-      <div class="card">  Waybar</div>
-      <div class="card">󰎟  Mako</div>
-      <div class="card">󱓞  Rofi</div>
-      <div class="card">  Tmux</div>
-      <div class="card">  Gruvbox Hard</div>
+      <div class="card"><span class="icon"></span> Arch Linux</div>
+      <div class="card"><span class="icon">󱘆</span> Niri (Wayland)</div>
+      <div class="card"><span class="icon"></span> Fish Shell</div>
+      <div class="card"><span class="icon"></span> Neovim</div>
+      <div class="card"><span class="icon"></span> Waybar</div>
+      <div class="card"><span class="icon">󰎟</span> Mako</div>
+      <div class="card"><span class="icon">󱓞</span> Rofi</div>
+      <div class="card"><span class="icon"></span> Tmux</div>
+      <div class="card"><span class="icon"></span> Gruvbox Hard</div>
+      <div class="card"><span class="icon"></span> CaskaydiaCove Nerd Font</div>
     </div>
   </section>
 
   <section class="features">
     <h2><span class="icon">󰛓</span> Features</h2>
     <ul>
-      <li class="card">󰧑  Keyboard-driven workflow (minimal mouse usage)</li>
-      <li class="card">  Consistent Gruvbox theming across the system</li>
-      <li class="card">󱐋  Fast startup & low resource usage</li>
-      <li class="card">  Modular and clean configuration structure</li>
-      <li class="card">󱠧  Integrated CLI prayer-time utilities (<a href="https://github.com/0xzer0x/go-pray">go-pray</a>)</li>
+      <li class="card"><span class="icon">󰧑</span> Keyboard-driven workflow (minimal mouse usage)</li>
+      <li class="card"><span class="icon"></span> Consistent Gruvbox theming across the system</li>
+      <li class="card"><span class="icon">󱐋</span> Fast startup & low resource usage</li>
+      <li class="card"><span class="icon"></span> Modular and clean configuration structure</li>
+      <li class="card"><span class="icon">󱠧</span> Integrated CLI prayer-time utilities (<a href="https://github.com/0xzer0x/go-pray">go-pray</a>)</li>
     </ul>
   </section>
 
@@ -114,6 +106,8 @@ import rofi_showcase from "$lib/assets/rofi-showcase.png";
     <strong>Sultan Al-Salahi</strong><br>
     Cybersecurity & Networking student<br>
     Arch Linux • Niri • Neovim<br><br>
-    <a href="https://github.com/ex-jandal/my-dots" target="_blank">GitHub</a>
+    <a href="https://github.com/ex-jandal" target="_blank"><span class="icon"></span>GitHub</a>
+    •
+    <a href="https://github.com/ex-jandal/my-dots" target="_blank">my-dots</a>
   </div>
 </div>

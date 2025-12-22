@@ -77,7 +77,7 @@ footer {
 
 .quote {
   background: var(--color-gruvbox-dark0);
-  border-left: 4px solid var(--color-gruvbox-bright-green);
+  border-left: 4px solid var(--color-gruvbox-bright-red);
   padding: 1.5rem;
   font-style: italic;
   color: var(--color-gruvbox-light4);
