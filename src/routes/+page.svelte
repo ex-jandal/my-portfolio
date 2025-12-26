@@ -120,7 +120,7 @@
     <div class="card"><span class="icon"></span> C#</div>
   </div>
 
-  <h2><span class="icon"></span> Markup Languages</h2>
+  <h2><span class="icon">󱥬</span> Markup Languages</h2>
   <div class="my-grid">
     <div class="card"><span class="icon"></span> HTML & CSS</div>
     <div class="card"><span class="icon"></span> Markdown</div>
