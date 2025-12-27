@@ -140,7 +140,7 @@
     <div class="card"><span class="icon"></span> Docker</div>
     <div class="card"><span class="icon"></span> Tailwindcss</div>
     <div class="card"><span class="icon"></span> SQL</div>
-    <div class="card"><span class="icon"></span> SurrealQL</div>
+    <div class="card"><span class="icon"></span> SurrealDB</div>
   </div>
 
   <h2><span class="icon"></span> Featured Projects</h2>
