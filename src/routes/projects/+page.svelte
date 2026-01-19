@@ -24,7 +24,7 @@
     },
     {
       title: "Karka-Deh",
-      description: 'It isa simple, modern blog for sharing thoughts, tutorials, and technical writings.',
+      description: 'It is a simple, modern blog for sharing thoughts, tutorials, and technical writings.',
       license: "GPL-3.0 license",
       link: "https://github.com/ex-jandal/karka-deh",
       isLocal: false,
