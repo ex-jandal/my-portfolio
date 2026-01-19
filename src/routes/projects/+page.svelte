@@ -1,71 +1,60 @@
 <script lang="ts">
 	import { blur, slide } from 'svelte/transition';
+	import ProjectCard from '../../compunentes/project-card.svelte';
+
+  interface Projects {
+    title: string,
+    description: string,
+    license: string,
+    link: string,
+    isLocal: boolean,
+    mainLanguages: string[]
+  }
+
+  let projects: Projects[] = [
+    {
+      title: "Pretty-Good Chatting App",
+      description: 'The real-time chat experience you\'ve been waiting for. Fast, secure, and built with the modern stack for people who value speed.',
+      license: "MIT license",
+      link: "https://github.com/ex-jandal/PG-chatting-app",
+      isLocal: false,
+      mainLanguages: ['Laravel', 'Svelte', 'php', 'TypeScript', 'MariaDB']
+    },
+    {
+      title: "Karka-Deh",
+      description: 'It isa simple, modern blog for sharing thoughts, tutorials, and technical writings.',
+      license: "GPL-3.0 license",
+      link: "https://github.com/ex-jandal/karka-deh",
+      isLocal: false,
+      mainLanguages: ['Spring Boot', 'Vue', 'Java', 'TypeScript', 'Postgres']
+    },
+    {
+      title: "QD Knowledge Manager",
+      description: 'It is a Markdown editor and knowledge management tool that helps users capture ideas, manage notes, and generate concise summaries from YouTube videos using AI.',
+      license: "MIT license",
+      link: "https://github.com/ex-jandal/qd-knowledge-manager",
+      isLocal: false,
+      mainLanguages: ['Blazor', 'CSharp','JavaScript']
+    },
+    {
+      title: "Whatsdown",
+      description: 'Itis a pretty powerful, lightweight, LAN-based CLI messaging app built with Python.',
+      license: "MIT license",
+      link: "https://github.com/ex-jandal/whatsdown",
+      isLocal: false,
+      mainLanguages: ['Python']
+    },
+  ]
 </script>
 
 <style>
-  code, .badge {
-    background: #161b22;
-    padding: 0.2rem 0.5rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-  }
-  .pro-card {
-    background: var(--color-gruvbox-dark0);
-    border: 1px solid var(--color-gruvbox-orange);
-    padding: 1em;
-    height: 200px;
-  }
-  .pro-card_title {
-    font-size: 24px;
-    font-weight: bolder;
-  }
-  .pro-card_info {
-    font-size: 12px;
-    padding-left: 12px;
-  }
-  .pro-card_description {
-    margin-top: 5px;
-    font-size: 12px;
-    overflow: hidden;
-    font-display: block;
-  }
-  a {
-    color: var(--color-gruvbox-light3);
-  }
-  a:hover {
-    text-decoration: none;
-    box-shadow: 0px 0px 20px var(--color-gruvbox-bright-red);
-    scale: 101%;
-    translate: 0px -3px;
-  }
 </style>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
   <h2 class="frist-h2"><span class="icon"></span> Projects</h2>
   <div class="grid md:grid-cols-2 grid-cols-1 mt-10 gap-4">
-    <a href="https://github.com/ex-jandal/whatsdown" target="_blank" class="pro-card">
-      <div class="pro-card_title">
-        <span class="icon"></span> 
-        <span>whatsdown</span>
-      </div>
-      <div class="pro-card_info">
-        <span>󰗑</span>
-        <span>MIT license</span>
-      </div>
-
-      <div class="pro-card_description">
-      </div>
-    </a>
-
-    <a href="https://github.com/ex-jandal/karka-deh" target="_blank" class="pro-card">
-      <div class="pro-card_title">
-        <span class="icon"></span> 
-        <span class="pro-card_title">karka-deh</span>
-      </div>
-      <div class="pro-card_info">
-        <span>󰗑</span>
-        <span>GPL-3.0 license</span>
-      </div>
-    </a>
+    {#each projects as item}
+      <ProjectCard {...item}/>
+    {/each}
   </div>
 </div>

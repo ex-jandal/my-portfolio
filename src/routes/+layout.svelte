@@ -43,7 +43,7 @@ a:playing {
               <span>󱆃 cd</span>
               <span class="sm:ml-5 ml-2">[</span>
               <button onclick={() => menu_clecked = true} 
-                class="sm:hidden relative translate-y-0.5 scale-[75%] text-gruvbox-gray hover:cursor-pointer bg-gruvbox-dark1 opacity-70 hover:opacity-100 transition-all duration-200 rounded-xl px-3">󰇘</button>
+                class="sm:hidden relative scale-[80%] text-gruvbox-light1 hover:cursor-pointer bg-gruvbox-dark1 opacity-70 hover:opacity-100 transition-all duration-200 rounded-xl px-3 after:contect-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-gruvbox-dark1 after:rounded-xl after:animate-ping after:-z-1">...More</button>
 
               {#if (menu_clecked.valueOf())}
                 <button in:blur={{ duration: 400 }} out:blur={{ duration: 400 }} onclick={() => menu_clecked = false} class="fixed h-screen w-screen top-0 left-0 bg-gruvbox-dark1 opacity-50">&af;
