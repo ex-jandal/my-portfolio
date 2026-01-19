@@ -8,7 +8,8 @@
     license: string,
     link: string,
     isLocal: boolean,
-    mainLanguages: string[]
+    mainLanguages: string[],
+    os: string[]
   }
 
   let projects: Projects[] = [
@@ -18,7 +19,8 @@
       license: "MIT license",
       link: "https://github.com/ex-jandal/PG-chatting-app",
       isLocal: false,
-      mainLanguages: ['Laravel', 'Svelte', 'php', 'TypeScript', 'MariaDB']
+      mainLanguages: ['Laravel', 'Svelte', 'php', 'TypeScript', 'MariaDB'],
+      os: ['Web', 'Any OS']
     },
     {
       title: "Karka-Deh",
@@ -26,7 +28,8 @@
       license: "GPL-3.0 license",
       link: "https://github.com/ex-jandal/karka-deh",
       isLocal: false,
-      mainLanguages: ['Spring Boot', 'Vue', 'Java', 'TypeScript', 'Postgres']
+      mainLanguages: ['Spring Boot', 'Vue', 'Java', 'TypeScript', 'Postgres'],
+      os: ['Web', 'Any OS'],
     },
     {
       title: "QD Knowledge Manager",
@@ -34,7 +37,8 @@
       license: "MIT license",
       link: "https://github.com/ex-jandal/qd-knowledge-manager",
       isLocal: false,
-      mainLanguages: ['Blazor', 'CSharp','JavaScript']
+      mainLanguages: ['Blazor', 'CSharp','JavaScript'],
+      os: ['Linux', '.Net v10', 'Web'],
     },
     {
       title: "Whatsdown",
@@ -42,7 +46,8 @@
       license: "MIT license",
       link: "https://github.com/ex-jandal/whatsdown",
       isLocal: false,
-      mainLanguages: ['Python']
+      mainLanguages: ['Python'],
+      os: ['Any OS'],
     },
   ]
 </script>

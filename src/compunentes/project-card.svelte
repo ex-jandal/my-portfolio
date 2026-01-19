@@ -5,93 +5,109 @@ interface Props {
   license: string,
   link: string,
   isLocal: boolean,
-  mainLanguages: string[]
+  mainLanguages: string[],
+  os: string[],
 }
 
-let {title, description, license, link, isLocal, mainLanguages}: Props = $props() ;
+let {title, description, license, link, isLocal, mainLanguages, os}: Props = $props() ;
 
-function colorize(lang: string) {
-  return lang === 'JavaScript'
+function colorize(thing: string) {
+  return thing === 'JavaScript'
           ? 'bg-linear-150 from-yellow-300 to-yellow-500'
 
-          : lang === 'TypeScript'
+          : thing === 'TypeScript'
           ? 'bg-linear-150 from-blue-400 to-blue-600'
 
-          : lang === 'Java'
+          : thing === 'Java'
           ? 'bg-linear-150 from-orange-100 to-orange-300'
 
-          : lang === 'Spring Boot'
+          : thing === 'Spring Boot'
           ? 'bg-linear-150 from-green-300 to-green-500'
 
-          : lang === 'Vue'
+          : thing === 'Vue'
           ? 'bg-linear-150 from-green-400 to-green-600'
 
-          : lang === 'Postgres'
+          : thing === 'Postgres'
           ? 'bg-linear-150 from-blue-200 to-blue-400'
 
-          : lang === 'MariaDB'
+          : thing === 'MariaDB'
           ? 'bg-linear-150 from-amber-300 to-amber-500'
 
-          : lang === 'Python'
+          : thing === 'Python'
           ? 'bg-linear-150 from-blue-400 to-yellow-400/80'
 
-          : lang === 'Svelte'
+          : thing === 'Svelte'
           ? 'bg-linear-150 from-orange-300 to-orange-600'
 
-          : lang === 'Laravel'
+          : thing === 'Laravel'
           ? 'bg-linear-150 from-orange-300 to-orange-500'
 
-          : lang === 'php'
+          : thing === 'php'
           ? 'bg-linear-150 from-purple-300 to-purple-500'
 
-          : lang === 'CSharp'
+          : thing === 'CSharp'
           ? 'bg-linear-150 from-purple-400 to-purple-600'
 
-          : lang === 'Blazor'
+          : thing === 'Blazor'
           ? 'bg-linear-150 from-purple-400 to-purple-600'
 
           : '';
 }
 
-function iconize(lang: string) {
-  return lang === 'JavaScript'
+function iconize(thing: string) {
+  return thing === 'JavaScript'
           ?''
 
-          : lang === 'TypeScript'
+          : thing === 'TypeScript'
           ? '󰛦'
 
-          : lang === 'Java'
+          : thing === 'Java'
           ? ''
 
-          : lang === 'Spring Boot'
+          : thing === 'Spring Boot'
           ? ''
 
-          : lang === 'Vue'
+          : thing === 'Vue'
           ? ''
 
-          : lang === 'Postgres'
+          : thing === 'Postgres'
           ? ''
 
-          : lang === 'MariaDB'
+          : thing === 'MariaDB'
           ? ''
 
-          : lang === 'Python'
+          : thing === 'Python'
           ? ''
 
-          : lang === 'Svelte'
+          : thing === 'Svelte'
           ? ''
 
-          : lang === 'Laravel'
+          : thing === 'Laravel'
           ? '󰫐'
 
-          : lang === 'php'
+          : thing === 'php'
           ? '󰌟'
 
-          : lang === 'CSharp'
+          : thing === 'CSharp'
           ? ''
 
-          : lang === 'Blazor'
+          : thing === 'Blazor'
           ? ''
+
+          : thing === 'Linux'
+          ? ''
+
+          : thing === 'Web'
+          ? '󰖟'
+
+          : thing === 'Windows'
+          ? ''
+
+          : thing === '.Net'
+          ? ''
+
+          : thing === 'Any'
+          ? ''
 
           : '';
 }
@@ -115,6 +131,12 @@ function iconize(lang: string) {
     <div class="pro-card_info">
       <span>󰗑</span>
       <span>{license}</span>
+    </div>
+
+    <div class="text-[12px] pt-1 flex flex-row gap-2">
+      {#each os as i}
+        <span class="bg-gruvbox-dark2 px-1 rounded-xl">{iconize(i.split(' ')[0])} {i}</span>
+      {/each}
     </div>
 
     <div class="pro-card_description pt-2 text-transparent bg-clip-text bg-linear-60 from-gruvbox-light2 to-gruvbox-light4 italic">
@@ -143,7 +165,7 @@ function iconize(lang: string) {
     background: var(--color-gruvbox-dark0);
     border: 1px solid var(--color-gruvbox-orange);
     padding: 1em;
-    height: 200px;
+    height: 230px;
   }
   .pro-card_title {
     font-size: 20px;
