@@ -5,6 +5,9 @@
   .frist-h2 {
     margin-top: 0;
   }
+  a {
+    color: var(--color-gruvbox-bright-blue);
+  }
 </style>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
