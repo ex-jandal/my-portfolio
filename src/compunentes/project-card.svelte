@@ -125,7 +125,7 @@ export function iconize(thing: string) {
 }
 </script>
 
-<a href="{link}" target="_blank" class="pro-card group rounded-sm flex flex-col justify-between">
+<a href="{link}" target="_blank" class="pro-card group rounded-sm flex flex-col gap-4 justify-between">
   <div>
     <div class="pro-card_title">
       {#if isLocal}
@@ -186,7 +186,6 @@ export function iconize(thing: string) {
     background: var(--color-gruvbox-dark0);
     border: 1px solid var(--color-gruvbox-orange);
     padding: 1em;
-    height: 230px;
   }
   .pro-card_title {
     font-size: 20px;
