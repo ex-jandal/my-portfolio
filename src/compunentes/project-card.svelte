@@ -125,7 +125,7 @@ export function iconize(thing: string) {
 }
 </script>
 
-<a href="{link}" target="_blank" class="pro-card rounded-sm flex flex-col justify-between">
+<a href="{link}" target="_blank" class="pro-card group rounded-sm flex flex-col justify-between">
   <div>
     <div class="pro-card_title">
       {#if isLocal}
@@ -164,7 +164,7 @@ export function iconize(thing: string) {
         {colorize(lang)}
         bg-size-[150%_150%]
         bg-left
-        hover:bg-right
+        group-hover:bg-right
         transition-all duration-700 ease-out
         "
       >
