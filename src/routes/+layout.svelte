@@ -83,7 +83,7 @@ a:playing {
     {@render children()}
     <footer>
       <p class="comment">// "Talk is cheap. Show me the code." — Linus Torvalds</p>
-      <p class="comment">// All wrongs reversed. 󱤹 Copyleft 2025. </p>
+      <p class="comment">// All wrongs reversed. 󱤹 Copyleft 2026. </p>
     </footer>
   </main>
   <div style="display:none">
