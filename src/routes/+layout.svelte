@@ -39,38 +39,38 @@ a:playing {
 
           <div class="ml-4 flex flex-row">
             <img src="{favicon256}" class="h-6 inline sm:hidden pr-2 mr-2 border-r border-gruvbox-green" alt="">
-            <div class="text-gruvbox-bright-green flex flex-row gap-1">
-              <span>󱆃 cd</span>
-              <span class="sm:ml-5 ml-2">[</span>
+            <div class="text-gruvbox-bright-blue flex flex-row gap-1">
+              <span class="text-gruvbox-bright-green">󱆃 cd</span>
+              <span class="text-gruvbox-bright-green sm:ml-5 ml-2">[</span>
               <button onclick={() => menu_clecked = true} 
                 class="sm:hidden relative scale-[80%] text-gruvbox-bright-blue hover:cursor-pointer bg-gruvbox-dark1 underline underline-offset-2 hover:opacity-100 transition-all duration-200 rounded-xl px-3 after:contect-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-gruvbox-bright-blue after:rounded-xl after:animate-ping">...More</button>
 
               {#if (menu_clecked.valueOf())}
                 <button in:blur={{ duration: 400 }} out:blur={{ duration: 400 }} onclick={() => menu_clecked = false} class="fixed h-screen w-screen top-0 left-0 bg-gruvbox-dark1 opacity-50">&af;
                 </button>
-                  <button onclick={() => menu_clecked = false} in:slide={{ duration: 400 }} out:blur={{ duration: 400 }} class="absolute text-start w-40 top-20 left-30 bg-gruvbox-dark0 flex flex-col gap-3 items-baseline p-5 border border-gruvbox-orange rounded-sm">
-                    <a class="block w-full" href="/">./</a>
-                    <a class="block w-full" href="/my-dotfiles">./my-dots</a>
-                    <a class="block w-full" href="/projects">./projects</a>
-                    <a class="block w-full" href="/contact">./contact</a>
+                  <button onclick={() => menu_clecked = false} in:slide={{ duration: 400 }} out:blur={{ duration: 400 }} class="absolute text-start w-40 top-20 left-30 bg-gruvbox-dark0 flex flex-col gap-3 items-baseline p-4 border border-gruvbox-orange rounded-sm">
+                    <a class="block w-full rounded-xl px-2 py-0.5 {(page.url.pathname === '/') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/">./</a>
+                    <a class="block w-full rounded-xl px-2 py-0.5 {(page.url.pathname === '/my-dotfiles') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/my-dotfiles">./my-dots</a>
+                    <a class="block w-full rounded-xl px-2 py-0.5 {(page.url.pathname === '/projects') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/projects">./projects</a>
+                    <a class="block w-full rounded-xl px-2 py-0.5 {(page.url.pathname === '/contact') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/contact">./contact</a>
                   </button>
               {/if}
 
-              <div class="hidden sm:flex flex-row gap-6">
-                <a href="/">
+              <div class="text-gruvbox-bright-blue hidden sm:flex flex-row gap-6">
+                <a class=" rounded-xl px-2 {(page.url.pathname === '/') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/">
                   ./<span class="text-gruvbox-light2">,</span>
                 </a>
-                <a href="/my-dotfiles">
+                <a class=" rounded-xl px-2 {(page.url.pathname === '/my-dotfiles') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/my-dotfiles">
                   ./my-dots<span class="text-gruvbox-light2">,</span>
                 </a>
-                <a href="/projects">
+                <a class=" rounded-xl px-2 {(page.url.pathname === '/projects') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/projects">
                   ./projects<span class="text-gruvbox-light2">,</span>
                 </a>
-                <a href="/contact">
+                <a class=" rounded-xl px-2 {(page.url.pathname === '/contact') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/contact">
                   ./contact
                 </a>
               </div>
-              <span>]</span>
+              <span class="text-gruvbox-bright-green">]</span>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ p{
 
 a {
   transition: 200ms ease-in 0s all;
-  color: var(--color-gruvbox-bright-blue);
+/*   color: var(--color-gruvbox-bright-blue); */
 }
 
 a:hover {
