@@ -19,7 +19,7 @@
       license: "MIT license",
       link: "https://github.com/ex-jandal/PG-chatting-app",
       isLocal: false,
-      mainLanguages: ['Laravel', 'Svelte', 'php', 'TypeScript', 'MariaDB'],
+      mainLanguages: ['Laravel', 'Svelte', 'PHP', 'TypeScript', 'MariaDB'],
       os: ['Web', 'Any OS']
     },
     {
@@ -28,7 +28,7 @@
       license: "GPL-3.0 license",
       link: "https://github.com/ex-jandal/karka-deh",
       isLocal: false,
-      mainLanguages: ['Spring Boot', 'Vue', 'Java', 'TypeScript', 'Postgres'],
+      mainLanguages: ['Spring Boot', 'Vue', 'Java', 'TypeScript', 'Postgres', 'Docker'],
       os: ['Web', 'Any OS'],
     },
     {

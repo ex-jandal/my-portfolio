@@ -11,105 +11,117 @@ interface Props {
 
 let {title, description, license, link, isLocal, mainLanguages, os}: Props = $props() ;
 
-function colorize(thing: string) {
-  return thing === 'JavaScript'
-          ? 'bg-linear-150 from-yellow-300 to-yellow-500'
+export const COLORS: Record<string, string> = {
+  /* ───── Languages ───── */
+  JavaScript: 'from-yellow-400 via-yellow-500 to-yellow-600',
+  TypeScript: 'from-blue-500 via-blue-600 to-indigo-600',
+  Java: 'from-orange-400 via-orange-500 to-blue-800',
+  Python: 'from-blue-500 via-sky-500 to-yellow-400',
+  Rust: 'from-orange-600 via-orange-700 to-red-800',
+  Zig: 'from-yellow-500 via-amber-600 to-orange-600',
+  C: 'from-blue-600 to-blue-800',
+  Cpp: 'from-blue-500 to-indigo-700',
+  CSharp: 'from-purple-500 via-purple-600 to-indigo-600',
+  Go: 'from-cyan-500 via-sky-500 to-blue-600',
+  PHP: 'from-indigo-400 via-purple-500 to-purple-600',
+  Swift: 'from-rose-500 via-rose-600 to-red-700',
 
-          : thing === 'TypeScript'
-          ? 'bg-linear-150 from-blue-400 to-blue-600'
+  /* ───── Frameworks ───── */
+  Svelte: 'from-orange-400 via-orange-500 to-red-600',
+  Vue: 'from-green-400 via-green-500 to-emerald-600',
+  React: 'from-cyan-400 via-sky-500 to-blue-500',
+  Angular: 'from-red-500 via-red-600 to-rose-700',
+  Laravel: 'from-red-400 via-orange-500 to-red-600',
+  'Spring Boot': 'from-green-500 via-emerald-600 to-teal-600',
+  Django: 'from-green-700 via-green-800 to-zinc-900',
+  Flask: 'from-gray-500 to-gray-700',
+  NodeJS: 'from-green-500 via-lime-500 to-emerald-600',
+  Blazor: 'from-purple-500 via-indigo-600 to-blue-700',
+  '.NET': 'from-purple-500 via-purple-600 to-indigo-700',
 
-          : thing === 'Java'
-          ? 'bg-linear-150 from-orange-100 to-orange-300'
+  /* ───── Databases ───── */
+  Postgres: 'from-blue-400 via-blue-500 to-indigo-600',
+  MySQL: 'from-sky-500 via-blue-500 to-orange-500',
+  MariaDB: 'from-amber-400 via-orange-500 to-red-600',
+  MongoDB: 'from-green-500 via-green-600 to-emerald-700',
+  Redis: 'from-red-500 via-red-600 to-rose-700',
 
-          : thing === 'Spring Boot'
-          ? 'bg-linear-150 from-green-300 to-green-500'
+  /* ───── Cybersecurity Tools ───── */
+  Nmap: 'from-indigo-500 via-blue-600 to-cyan-600',
+  Metasploit: 'from-red-600 via-rose-700 to-zinc-900',
+  Burp: 'from-orange-500 via-amber-500 to-yellow-500',
+  Wireshark: 'from-sky-500 via-blue-600 to-indigo-700',
+  Hydra: 'from-red-700 via-red-800 to-black',
+  John: 'from-zinc-600 via-zinc-700 to-black',
 
-          : thing === 'Vue'
-          ? 'bg-linear-150 from-green-400 to-green-600'
+  /* ───── DevOps / OS ───── */
+  Linux: 'from-zinc-700 via-zinc-800 to-black',
+  Docker: 'from-sky-400 via-sky-500 to-blue-600',
+  Kubernetes: 'from-blue-500 via-indigo-600 to-purple-700',
+  Git: 'from-orange-500 via-orange-600 to-red-600',
+  GitHub: 'from-zinc-700 via-zinc-800 to-black',
+};
 
-          : thing === 'Postgres'
-          ? 'bg-linear-150 from-blue-200 to-blue-400'
-
-          : thing === 'MariaDB'
-          ? 'bg-linear-150 from-amber-300 to-amber-500'
-
-          : thing === 'Python'
-          ? 'bg-linear-150 from-blue-400 to-yellow-400/80'
-
-          : thing === 'Svelte'
-          ? 'bg-linear-150 from-orange-300 to-orange-600'
-
-          : thing === 'Laravel'
-          ? 'bg-linear-150 from-orange-300 to-orange-500'
-
-          : thing === 'php'
-          ? 'bg-linear-150 from-purple-300 to-purple-500'
-
-          : thing === 'CSharp'
-          ? 'bg-linear-150 from-purple-400 to-purple-600'
-
-          : thing === 'Blazor'
-          ? 'bg-linear-150 from-purple-400 to-purple-600'
-
-          : '';
+export function colorize(thing: string) {
+  return COLORS[thing]
+    ? `bg-gradient-to-tr ${COLORS[thing]}`
+    : '';
 }
 
-function iconize(thing: string) {
-  return thing === 'JavaScript'
-          ?''
+export const ICONS: Record<string, string> = {
+  JavaScript: '',
+  TypeScript: '󰛦',
+  Java: '',
+  Python: '',
+  Rust: '',
+  Zig: '',
+  C: '',
+  Cpp: '',
+  CSharp: '',
+  Go: '',
+  PHP: '󰌟',
 
-          : thing === 'TypeScript'
-          ? '󰛦'
+  Svelte: '',
+  Vue: '',
+  React: '',
+  Angular: '',
+  Laravel: '󰫐',
+  'Spring Boot': '',
+  Django: '',
+  Flask: '󰬠',
+  NodeJS: '',
+  Swift: '󰛥',
+  Blazor: '',
+  '.NET': '',
 
-          : thing === 'Java'
-          ? ''
+  Postgres: '',
+  MySQL: '',
+  MariaDB: '',
+  MongoDB: '',
+  Redis: '',
+  SQLlite: '',
 
-          : thing === 'Spring Boot'
-          ? ''
+  /* Cybersecurity */
+  Nmap: '󰺮',
+  Metasploit: '󰯄',
+  Burp: '󰖟',
+  Wireshark: '󰁪',
+  Hydra: '',
+  John: '󰯂',
 
-          : thing === 'Vue'
-          ? ''
+  Linux: '',
+  Web: '󰖟',
+  ".Net": '',
+  Docker: '󰡨',
+  Kubernetes: '󱃾',
+  Git: '',
+  GitHub: '',
 
-          : thing === 'Postgres'
-          ? ''
+  Any: '',
+};
 
-          : thing === 'MariaDB'
-          ? ''
-
-          : thing === 'Python'
-          ? ''
-
-          : thing === 'Svelte'
-          ? ''
-
-          : thing === 'Laravel'
-          ? '󰫐'
-
-          : thing === 'php'
-          ? '󰌟'
-
-          : thing === 'CSharp'
-          ? ''
-
-          : thing === 'Blazor'
-          ? ''
-
-          : thing === 'Linux'
-          ? ''
-
-          : thing === 'Web'
-          ? '󰖟'
-
-          : thing === 'Windows'
-          ? ''
-
-          : thing === '.Net'
-          ? ''
-
-          : thing === 'Any'
-          ? ''
-
-          : '';
+export function iconize(thing: string) {
+  return ICONS[thing] ?? '';
 }
 </script>
 
@@ -135,7 +147,7 @@ function iconize(thing: string) {
 
     <div class="text-[12px] pt-1 flex flex-row gap-2">
       {#each os as i}
-        <span class="bg-gruvbox-dark2 px-1 rounded-xl">{iconize(i.split(' ')[0])} {i}</span>
+        <span class="bg-gruvbox-dark2 px-2 rounded-xl">{iconize(i.split(' ')[0])} {i}</span>
       {/each}
     </div>
 
@@ -146,7 +158,16 @@ function iconize(thing: string) {
 
   <div class="flex flex-row flex-wrap gap-2 text-sm">
     {#each mainLanguages as lang}
-      <div class="rounded-2xl text-gruvbox-dark0 px-2 {colorize(lang)}">
+      <div class="
+        inline-flex items-center gap-2 px-2 py-0.5 rounded-xl
+        text-sm text-gruvbox-light0
+        {colorize(lang)}
+        bg-size-[150%_150%]
+        bg-left
+        hover:bg-right
+        transition-all duration-700 ease-out
+        "
+      >
         {iconize(lang)}
         {lang}
       </div>
