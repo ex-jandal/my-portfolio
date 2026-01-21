@@ -144,12 +144,6 @@
     <div class="card"><span class="icon"></span> SurrealDB</div>
   </div>
 
-  <h2><span class="icon"></span> Featured Projects</h2>
-  <ul>
-    <li><strong>Whatsdown</strong> – CLI Messaging app built Python</li>
-    <li><strong>Karka-deh</strong> – Website for articles and more</li>
-  </ul>
-
   <h2><span class="icon">󰌢</span> Cybersecurity & Networking</h2>
   <ul>
     <li>Foundations of networking (IP, subnetting, routing)</li>
