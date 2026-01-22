@@ -43,7 +43,7 @@
     {
       title: "Radium-Shell-rs",
       description: 'Specialized terminal-based command manager and execution environment built in Rust.',
-      license: "MIT license",
+      license: "GPL-3.0 license",
       link: "https://github.com/ex-jandal/radium-shell-rs",
       isLocal: false,
       mainLanguages: ['Rust', 'Ratatui'],
