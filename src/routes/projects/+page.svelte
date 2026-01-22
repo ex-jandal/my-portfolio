@@ -41,6 +41,15 @@
       os: ['Linux', '.Net v10', 'Web'],
     },
     {
+      title: "Radium-Shell-rs",
+      description: 'Specialized terminal-based command manager and execution environment built in Rust.',
+      license: "MIT license",
+      link: "https://github.com/ex-jandal/radium-shell-rs",
+      isLocal: false,
+      mainLanguages: ['Rust', 'Ratatui'],
+      os: ['Linux'],
+    },
+    {
       title: "Whatsdown",
       description: 'Itis a pretty powerful, lightweight, LAN-based CLI messaging app built with Python.',
       license: "MIT license",
