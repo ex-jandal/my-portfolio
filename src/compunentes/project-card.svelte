@@ -13,7 +13,7 @@ let {title, description, license, link, isLocal, mainLanguages, os}: Props = $pr
 
 export const COLORS: Record<string, string> = {
   /* ───── Languages ───── */
-  JavaScript: 'from-yellow-400 via-yellow-500 to-yellow-600',
+  JavaScript: 'from-yellow-500 via-yellow-600 to-yellow-700',
   TypeScript: 'from-blue-500 via-blue-600 to-indigo-600',
   Java: 'from-orange-400 via-orange-500 to-blue-800',
   Python: 'from-blue-500 via-sky-500 to-yellow-400',
@@ -25,7 +25,7 @@ export const COLORS: Record<string, string> = {
   Go: 'from-cyan-500 via-sky-500 to-blue-600',
   PHP: 'from-indigo-400 via-purple-500 to-purple-600',
   Swift: 'from-rose-500 via-rose-600 to-red-700',
-  Assembly: 'from-[#8a6a1f] via-[#6e4c13] to-[#4b330c] text-gruvbox-light1',
+  Assembly: 'from-[#8a6a1f] via-[#6e4c13] to-[#4b330c]',
 
   /* ───── Frameworks ───── */
   Svelte: 'from-orange-400 via-orange-500 to-red-600',
@@ -165,7 +165,7 @@ export function iconize(thing: string) {
     {#each mainLanguages as lang}
       <div class="
         inline-flex items-center gap-2 px-2 rounded-xl
-        text-sm text-gruvbox-dark0
+        text-sm text-gruvbox-light1
         {colorize(lang)}
         bg-size-[150%_150%]
         bg-left
