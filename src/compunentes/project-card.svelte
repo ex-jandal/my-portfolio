@@ -25,6 +25,7 @@ export const COLORS: Record<string, string> = {
   Go: 'from-cyan-500 via-sky-500 to-blue-600',
   PHP: 'from-indigo-400 via-purple-500 to-purple-600',
   Swift: 'from-rose-500 via-rose-600 to-red-700',
+  Assembly: 'from-[#8a6a1f] via-[#6e4c13] to-[#4b330c] text-gruvbox-light1',
 
   /* ───── Frameworks ───── */
   Svelte: 'from-orange-400 via-orange-500 to-red-600',
@@ -81,6 +82,7 @@ export const ICONS: Record<string, string> = {
   CSharp: '',
   Go: '',
   PHP: '󰌟',
+  Assembly: '',
 
   Svelte: '',
   Vue: '',

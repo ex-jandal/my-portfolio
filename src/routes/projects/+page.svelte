@@ -50,8 +50,17 @@
       os: ['Linux', 'MacOS'],
     },
     {
+      title: "File Viewer",
+      description: 'Simple file viewer implemented in x86-64 assembly language.',
+      license: "MIT license",
+      link: "https://github.com/ex-jandal/file-viewer-asm",
+      isLocal: false,
+      mainLanguages: ['Assembly'],
+      os: ['Linux'],
+    },
+    {
       title: "Whatsdown",
-      description: 'Itis a pretty powerful, lightweight, LAN-based CLI messaging app built with Python.',
+      description: 'It is a pretty powerful, lightweight, LAN-based CLI messaging app built with Python.',
       license: "MIT license",
       link: "https://github.com/ex-jandal/whatsdown",
       isLocal: false,
