@@ -51,7 +51,7 @@
     },
     {
       title: "File Viewer",
-      description: 'Simple file viewer implemented in x86-64 assembly language.',
+      description: 'Simple file viewer implemented in x86-64 assembly language, designed specifically for Linux. It demonstrates the use of Linux system calls for basic file I/O operations.',
       license: "MIT license",
       link: "https://github.com/ex-jandal/file-viewer-asm",
       isLocal: false,
