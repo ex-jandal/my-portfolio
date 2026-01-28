@@ -47,7 +47,7 @@
       link: "https://github.com/ex-jandal/radium-shell-rs",
       isLocal: false,
       mainLanguages: ['Rust', 'Ratatui'],
-      os: ['Linux'],
+      os: ['Linux', 'MacOS'],
     },
     {
       title: "Whatsdown",
