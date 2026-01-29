@@ -14,36 +14,24 @@
   }
 
 </script>
-<style>
-  code, .badge {
-    background: #161b22;
-    padding: 0.2rem 0.5rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-  }
-  td {
-    padding-left: 10px;
-    min-width: 120px;
-  }
-</style>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
   <h1> Let's Fetch<span class="pl-1 text-gruvbox-gray text-[18px]"></span></h1>
 
-  <div class="bg-gruvbox-dark0 py-10 sm:px-0 px-5 flex sm:flex-row flex-col items-center rounded-sm">
+  <div class="bg-gruvbox-dark0 py-10 sm:px-0 sm:pr-50 px-5 flex sm:flex-row flex-col justify-evenly items-center rounded-sm">
     <div class="sm:min-w-70 flex justify-center items-center">
-      <pre class="ascii-art text-[10px]">
-                        ________
-                       | ______o|
-       _______________ ||__---_||
-      |  ___________  || ______ |
-      | |           | |||______||
-      | | #         | ||--------|
-      | |           | ||      O |
-      | |           | ||      | |
-      | '-----------' ||      | |
-      |_____________-_||      | |
-       ___/_______\____|::::::::|
+      <pre class="ascii-art text-[10px] tracking-[0.1em]">
+                         ________
+                        | ______o|
+       _______________  ||__---_||
+      |  ___________  | | ______ |
+      | |           | | ||______||
+      | | #         | | |--------|
+      | |           | | |      O |
+      | |           | | |      | |
+      | '-----------' | |      | |
+      |_____________-_| |      | |
+       ___/_______\____ |::::::::|
       / _______________\-.__
       /:::::::::':::'::\ .\\\---.
   jgs/::======::: .:.:::\ \\_)   \
@@ -167,3 +155,16 @@
     I prefer tools that respect user freedom, transparency, and <strong>*performance</strong>.
   </p>
 </div>
+
+<style>
+  code, .badge {
+    background: #161b22;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+  td {
+    padding-left: 10px;
+    min-width: 100px;
+  }
+</style>

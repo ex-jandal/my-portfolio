@@ -16,15 +16,6 @@
   <title>Abu Jandal - The humble servant of Allah</title>
 </svelte:head>
 
-<style>
-a:hover {
-  text-decoration: none;
-}
-a:playing {
-  color: black;
-}
-</style>
-
 <div class="max-w-257 m-auto">
   <header class="bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-5 rounded-sm">
     <nav class="flex flex-row justify-between items-center pl-2 pr-2 py-2">
@@ -94,4 +85,13 @@ a:playing {
     {/each}
   </div>
 </div>
+
+<style>
+a:hover {
+  text-decoration: none;
+}
+a:playing {
+  color: black;
+}
+</style>
 
