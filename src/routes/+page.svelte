@@ -56,7 +56,7 @@
             </tr>
             <tr>
               <td><span class="icon"></span> Langs:</td>
-              <td>en, ara</td>
+              <td>ara, en</td>
             </tr>
           </tbody>
         </table>
