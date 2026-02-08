@@ -1,14 +1,14 @@
 <script lang="ts">
   import { slide, blur } from 'svelte/transition';
-	import { page } from '$app/state';
-	import { locales, localizeHref } from '$lib/paraglide/runtime';
-	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+  import { page } from '$app/state';
+  import { locales, localizeHref } from '$lib/paraglide/runtime';
+  import './layout.css';
+  import favicon from '$lib/assets/favicon.svg';
   import favicon256 from '../lib/assets/favicon256.png';
 
   let menu_clecked = $state(false);
 
-	let { children } = $props();
+  let { children } = $props();
 </script>
 
 <svelte:head>

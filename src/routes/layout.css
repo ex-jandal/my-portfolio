@@ -111,35 +111,62 @@ footer {
   --default-font-family: 'CascidaCode', 'NerdIcons', monospace;
   --font-main: 'CascidaCode', 'NerdIcons', monospace; /* CascidaCode font*/
   --font-icons: 'NerdIcons';
+  /* Absolute Zero Backgrounds */
+  --color-gruvbox-dark0: #000000;
+  --color-gruvbox-dark1: #0a0a0a;
+  --color-gruvbox-dark2: #141414;
+  --color-gruvbox-dark3: #1f1f1f;
+  --color-gruvbox-dark4: #2b2b2b;
 
-  /* Gruvbox Dark Background */
-  --color-gruvbox-dark0: #282828;
-  --color-gruvbox-dark1: #3c3836;
-  --color-gruvbox-dark2: #504945;
-  --color-gruvbox-dark3: #665c54;
-  --color-gruvbox-dark4: #7c6f64;
+  /* Cool Metallic Neutrals */
+  --color-gruvbox-light0: #cfd8dc;
+  --color-gruvbox-light1: #b0bec5;
+  --color-gruvbox-light2: #90a4ae;
+  --color-gruvbox-light3: #78909c;
+  --color-gruvbox-light4: #546e7a;
 
-  /* Gruvbox Light Background */
-  --color-gruvbox-light0: #fbf1c7;
-  --color-gruvbox-light1: #ebdbb2;
-  --color-gruvbox-light2: #d5c4a1;
-  --color-gruvbox-light3: #bdae93;
-  --color-gruvbox-light4: #a89984;
+  /* Deep Jewel Tones */
+  --color-gruvbox-gray: #546e7a;
+  --color-gruvbox-red: #990000;
+  --color-gruvbox-bright-red: #ff0000;
+  --color-gruvbox-green: #006400;
+  --color-gruvbox-bright-green: #00c853;
+  --color-gruvbox-yellow: #a57c00;
+  --color-gruvbox-bright-yellow: #ffd600;
+  --color-gruvbox-blue: #004488;
+  --color-gruvbox-bright-blue: #0077ff;
+  --color-gruvbox-purple: #1a237e;        /* Deep Navy */
+  --color-gruvbox-bright-purple: #2563eb; /* Royal Blue */
+  --color-gruvbox-aqua: #006064;
+  --color-gruvbox-bright-aqua: #00e5ff;
+  --color-gruvbox-orange: #8a4b00;
+  --color-gruvbox-bright-orange: #ff6d00;
 
-  /* Gruvbox Colors */
-  --color-gruvbox-gray: #928374;
-  --color-gruvbox-red: #cc241d;
-  --color-gruvbox-bright-red: #fb4934;
-  --color-gruvbox-green: #98971a;
-  --color-gruvbox-bright-green: #b8bb26;
-  --color-gruvbox-yellow: #d79921;
-  --color-gruvbox-bright-yellow: #fabd2f;
-  --color-gruvbox-blue: #458588;
-  --color-gruvbox-bright-blue: #83a598;
-  --color-gruvbox-purple: #b16286;
-  --color-gruvbox-bright-purple: #d3869b;
-  --color-gruvbox-aqua: #689d6a;
-  --color-gruvbox-bright-aqua: #8ec07c;
-  --color-gruvbox-orange: #d65d0e;
-  --color-gruvbox-bright-orange: #fe8019;
+  /* --color-gruvbox-dark0: #282828; */
+  /* --color-gruvbox-dark1: #3c3836; */
+  /* --color-gruvbox-dark2: #504945; */
+  /* --color-gruvbox-dark3: #665c54; */
+  /* --color-gruvbox-dark4: #7c6f64; */
+  /**/
+  /* --color-gruvbox-light0: #fbf1c7; */
+  /* --color-gruvbox-light1: #ebdbb2; */
+  /* --color-gruvbox-light2: #d5c4a1; */
+  /* --color-gruvbox-light3: #bdae93; */
+  /* --color-gruvbox-light4: #a89984; */
+  /**/
+  /* --color-gruvbox-gray: #928374; */
+  /* --color-gruvbox-red: #cc241d; */
+  /* --color-gruvbox-bright-red: #fb4934; */
+  /* --color-gruvbox-green: #98971a; */
+  /* --color-gruvbox-bright-green: #b8bb26; */
+  /* --color-gruvbox-yellow: #d79921; */
+  /* --color-gruvbox-bright-yellow: #fabd2f; */
+  /* --color-gruvbox-blue: #458588; */
+  /* --color-gruvbox-bright-blue: #83a598; */
+  /* --color-gruvbox-purple: #b16286; */
+  /* --color-gruvbox-bright-purple: #d3869b; */
+  /* --color-gruvbox-aqua: #689d6a; */
+  /* --color-gruvbox-bright-aqua: #8ec07c; */
+  /* --color-gruvbox-orange: #d65d0e; */
+  /* --color-gruvbox-bright-orange: #fe8019; */
 }

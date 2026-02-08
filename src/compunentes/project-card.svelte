@@ -165,7 +165,7 @@ export function iconize(thing: string) {
     {#each mainLanguages as lang}
       <div class="
         inline-flex items-center gap-2 px-2 rounded-xl
-        text-sm text-gruvbox-light1 text-shadow-black text-shadow-2xs
+        text-sm text-gruvbox-dark0 font-outline-2
         {colorize(lang)}
         bg-size-[150%_150%]
         bg-left
