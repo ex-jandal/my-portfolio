@@ -41,6 +41,15 @@
       os: ['Linux', '.Net v10', 'Web'],
     },
     {
+      title: "Proxy-Security-Guard",
+      description: 'A high-performance, security-focused proxy server built in Rust.',
+      license: "MIT license",
+      link: "https://github.com/ex-jandal/proxy-security-guard",
+      isLocal: false,
+      mainLanguages: ['Axum', 'Tokio', 'Rust', 'Ed25519', 'Sha2', 'Clap', 'Tracing'],
+      os: ['Linux', 'MacOS', 'Windows'],
+    },
+    {
       title: "Radium-Shell-rs",
       description: 'Specialized terminal-based command manager and execution environment built in Rust.',
       license: "GPL-3.0 license",

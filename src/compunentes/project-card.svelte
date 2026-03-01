@@ -27,6 +27,14 @@ export const COLORS: Record<string, string> = {
   Swift: 'from-rose-500 via-rose-600 to-red-700',
   Assembly: 'from-[#8a6a1f] via-[#6e4c13] to-[#4b330c]',
 
+  /* ───── Rust Stuff ───── */
+  Axum:    'from-orange-500 via-red-500 to-red-600',
+  Clap:    'from-orange-700 via-red-800 to-rose-900',
+  Tokio:   'from-amber-400 via-orange-500 to-orange-600',
+  Tracing: 'from-yellow-400 via-orange-400 to-red-500',
+  Ed25519: 'from-rose-600 via-red-700 to-orange-800',
+  Sha2:    'from-orange-400 via-rose-500 to-red-700',
+
   /* ───── Frameworks ───── */
   Svelte: 'from-orange-400 via-orange-500 to-red-600',
   Vue: 'from-green-400 via-green-500 to-emerald-600',
@@ -83,6 +91,15 @@ export const ICONS: Record<string, string> = {
   Go: '',
   PHP: '󰌟',
   Assembly: '',
+
+  /* ───── Rust Stuff ───── */
+  Axum:'󰒍',
+  Clap: '',
+  Tokio: '',
+  Tracing: '󰦨',
+  Tauri: '󰌹',
+  Ed25519: '󰌋',
+  Sha2: '󰈷',
 
   Svelte: '',
   Vue: '',
@@ -165,7 +182,7 @@ export function iconize(thing: string) {
     {#each mainLanguages as lang}
       <div class="
         inline-flex items-center gap-2 px-2 rounded-xl
-        text-sm text-gruvbox-dark0 font-outline-2
+        text-sm text-gruvbox-light0
         {colorize(lang)}
         bg-size-[150%_150%]
         bg-left
@@ -174,7 +191,14 @@ export function iconize(thing: string) {
         "
       >
         {iconize(lang)}
-        {lang}
+        <span
+          style="
+            text-shadow: -0.5px -0.5px 0 var(--color-gruvbox-dark0), 
+                          0.5px -0.5px 0 var(--color-gruvbox-dark0), 
+                         -0.5px 0.5px 0 var(--color-gruvbox-dark0), 
+                          0.5px 0.5px 0 var(--color-gruvbox-dark0);
+          "
+        >{lang}</span>
       </div>
     {/each}
   </div>
