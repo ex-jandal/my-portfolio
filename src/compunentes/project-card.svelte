@@ -132,6 +132,7 @@ export const ICONS: Record<string, string> = {
 
   Linux: '',
   MacOS: '',
+  Windows: '󰨡',
   Web: '󰖟',
   ".Net": '',
   Docker: '󰡨',
