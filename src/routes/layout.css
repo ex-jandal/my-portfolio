@@ -35,10 +35,10 @@ a {
 /*   color: var(--color-gruvbox-bright-blue); */
 }
 
-a:hover {
-  color: var(--color-gruvbox-blue);
-  text-decoration: underline;
-}
+/* a:hover { */
+/*   color: var(--color-gruvbox-blue); */
+/*   text-decoration: underline; */
+/* } */
 
 ul {
   list-style: disc inside;
