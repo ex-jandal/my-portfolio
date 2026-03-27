@@ -98,7 +98,7 @@
   <h2><span class="icon"></span> Programming Languages</h2>
   <div class="my-grid">
     <div class="card"><span class="icon"></span> Rust</div>
-    <div class="card"><span class="icon"></span> Zig (0.15)</div>
+    <div class="card"><span class="icon"></span> Zig (0.16)</div>
     <div class="card"><span class="icon"></span> JavaScript</div>
     <div class="card"><span class="icon"></span> TypeScript</div>
     <div class="card"><span class="icon"></span> Lua</div>
