@@ -117,10 +117,10 @@
 
   <h2><span class="icon">󰏓</span> Frontend & Frameworks</h2>
   <div class="my-grid">
-    <div class="card"><span class="icon"></span> Vue.js</div>
-    <div class="card"><span class="icon"></span> Svelte</div>
-    <div class="card"><span class="icon"></span> Laravel</div>
     <div class="card"><span class="icon"></span> Bun</div>
+    <div class="card"><span class="icon"></span> Svelte</div>
+    <div class="card"><span class="icon"></span> Vue.js</div>
+    <div class="card"><span class="icon"></span> Laravel</div>
     <div class="card"><span class="icon"></span> Blazor</div>
   </div>
 
