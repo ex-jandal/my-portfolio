@@ -69,13 +69,29 @@
       <div class="flex flex-row items-center gap-2"></div>
     </nav>
   </header>
-  <dev class="px-5 sm:px-10 py-5 m-5 rounded-sm bg-gruvbox-red flex flex-col gap-2">
-    <span class='text-lg sm:text-2xl'> Warnning ( Android Will be Locked):</span> <br/>
+  <dev class="px-5 sm:px-10 py-5 m-5 rounded-sm bg-gruvbox-dark1 flex flex-col gap-2">
+    <table class="table-caption">
+      <tbody>
+        <tr>
+          <td class="pl-4 text-gruvbox-bright-red text-5xl translate-y-4"> </td>
+          <td class='pl-10 text-3xl sm:text-3xl'>Warnning:</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="pl-10"> 
+            <span class="text-gruvbox-bright-green text-right">
+              
+            </span>
+            Android Will be Locked
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <p class="pl-2">
       Starting in September 2026, Android will require all apps to be registered by verified developers in order to be installed on certified Android devices
     </p>
     <a 
-      class="block w-full rounded-sm p-2 mt-2 bg-gruvbox-light0 text-gruvbox-red text-center hover:bg-gruvbox-bright-red hover:text-gruvbox-light0"
+      class="block w-full rounded-sm border-2 border-gruvbox-red p-2 mt-2 bg-gruvbox-dark3 text-gruvbox-light0 text-center hover:bg-gruvbox-bright-red hover:text-gruvbox-light0"
       href="https://keepandroidopen.org/"
       target="_blank"
     >Learn More</a>
