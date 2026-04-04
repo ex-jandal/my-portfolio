@@ -5,11 +5,12 @@ interface Props {
   license: string,
   link: string,
   isLocal: boolean,
+  isGithub: boolean,
   mainLanguages: string[],
   os: string[],
 }
 
-let {title, description, license, link, isLocal, mainLanguages, os}: Props = $props() ;
+let {title, description, license, link, isLocal, isGithub, mainLanguages, os}: Props = $props() ;
 
 export const COLORS: Record<string, string> = {
   /* ───── Languages ───── */
@@ -157,7 +158,12 @@ export function iconize(thing: string) {
         </span> 
       {:else}
         <span class="icon">
-          
+          {#if isGithub}
+            
+            {:else}
+            
+          {/if}
+          
         </span> 
       {/if}
       <span>{title}</span>
