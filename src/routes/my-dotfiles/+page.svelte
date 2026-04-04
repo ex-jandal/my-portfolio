@@ -106,6 +106,6 @@ import rofi_showcase from "$lib/assets/rofi-showcase.png";
     <strong>Sultan Al-Salahi</strong><br>
     Cybersecurity & Networking student<br>
     Arch Linux • Niri • Neovim<br><br>
-    <a href="https://github.com/ex-jandal/my-dots" target="_blank"><span class="icon"></span>GitHub/my-dots</a>
+    <a href="https://codeberg.org/ex-jandal/my-dots" target="_blank"><span class="icon"></span>Codeberg/my-dots</a>
   </div>
 </div>
