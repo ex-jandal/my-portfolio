@@ -68,7 +68,7 @@
     },
     {
       title: "Radium-Shell-rs",
-      icon: "",
+      icon: "",
       description: 'Specialized terminal-based command manager and execution environment built in Rust.',
       license: "GPL-3.0 license",
       showcase: radium_showcase,
