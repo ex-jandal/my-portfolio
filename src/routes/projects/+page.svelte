@@ -39,6 +39,7 @@
       description: 'It is a simple, modern blog for sharing thoughts, tutorials, and technical writings.',
       license: "GPL-3.0 license",
       showcase: karkadeh_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/karka-deh",
       linkGithub: "https://github.com/ex-jandal/karka-deh",
       mainLanguages: ['Spring Boot', 'Vue', 'Java', 'TypeScript', 'Postgres', 'Docker'],
       os: ['Web', 'Any OS'],
