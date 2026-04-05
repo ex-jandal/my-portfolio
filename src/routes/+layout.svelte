@@ -17,7 +17,7 @@
 </svelte:head>
 
 <div class="max-w-257 m-auto">
-  <header class="bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-5 rounded-sm">
+  <header class="bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-sm">
     <nav class="flex flex-row justify-between items-center pl-2 pr-2 py-2">
       <div class="flex flex-row items-center gap-2">
           <img src="{favicon256}" class="h-12 hidden sm:inline pr-2 border-r border-gruvbox-green" alt="">
@@ -30,7 +30,7 @@
 
           <div class="ml-4 flex flex-row">
             <img src="{favicon256}" class="h-6 inline sm:hidden pr-2 mr-2 border-r border-gruvbox-green" alt="">
-            <div class="text-gruvbox-bright-blue flex flex-row gap-1">
+            <div class="text-gruvbox-bright-blue flex flex-row gap-1 z-20">
               <span class="text-gruvbox-bright-green">󱆃 cd</span>
               <span class="text-gruvbox-bright-green sm:ml-5 ml-2">[</span>
               <button onclick={() => menu_clecked = true} 
@@ -69,16 +69,16 @@
       <div class="flex flex-row items-center gap-2"></div>
     </nav>
   </header>
-  <dev class="px-5 sm:px-10 py-5 m-5 rounded-sm bg-gruvbox-dark1 flex flex-col gap-2">
+  <dev class="px-2 sm:px-10 sm:m-5 py-5 m-2 rounded-sm bg-gruvbox-dark1 flex flex-col gap-2">
     <table class="table-caption">
       <tbody>
         <tr>
-          <td class="pl-4 text-gruvbox-bright-red text-5xl translate-y-4"> </td>
-          <td class='pl-10 text-3xl sm:text-3xl'>Warnning:</td>
+          <td class="pl-5 sm:pl-4 text-gruvbox-bright-red text-3xl sm:text-5xl translate-y-4"> </td>
+          <td class='pl-5 sm:pl-10 text-3xl sm:text-3xl'>Warnning:</td>
         </tr>
         <tr>
           <td></td>
-          <td class="pl-10"> 
+          <td class="pl-5 sm:pl-10"> 
             <span class="text-gruvbox-bright-green text-right">
               
             </span>
@@ -87,8 +87,8 @@
         </tr>
       </tbody>
     </table>
-    <p class="pl-2">
-      Starting in September 2026, Android will require all apps to be registered by verified developers in order to be installed on certified Android devices
+    <p class="px-5 italic text-xs sm:text-sm">
+      Starting in September 2026, Android will require all apps to be registered by verified developers in order to be installed on certified Android devices.
     </p>
     <a 
       class="block w-full rounded-sm border-2 border-gruvbox-red p-2 mt-2 bg-gruvbox-dark3 text-gruvbox-light0 text-center hover:bg-gruvbox-bright-red hover:text-gruvbox-light0"
@@ -97,7 +97,7 @@
     >Learn More</a>
   </dev>
 
-  <main class="m-5 mt-0 p-5 bg-gruvbox-dark1 rounded-sm">
+  <main class="m-2 sm:m-5 mt-0 p-2 sm:p-5 bg-gruvbox-dark1 rounded-sm">
     {@render children()}
     <footer>
       <p class="comment">// "Talk is cheap. Show me the code." — Linus Torvalds</p>

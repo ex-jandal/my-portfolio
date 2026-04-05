@@ -1,16 +1,17 @@
 <script lang="ts">
 interface Props {
   title: string,
+    icon?: string,
   description: string,
   license: string,
-  link: string,
-  isLocal: boolean,
-  isGithub: boolean,
+  showcase?: string,
+  linkCodeberg?: string,
+  linkGithub?: string,
   mainLanguages: string[],
   os: string[],
 }
 
-let {title, description, license, link, isLocal, isGithub, mainLanguages, os}: Props = $props() ;
+let {title, icon, description, license, showcase, linkCodeberg, linkGithub, mainLanguages, os}: Props = $props() ;
 
 export const COLORS: Record<string, string> = {
   /* ───── Languages ───── */
@@ -149,67 +150,84 @@ export function iconize(thing: string) {
 }
 </script>
 
-<a href="{link}" target="_blank" class="pro-card group rounded-sm flex flex-col gap-4 justify-between">
-  <div>
-    <div class="pro-card_title">
-      {#if isLocal}
-        <span class="icon">
-          
-        </span> 
-      {:else}
-        <span class="icon">
-          {#if isGithub}
-            
-            {:else}
-            
-          {/if}
-          
-        </span> 
-      {/if}
-      <span>{title}</span>
-    </div>
-
-    <div class="pro-card_info">
-      <span>󰗑</span>
-      <span>{license}</span>
-    </div>
-
-    <div class="text-[12px] pt-1 flex flex-row gap-2">
-      {#each os as i}
-        <span class="bg-gruvbox-dark2 px-2 rounded-xl">{iconize(i.split(' ')[0])} {i}</span>
-      {/each}
-    </div>
-
-    <div class="pro-card_description pt-2 text-transparent bg-clip-text bg-linear-60 from-gruvbox-light2 to-gruvbox-light4 italic">
-      {description}
-    </div>
+<dev class="pro-card group rounded-sm flex flex-col gap-4 
+            justify-baseline shadow-md hover:shadow-gruvbox-bright-red
+            duration-300"
+>
+  <div class="relative h-40 w-full overflow-hidden flex justify-center align-middle items-baseline rounded-md">
+    <img class="z-10 scale-105" src="{showcase}" alt=""/>
+    <span class="absolute text-gruvbox-light4 text-9xl">󰲍</span>
   </div>
 
-  <div class="flex flex-row flex-wrap gap-2 text-sm">
-    {#each mainLanguages as lang}
-      <div class="
-        inline-flex items-center gap-2 px-2 rounded-xl
-        text-sm text-gruvbox-light0
-        {colorize(lang)}
-        bg-size-[150%_150%]
-        bg-left
-        group-hover:bg-right
-        transition-all duration-700 ease-out
-        "
-      >
-        {iconize(lang)}
-        <span
-          style="
-            text-shadow: -0.5px -0.5px 0 var(--color-gruvbox-dark0), 
-                          0.5px -0.5px 0 var(--color-gruvbox-dark0), 
-                         -0.5px 0.5px 0 var(--color-gruvbox-dark0), 
-                          0.5px 0.5px 0 var(--color-gruvbox-dark0);
-          "
-        >{lang}</span>
+  <div class="px-5 pb-5 grow flex flex-col justify-between">
+    <div>
+      <div class="pro-card_title">
+          <span class="text-gruvbox-bright-aqua text-2xl pl-1">
+            {icon}
+          </span> 
+        <span>{title}</span>
       </div>
-    {/each}
+
+      <div class="pro-card_info">
+        <span>󰗑</span>
+        <span>{license}</span>
+      </div>
+
+      <div class="text-[12px] pt-1 flex flex-row gap-2">
+        {#each os as i}
+          <span class="bg-gruvbox-dark2 px-2 rounded-xl">{iconize(i.split(' ')[0])} {i}</span>
+        {/each}
+      </div>
+
+      <div class="pro-card_description py-2 text-transparent bg-clip-text bg-linear-60 from-gruvbox-light2 to-gruvbox-light4 italic">
+        {description}
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2 text-sm">
+      <div class="flex flex-row flex-wrap gap-2 text-sm">
+        {#each mainLanguages as lang}
+          <div class="
+            inline-flex items-center gap-2 px-2 rounded-xl
+            text-sm text-gruvbox-light0
+            {colorize(lang)}
+            bg-size-[150%_150%]
+            bg-left
+            group-hover:bg-right
+            transition-all duration-700 ease-out
+            "
+          >
+            {iconize(lang)}
+            <span
+              style="
+                text-shadow: -0.5px -0.5px 0 var(--color-gruvbox-dark0), 
+                              0.5px -0.5px 0 var(--color-gruvbox-dark0), 
+                             -0.5px 0.5px 0 var(--color-gruvbox-dark0), 
+                              0.5px 0.5px 0 var(--color-gruvbox-dark0);
+              "
+            >{lang}</span>
+          </div>
+        {/each}
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-2 pt-2">
+      {#if linkCodeberg}
+        <a class="block w-full bg-[#4794CC] text-gruvbox-light1 px-2 py-1 text-center rounded-md 
+          hover:scale-[101%] hover:bg-gruvbox-dark1 hover:text-[#4794CC] border-2 border-[#4794CC]" href="{linkCodeberg}" target="_blank">
+          <span class="text-xl"></span>
+          <span class="font-bold">Codeberg</span>
+        </a>
+      {/if}
+      {#if linkGithub}
+        <a class="block w-full bg-gruvbox-dark1 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
+          hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-gruvbox-dark0 border-2 border-gruvbox-dark1" href="{linkGithub}" target="_blank">
+          <span class="text-xl"></span>
+          <span>GitHub</span>
+        </a>
+      {/if}
+      </div>
+    </div>
   </div>
-</a>
+</dev>
 
 <style>
   code, .badge {
@@ -221,7 +239,7 @@ export function iconize(thing: string) {
   .pro-card {
     background: var(--color-gruvbox-dark0);
     border: 1px solid var(--color-gruvbox-orange);
-    padding: 1em;
+    /* padding: 1em; */
   }
   .pro-card_title {
     font-size: 20px;
@@ -236,14 +254,5 @@ export function iconize(thing: string) {
     font-size: 12px;
     overflow: hidden;
     font-display: block;
-  }
-  a {
-    color: var(--color-gruvbox-light3);
-  }
-  a:hover {
-    text-decoration: none;
-    box-shadow: 0px 0px 20px var(--color-gruvbox-bright-red);
-    scale: 101%;
-    translate: 0px -3px;
   }
 </style>

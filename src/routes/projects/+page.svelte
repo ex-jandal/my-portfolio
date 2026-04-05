@@ -1,14 +1,22 @@
 <script lang="ts">
 	import { blur, slide } from 'svelte/transition';
 	import ProjectCard from '../../compunentes/project-card.svelte';
+  import PG_showcase from '../../lib/assets/project_showcase/PG_chatting_app.png'
+  import qd_showcase from '../../lib/assets/project_showcase/qd_knowledge_manager.png'
+  import psg_showcase from '../../lib/assets/project_showcase/proxy_security_gaurid.png'
+  import radium_showcase from '../../lib/assets/project_showcase/radium_shell.png'
+  import karkadeh_showcase from '../../lib/assets/project_showcase/karka_deh.png'
+  import file_veiwer_showcase from '../../lib/assets/project_showcase/file_viewer.png'
+  import whatsdown_showcase from '../../lib/assets/project_showcase/whatsdown.png'
 
   interface Projects {
     title: string,
+    icon?: string,
     description: string,
     license: string,
-    link: string,
-    isLocal: boolean,
-    isGithub: boolean,
+    showcase?: string,
+    linkCodeberg?: string,
+    linkGithub?: string,
     mainLanguages: string[],
     os: string[]
   }
@@ -16,71 +24,77 @@
   let projects: Projects[] = [
     {
       title: "Pretty-Good Chatting App",
+      icon: "󱅰",
       description: 'The real-time chat experience you\'ve been waiting for. Fast, secure, and built with the modern stack for people who value speed.',
       license: "MIT license",
-      link: "https://codeberg.org/ex-jandal/pg-chatting-app",
-      isLocal: false,
-      isGithub: false,
+      showcase: PG_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/pg-chatting-app",
+      linkGithub: "https://github.com/ex-jandal/PG-chatting-app",
       mainLanguages: ['Laravel', 'Svelte', 'PHP', 'TypeScript', 'MariaDB'],
       os: ['Web', 'Any OS']
     },
     {
       title: "Karka-Deh",
+      icon: "󰆪",
       description: 'It is a simple, modern blog for sharing thoughts, tutorials, and technical writings.',
       license: "GPL-3.0 license",
-      link: "https://github.com/ex-jandal/karka-deh",
-      isLocal: false,
-      isGithub: true,
+      showcase: karkadeh_showcase,
+      linkGithub: "https://github.com/ex-jandal/karka-deh",
       mainLanguages: ['Spring Boot', 'Vue', 'Java', 'TypeScript', 'Postgres', 'Docker'],
       os: ['Web', 'Any OS'],
     },
     {
       title: "QD Knowledge Manager",
+      icon: "",
       description: 'It is a Markdown editor and knowledge management tool that helps users capture ideas, manage notes, and generate concise summaries from YouTube videos using AI.',
       license: "MIT license",
-      link: "https://codeberg.org/ex-jandal/qd-knowledge-manager",
-      isLocal: false,
-      isGithub: false,
+      showcase: qd_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/qd-knowledge-manager",
+      linkGithub: "https://github.com/ex-jandal/qd-knowledge-manager",
       mainLanguages: ['Blazor', 'CSharp','JavaScript'],
       os: ['Linux', '.Net v10', 'Web'],
     },
     {
       title: "Proxy-Security-Guard",
+      icon: "󰒄",
       description: 'A high-performance, security-focused proxy server built in Rust.',
       license: "MIT license",
-      link: "https://codeberg.org/ex-jandal/proxy-security-guard",
-      isLocal: false,
-      isGithub: false,
+      showcase: psg_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/proxy-security-guard",
+      linkGithub: "https://github.com/ex-jandal/proxy-security-guard",
       mainLanguages: ['Axum', 'Tokio', 'Rust', 'Ed25519', 'Sha2', 'Clap', 'Tracing'],
       os: ['Linux', 'MacOS', 'Windows'],
     },
     {
       title: "Radium-Shell-rs",
+      icon: "",
       description: 'Specialized terminal-based command manager and execution environment built in Rust.',
       license: "GPL-3.0 license",
-      link: "https://codeberg.org/ex-jandal/radium-shell-rs",
-      isLocal: false,
-      isGithub: false,
+      showcase: radium_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/radium-shell-rs",
+      linkGithub: "https://github.com/ex-jandal/radium-shell-rs",
       mainLanguages: ['Rust', 'Ratatui'],
       os: ['Linux', 'MacOS'],
     },
     {
       title: "File Viewer",
+      icon: "",
       description: 'Simple file viewer implemented in x86-64 assembly language, designed specifically for Linux. It demonstrates the use of Linux system calls for basic file I/O operations.',
       license: "MIT license",
-      link: "https://codeberg.org/ex-jandal/file-viewer-asm",
-      isLocal: false,
-      isGithub: false,
+      showcase: file_veiwer_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/file-viewer-asm",
+      linkGithub: "https://github.com/ex-jandal/file-viewer-asm",
       mainLanguages: ['Assembly'],
       os: ['Linux'],
     },
     {
       title: "Whatsdown",
+      icon: "󰴽",
       description: 'It is a pretty powerful, lightweight, LAN-based CLI messaging app built with Python.',
       license: "MIT license",
-      link: "https://codeberg.org/ex-jandal/whatsdown",
-      isLocal: false,
-      isGithub: false,
+      showcase: whatsdown_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/whatsdown",
+      linkGithub: "https://github.com/ex-jandal/whatsdown",
       mainLanguages: ['Python'],
       os: ['Any OS'],
     },
