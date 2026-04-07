@@ -8,6 +8,7 @@
   import karkadeh_showcase from '../../lib/assets/project_showcase/karka_deh.png'
   import file_veiwer_showcase from '../../lib/assets/project_showcase/file_viewer.png'
   import whatsdown_showcase from '../../lib/assets/project_showcase/whatsdown.png'
+  import android_emu_showcase from '../../lib/assets/project_showcase/android_emu_selector.png'
 
   interface Projects {
     title: string,
@@ -86,6 +87,17 @@
       linkCodeberg: "https://codeberg.org/ex-jandal/file-viewer-asm",
       linkGithub: "https://github.com/ex-jandal/file-viewer-asm",
       mainLanguages: ['Assembly'],
+      os: ['Linux'],
+    },
+    {
+      title: "Android Emulator Selector",
+      icon: "󱜧",
+      description: 'A lightweight Python script to quickly select and launch Android Virtual Devices (AVDs) from your terminal with a beautiful interactive UI.',
+      license: "MIT license",
+      showcase: android_emu_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/android_emu_selector",
+      linkGithub: "https://github.com/ex-jandal/android_emu_selector",
+      mainLanguages: ['Python', 'Rich'],
       os: ['Linux'],
     },
     {

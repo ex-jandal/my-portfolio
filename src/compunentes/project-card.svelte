@@ -50,6 +50,7 @@ export const COLORS: Record<string, string> = {
   Blazor: 'from-purple-500 via-indigo-600 to-blue-700',
   '.NET': 'from-purple-500 via-purple-600 to-indigo-700',
   Ratatui: 'from-zinc-400 via-zinc-500 to-gray-200',
+  Rich: 'from-zinc-400 via-zinc-500 to-gray-200',
 
   /* ───── Databases ───── */
   Postgres: 'from-blue-400 via-blue-500 to-indigo-600',
@@ -116,6 +117,7 @@ export const ICONS: Record<string, string> = {
   Blazor: '',
   '.NET': '',
   Ratatui: '',
+  Rich: '',
 
   Postgres: '',
   MySQL: '',
