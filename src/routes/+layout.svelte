@@ -9,6 +9,8 @@
   let menu_clecked = $state(false);
 
   let { children } = $props();
+
+
 </script>
 
 <svelte:head>
@@ -69,33 +71,33 @@
       <div class="flex flex-row items-center gap-2"></div>
     </nav>
   </header>
-  <dev class="px-2 sm:px-10 sm:m-5 py-5 m-2 rounded-sm bg-gruvbox-dark1 flex flex-col gap-2">
-    <table class="table-caption">
-      <tbody>
-        <tr>
-          <td class="pl-5 sm:pl-4 text-gruvbox-bright-red text-3xl sm:text-5xl translate-y-4"> </td>
-          <td class='pl-5 sm:pl-10 text-3xl sm:text-3xl'>Warnning:</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td class="pl-5 sm:pl-10"> 
-            <span class="text-gruvbox-bright-green text-right">
-              
-            </span>
-            Android Will be Locked
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="px-5 italic text-xs sm:text-sm">
-      Starting in September 2026, Android will require all apps to be registered by verified developers in order to be installed on certified Android devices.
-    </p>
-    <a 
-      class="block w-full rounded-sm border-2 border-gruvbox-red p-2 mt-2 bg-gruvbox-dark3 text-gruvbox-light0 text-center hover:bg-gruvbox-bright-red hover:text-gruvbox-light0"
-      href="https://keepandroidopen.org/"
-      target="_blank"
-    >Learn More</a>
-  </dev>
+  <!-- <dev class="px-2 sm:px-10 sm:m-5 py-5 m-2 rounded-sm bg-gruvbox-dark1 flex flex-col gap-2"> -->
+  <!--   <table class="table-caption"> -->
+  <!--     <tbody> -->
+  <!--       <tr> -->
+  <!--         <td class="pl-5 sm:pl-4 text-gruvbox-bright-red text-3xl sm:text-5xl translate-y-4"> </td> -->
+  <!--         <td class='pl-5 sm:pl-10 text-3xl sm:text-3xl'>Warnning:</td> -->
+  <!--       </tr> -->
+  <!--       <tr> -->
+  <!--         <td></td> -->
+  <!--         <td class="pl-5 sm:pl-10">  -->
+  <!--           <span class="text-gruvbox-bright-green text-right"> -->
+  <!--              -->
+  <!--           </span> -->
+  <!--           Android Will be Locked -->
+  <!--         </td> -->
+  <!--       </tr> -->
+  <!--     </tbody> -->
+  <!--   </table> -->
+  <!--   <p class="px-5 italic text-xs sm:text-sm"> -->
+  <!--     Starting in September 2026, Android will require all apps to be registered by verified developers in order to be installed on certified Android devices. -->
+  <!--   </p> -->
+  <!--   <a  -->
+  <!--     class="block w-full rounded-sm border-2 border-gruvbox-red p-2 mt-2 bg-gruvbox-dark3 text-gruvbox-light0 text-center hover:bg-gruvbox-bright-red hover:text-gruvbox-light0" -->
+  <!--     href="https://keepandroidopen.org/" -->
+  <!--     target="_blank" -->
+  <!--   >Learn More</a> -->
+  <!-- </dev> -->
 
   <main class="m-2 sm:m-5 mt-0 p-2 sm:p-5 bg-gruvbox-dark1 rounded-sm">
     {@render children()}
@@ -111,7 +113,10 @@
       </a>
     {/each}
   </div>
+
+  <script src="https://keepandroidopen.org/banner.js"></script>
 </div>
+
 
 <style>
 a:hover {
