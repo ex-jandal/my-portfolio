@@ -1,11 +1,15 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
+	import { blur, slide } from 'svelte/transition';
   import emailjs from '@emailjs/browser';
+	import { SpenerConfig, SpenerKey } from './types';
 	import { 
     PUBLIC_EMAILJS_PUBLIC_KEY, 
     PUBLIC_EMAILJS_SERVICE_ID, 
     PUBLIC_EMAILJS_TEMPLATE_ID 
   } from '$env/static/public';
+
+  let spenerStatus: SpenerKey = $state(SpenerKey.Hide);
+  let spenerConfig = $derived(SpenerConfig[spenerStatus]);
 
   let name: string = $state("");
   let email: string = $state("");
@@ -41,6 +45,7 @@
   });
 
   const sendEmail = async () => {
+    spenerStatus = SpenerKey.Show;
     let date = new Date();
     let formatedDate = `${date.toLocaleString()} - ${date.toTimeString().split(' ').slice(1).join(' ')}`;
 
@@ -59,9 +64,20 @@
       time = undefined;
     }
     console.log("respone is: ", respone.status, respone.text);
+    spenerStatus = SpenerKey.Hide;
   };
 
 </script>
+
+{#key spenerStatus}
+  <div out:blur={{ duration: 400 }} in:blur={{ duration: 400, delay: 400 }} class="fixed top-0 left-0 h-full w-full z-40 {spenerConfig.displayProp} flex-col gap-4 justify-center items-center backdrop-brightness-50 backdrop-blur-sm">
+    <div class="animate-spin [animation-direction:reverse] flex justify-center items-center duration-200 text-gruvbox-aqua text-5xl">
+    <span class="-translate-y-0.5">
+     󱍸     
+    </span>
+    </div>
+  </div>
+{/key}
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
   <h2 class="frist-h2"><span class="icon"></span> Connect</h2>
