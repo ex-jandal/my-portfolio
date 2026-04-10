@@ -103,7 +103,7 @@
       <input bind:value={name} class="block pl-10 w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="text" placeholder="Name" required />
     </div>
     <div class="relative">
-      <span class="absolute top-2 left-4">󰇮</span>
+      <span class="absolute top-2 left-4"></span>
       <input bind:value={email} class="block pl-10 w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="email" placeholder="Email" required />
     </div>
     <div class="relative">
