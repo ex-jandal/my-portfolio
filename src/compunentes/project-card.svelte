@@ -153,11 +153,11 @@ export function iconize(thing: string) {
 </script>
 
 <dev class="pro-card group rounded-sm flex flex-col gap-4 
-            justify-baseline shadow-md hover:shadow-gruvbox-bright-red
+            justify-baseline shadow-lg hover:shadow-gruvbox-bright-red
             duration-300"
 >
   <div class="relative h-40 w-full overflow-hidden flex justify-center align-middle items-baseline rounded-md">
-    <img class="z-10 scale-105" src="{showcase}" alt=""/>
+    <img class="z-10 scale-105 group-hover:scale-110 duration-300" src="{showcase}" alt=""/>
     <span class="absolute text-gruvbox-light4 text-9xl">󰲍</span>
   </div>
 

@@ -1,19 +1,8 @@
 <script lang="ts">
-import { slide, blur } from "svelte/transition";
+import { slide } from "svelte/transition";
 import tmux_nvim_showcase from "$lib/assets/tmux-nvim-showcase.png";
 import rofi_showcase from "$lib/assets/rofi-showcase.png";
 </script>
-  <style>
-    .features li {
-      margin-bottom: 0.75rem;
-      padding: 0.75rem 1rem;
-      list-style: none;
-    }
-
-    .lastly strong {
-      color: var(--color-gruvbox-yellow);
-    }
-  </style>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
   <section class="hero">
@@ -27,20 +16,20 @@ import rofi_showcase from "$lib/assets/rofi-showcase.png";
     <img class="mt-4 rounded-sm border border-gruvbox-aqua" src="{rofi_showcase}" alt="tmux + nvim showcase"/>
   </section>
 
-  <section>
+  <section class="stack">
     <h2><span class="icon"></span> Stack</h2>
-    <div class="my-grid">
-      <div class="card"><span class="icon"></span> Arch Linux</div>
-      <div class="card"><span class="icon">󱘆</span> Niri (Wayland)</div>
-      <div class="card"><span class="icon"></span> Fish Shell</div>
-      <div class="card"><span class="icon"></span> Neovim</div>
-      <div class="card"><span class="icon"></span> Waybar</div>
-      <div class="card"><span class="icon">󰎟</span> Mako</div>
-      <div class="card"><span class="icon">󱓞</span> Rofi</div>
-      <div class="card"><span class="icon"></span> Tmux</div>
-      <div class="card"><span class="icon"></span> Gruvbox Hard</div>
-      <div class="card"><span class="icon"></span> CaskaydiaCove Nerd Font</div>
-    </div>
+    <ul class="my-grid">
+      <li class="card"><span class="icon"></span> Arch Linux</li>
+      <li class="card"><span class="icon">󱘆</span> Niri (Wayland)</li>
+      <li class="card"><span class="icon"></span> Fish Shell</li>
+      <li class="card"><span class="icon"></span> Neovim</li>
+      <li class="card"><span class="icon"></span> Waybar</li>
+      <li class="card"><span class="icon">󰎟</span> Mako</li>
+      <li class="card"><span class="icon">󱓞</span> Rofi</li>
+      <li class="card"><span class="icon"></span> Tmux</li>
+      <li class="card"><span class="icon"></span> Gruvbox Hard</li>
+      <li class="card"><span class="icon"></span> CaskaydiaCove Nerd Font</li>
+    </ul>
   </section>
 
   <section class="features">
@@ -109,3 +98,18 @@ import rofi_showcase from "$lib/assets/rofi-showcase.png";
     <a href="https://codeberg.org/ex-jandal/my-dots" target="_blank"><span class="icon"></span>Codeberg/my-dots</a>
   </div>
 </div>
+
+<style>
+  .features li {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    list-style: none;
+  }
+  .stack li {
+    list-style: none;
+  }
+
+  .lastly strong {
+    color: var(--color-gruvbox-yellow);
+  }
+</style>
