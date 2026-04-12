@@ -46,6 +46,9 @@
 
   <link rel="icon" href={favicon} />
   <title>Abu Jandal - The humble servant of Allah</title>
+
+  <!-- <script src="https://keepandroidopen.org/banner.js"></script> -->
+  <script src="https://abu-jandal.netlify.app/scripts/keepandroidopen_banner.js"></script>
 </svelte:head>
 
 <div 
@@ -161,9 +164,7 @@
   <!--   {/each} -->
   <!-- </div> -->
   <!---->
-  <script src="https://keepandroidopen.org/banner.js"></script>
 </div>
-
 <style>
 a:hover {
   text-decoration: none;
