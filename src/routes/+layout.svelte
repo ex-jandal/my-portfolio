@@ -105,7 +105,7 @@
           </div>
         </div>
       </div>
-      <button class="cursor-pointer px-3 py-1 sm:mt-2 w-15 absolute top-10 md:relative md:top-0 flex flex-row self-end justify-between items-center bg-gruvbox-dark0 gap-1 rounded-full" dir="ltr" onclick={swapLang}>
+      <button class="cursor-pointer px-3 py-1 sm:mt-2 w-15 absolute bottom-1.75 md:relative md:top-0 flex flex-row self-end justify-between items-center bg-gruvbox-dark0 gap-1 rounded-full" dir="ltr" onclick={swapLang}>
         {#key currentLang}
           <div class="absolute {(currentLang == 'ar') ? 'right-px' : 'left-px'} bg-gruvbox-orange  text-gruvbox-light0 leading-0 w-7 h-7 scale-125 text-center flex justify-center items-center rounded-full">
             
