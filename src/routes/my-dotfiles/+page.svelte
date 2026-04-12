@@ -15,7 +15,7 @@
     <p class="comment">&af; {m["my-dots.quote"]()}</p>
 
     <video class="mt-4 rounded-sm border border-gruvbox-aqua" autoplay loop>
-      <source src="https://github.com/user-attachments/assets/0ce09895-6bb8-44ed-a365-dd4656c52949">
+      <source src="https://abu-jandal.netlify.app/videos/my-dots_showcase.mp4">
     </video>
     <img class="mt-4 rounded-sm border border-gruvbox-aqua" src="{tmux_nvim_showcase}" alt="tmux + nvim showcase"/>
     <img class="mt-4 rounded-sm border border-gruvbox-aqua" src="{rofi_showcase}" alt="tmux + nvim showcase"/>
