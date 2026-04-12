@@ -113,8 +113,8 @@
             
           </div>
         {/key}
-        <div class="flex">ع</div>
         <div class="flex">E</div>
+        <div class="flex">ع</div>
       </button>
     </nav>
   </header>
