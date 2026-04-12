@@ -8,6 +8,7 @@
 
   import { setLocale, getLocale } from "$lib/paraglide/runtime.js";
   import * as m from '$lib/paraglide/messages';
+	import { PUBLIC_URL } from '$env/static/public';
 
   let currentLang = $state(getLocale());
 
@@ -31,7 +32,7 @@
 </script>
 
 <svelte:head>
-  <meta property="og:image" content="https://abu-jandal.netlify.app/images/me-preview.jpg">
+  <meta property="og:image" content="{PUBLIC_URL}/images/me-preview.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="me.abujandal.qzz.io">
   <meta property="og:description" content="Cybersecurity • Arch Linux • Rustaceans">
@@ -42,13 +43,13 @@
   <meta property="twitter:url" content="https://me.abujandal.qzz.io">
   <meta name="twitter:title" content="Abu Jandal - The humble servant of Allah">
   <meta name="twitter:description" content="Cybersecurity • Arch Linux • Rustaceans">
-  <meta name="twitter:image" content="https://abu-jandal.netlify.app/images/me-preview.jpg">
+  <meta name="twitter:image" content="{PUBLIC_URL}/images/me-preview.jpg">
 
   <link rel="icon" href={favicon} />
   <title>Abu Jandal - The humble servant of Allah</title>
 
   <!-- <script src="https://keepandroidopen.org/banner.js"></script> -->
-  <script src="https://abu-jandal.netlify.app/scripts/keepandroidopen_banner.js"></script>
+  <script src="{PUBLIC_URL}/scripts/keepandroidopen_banner.js"></script>
 </svelte:head>
 
 <div 

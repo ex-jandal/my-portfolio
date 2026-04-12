@@ -3,6 +3,7 @@
   import tmux_nvim_showcase from "$lib/assets/tmux-nvim-showcase.png";
   import rofi_showcase from "$lib/assets/rofi-showcase.png";
   import * as m from "$lib/paraglide/messages";
+	import { PUBLIC_URL } from '$env/static/public';
 
   let stack = m["my-dots.stack.list"]()
     .split(' ')
@@ -17,7 +18,7 @@
     <div class="relative flex justify-center items-center overflow-hidden mt-4 rounded-sm border border-gruvbox-aqua">
       <div class="absolute text-4xl text-gruvbox-bright-aqua"></div>
       <video class="w-full z-10" autoplay loop>
-        <source src="https://abu-jandal.netlify.app/videos/my-dots_showcase.mp4">
+        <source src="{PUBLIC_URL}/videos/my-dots_showcase.mp4">
       </video>
     </div>
 
