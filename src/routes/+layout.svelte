@@ -77,9 +77,9 @@
                   class="md:hidden relative scale-[80%] text-gruvbox-bright-blue hover:cursor-pointer bg-gruvbox-dark1 underline underline-offset-2 hover:opacity-100 transition-all duration-200 rounded-xl px-3 after:contect-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-gruvbox-bright-blue after:rounded-xl after:animate-ping">...{m['prompt_bar.clickable']()}</button>
 
                 {#if (menu_clecked.valueOf())}
-                  <button in:blur={{ duration: 400 }} out:blur={{ duration: 400 }} onclick={() => menu_clecked = false} class="fixed h-screen w-screen top-0 left-0 backdrop-blur-md backdrop-brightness-80">&af;
+                  <button in:blur={{ duration: 400 }} out:blur={{ duration: 400 }} onclick={() => menu_clecked = false} class="fixed h-screen w-screen top-0 {(currentLang == 'ar') ? 'right-0' : 'left-0'} backdrop-blur-md backdrop-brightness-80">&af;
                   </button>
-                    <button onclick={() => menu_clecked = false} in:slide={{ duration: 400 }} out:slide={{ duration: 400 }} class="absolute text-start w-40 top-8 left-0 bg-gruvbox-dark0 flex flex-col gap-3 items-baseline p-4 border border-gruvbox-orange rounded-sm">
+                    <button onclick={() => menu_clecked = false} in:slide={{ duration: 400 }} out:slide={{ duration: 400 }} class="absolute text-start w-40 top-8 {(currentLang == 'ar') ? 'right-0' : 'left-0'} bg-gruvbox-dark0 flex flex-col gap-3 items-baseline p-4 border border-gruvbox-orange rounded-sm">
                       <a class="block w-full rounded-xl px-2 py-0.5 {(page.url.pathname === '/') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/">{prompt_paths[0]}</a>
                       <a class="block w-full rounded-xl px-2 py-0.5 {(page.url.pathname === '/my-dotfiles') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/my-dotfiles">{prompt_paths[1]}</a>
                       <a class="block w-full rounded-xl px-2 py-0.5 {(page.url.pathname === '/projects') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/projects">{prompt_paths[2]}</a>
