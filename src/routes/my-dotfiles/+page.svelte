@@ -14,9 +14,13 @@
     <h2 class="frist-h2"><span class="icon">󰟃</span> {m["my-dots.title"]()}</h2>
     <p class="comment">&af; {m["my-dots.quote"]()}</p>
 
-    <video class="mt-4 rounded-sm border border-gruvbox-aqua" autoplay loop>
-      <source src="https://abu-jandal.netlify.app/videos/my-dots_showcase.mp4">
-    </video>
+    <div class="relative flex justify-center items-center overflow-hidden mt-4 rounded-sm border border-gruvbox-aqua">
+      <div class="absolute text-4xl text-gruvbox-bright-aqua"></div>
+      <video class="w-full z-10" autoplay loop>
+        <source src="https://abu-jandal.netlify.app/videos/my-dots_showcase.mp4">
+      </video>
+    </div>
+
     <img class="mt-4 rounded-sm border border-gruvbox-aqua" src="{tmux_nvim_showcase}" alt="tmux + nvim showcase"/>
     <img class="mt-4 rounded-sm border border-gruvbox-aqua" src="{rofi_showcase}" alt="tmux + nvim showcase"/>
   </section>
