@@ -48,8 +48,6 @@
   <link rel="icon" href={favicon} />
   <title>Abu Jandal - The humble servant of Allah</title>
 
-  <!-- <script src="https://keepandroidopen.org/banner.js"></script> -->
-  <script src="{PUBLIC_URL}/scripts/keepandroidopen_banner.js"></script>
 </svelte:head>
 
 <div 
@@ -156,6 +154,8 @@
       <p class="comment">&af; {m['footer.quote_1']()}</p>
       <p class="comment">&af; {m['footer.quote_2']()}</p>
     </footer>
+    <!-- <script src="https://keepandroidopen.org/banner.js"></script> -->
+    <script src="{PUBLIC_URL}/scripts/keepandroidopen_banner.js"></script>
   </main>
   <!-- <div style="display:none"> -->
   <!--   {#each locales as locale} -->
