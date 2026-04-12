@@ -54,10 +54,10 @@
   class="max-w-257 m-auto {(currentLang == 'ar') ? 'font-arabic' : 'font-main'}" 
   dir="{(currentLang === 'ar') ? 'rtl' : 'ltr'}"
 >
-  <header class="bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-sm">
+  <header class="sticky top-2 bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-sm">
     <nav class="relative flex flex-col md:flex-row md:justify-between md:items-center pl-2 pr-2 py-2">
       <div class="flex flex-row items-center gap-2">
-          <img src="{favicon256}" class="h-12 hidden sm:inline {(currentLang === 'ar' ? 'pl-2 border-l' : 'pr-2 border-r')} border-gruvbox-green" alt="">
+        <img src="{favicon256}" class="h-12 hidden sm:inline {(currentLang === 'ar' ? 'pl-2 border-l' : 'pr-2 border-r')} border-gruvbox-green" alt="">
         <!-- <h1>It's me. Abu_jandal </h1> -->
 
         <div class="text-md flex flex-col gap-1 py-1">
@@ -74,7 +74,7 @@
               <span class="text-gruvbox-bright-green">[</span>
               <div class="relative">
                 <button onclick={() => menu_clecked = true} 
-                  class="sm:hidden relative scale-[80%] text-gruvbox-bright-blue hover:cursor-pointer bg-gruvbox-dark1 underline underline-offset-2 hover:opacity-100 transition-all duration-200 rounded-xl px-3 after:contect-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-gruvbox-bright-blue after:rounded-xl after:animate-ping">...{m['prompt_bar.clickable']()}</button>
+                  class="md:hidden relative scale-[80%] text-gruvbox-bright-blue hover:cursor-pointer bg-gruvbox-dark1 underline underline-offset-2 hover:opacity-100 transition-all duration-200 rounded-xl px-3 after:contect-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-gruvbox-bright-blue after:rounded-xl after:animate-ping">...{m['prompt_bar.clickable']()}</button>
 
                 {#if (menu_clecked.valueOf())}
                   <button in:blur={{ duration: 400 }} out:blur={{ duration: 400 }} onclick={() => menu_clecked = false} class="fixed h-screen w-screen top-0 left-0 backdrop-blur-md backdrop-brightness-80">&af;
@@ -88,7 +88,7 @@
                 {/if}
               </div>
 
-              <div class="text-gruvbox-bright-blue hidden sm:flex flex-row gap-6">
+              <div class="text-gruvbox-bright-blue hidden md:flex flex-row gap-6">
                 <a class=" rounded-xl px-2 {(page.url.pathname === '/') ? 'bg-gruvbox-bright-blue text-gruvbox-dark0' : ''}" href="/">
                   {prompt_paths[0]}<span class="text-gruvbox-light2">{m['prompt_bar.sep']()}</span>
                 </a>
