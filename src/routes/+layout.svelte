@@ -54,7 +54,7 @@
   class="max-w-257 m-auto {(currentLang == 'ar') ? 'font-arabic' : 'font-main'}" 
   dir="{(currentLang === 'ar') ? 'rtl' : 'ltr'}"
 >
-  <header class="sticky top-2 bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-sm">
+  <header class="sticky z-20 top-2 bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-sm">
     <nav class="relative flex flex-col md:flex-row md:justify-between md:items-center pl-2 pr-2 py-2">
       <div class="flex flex-row items-center gap-2">
         <img src="{favicon256}" class="h-12 hidden sm:inline {(currentLang === 'ar' ? 'pl-2 border-l' : 'pr-2 border-r')} border-gruvbox-green" alt="">
