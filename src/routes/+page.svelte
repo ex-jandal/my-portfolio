@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Page from "./demo/+page.svelte";
-	import { blur, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
+  import * as m from '$lib/paraglide/messages';
+	import { getLocale } from '$lib/paraglide/runtime';
 
   let age: number | null = null;
 
@@ -13,14 +14,33 @@
     age--;
   }
 
+  let pro_langs = m["root.programming_langs.langs"]()
+    .split(' ')
+    .map((i) => i.replaceAll("_", " "));
+
+  let mark_langs = m["root.markup_langs.langs"]()
+    .split(' ')
+    .map((i) => i.replaceAll("_", " "));
+
+  let frames_front = m["root.frontend_frameworks.objects"]()
+    .split(' ')
+    .map((i) => i.replaceAll("_", " "));
+
+  let skills = m["root.skills.list"]()
+    .split(' ')
+    .map((i) => i.replaceAll("_", " "));
+
+  let environment = m["root.environment.list"]()
+    .split(' ')
+    .map((i) => i.replaceAll("_", " "));
 </script>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
-  <h1> Let's Fetch<span class="pl-1 text-gruvbox-gray text-[18px]"></span></h1>
+  <h1> {m['root.fetch.title']()} <span class="pl-1 text-gruvbox-gray text-[18px]"></span></h1>
 
-  <div class="bg-gruvbox-dark0 py-10 sm:px-0 sm:pr-50 px-5 flex sm:flex-row flex-col justify-evenly items-center rounded-sm">
-    <div class="sm:min-w-70 flex justify-center items-center">
-      <pre class="ascii-art text-[10px] tracking-[0.1em]">
+  <div class="bg-gruvbox-dark0 py-10 sm:px-0 {(getLocale() == 'ar') ? 'sm:pl-50' : 'sm:pr-50'} px-5 flex sm:flex-row flex-col justify-evenly items-center rounded-sm">
+    <div class="sm:min-w-70 flex justify-center items-center" dir="ltr">
+      <pre class="ascii-art text-[10px] tracking-widest">
                          ________
                         | ______o|
        _______________  ||__---_||
@@ -39,47 +59,47 @@
       </pre>
     </div>
     <div class="">
-      <div class="pl-1 mb-5 border-l-2 border-gruvbox-blue rounded-l-sm">
+      <div class="mb-5 border-gruvbox-blue {(getLocale() == 'ar') ? 'pr-1 border-r-2 rounded-r-sm' : 'pl-1 border-l-2 rounded-l-sm'}">
         <table>
           <tbody>
             <tr>
-              <td><span class="icon"></span> Name:</td>
-              <td> Sultan Majed</td>
+              <td><span class="icon"></span> {m['root.fetch.feild_1.name']()}:</td>
+              <td> {m['root.fetch.feild_1.value']()}</td>
             </tr>
             <tr>
-              <td><span class="icon">󰻗</span> Age:</td>
-              <td> {age} years old</td>
+              <td><span class="icon">󰻗</span> {m['root.fetch.feild_2.name']()}:</td>
+              <td> {age} {m['root.fetch.feild_2.value']()}</td>
             </tr>
             <tr>
-              <td><span class="icon"></span> Major:</td>
-              <td> Cybersecurity</td>
+              <td><span class="icon"></span> {m['root.fetch.feild_3.name']()}:</td>
+              <td> {m['root.fetch.feild_3.value']()}</td>
             </tr>
             <tr>
-              <td><span class="icon"></span> Langs:</td>
-              <td>en, ara</td>
+              <td><span class="icon"></span> {m['root.fetch.feild_4.name']()}:</td>
+              <td>{m['root.fetch.feild_4.value']()}</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="pl-1 border-l-2 border-gruvbox-blue rounded-l-sm">
+      <div class="border-gruvbox-blue {(getLocale() == 'ar') ? 'pr-1 border-r-2 rounded-r-sm' : 'pl-1 border-l-2 rounded-l-sm'}">
         <table>
           <tbody>
             <tr>
-              <td><span class="icon"></span> Distro:</td>
-              <td>Arch Linux</td>
+              <td><span class="icon"></span> {m['root.fetch.feild_5.name']()}:</td>
+              <td>{m['root.fetch.feild_5.value']()}</td>
             </tr>
             <tr>
-              <td><span class="icon"></span> WM:</td>
-              <td>Niri</td>
+              <td><span class="icon"></span> {m['root.fetch.feild_6.name']()}:</td>
+              <td>{m['root.fetch.feild_6.value']()}</td>
             </tr>
             <tr>
-              <td><span class="icon"></span> Shell:</td>
-              <td>Fish</td>
+              <td><span class="icon"></span> {m['root.fetch.feild_7.name']()}:</td>
+              <td>{m['root.fetch.feild_7.value']()}</td>
             </tr>
             <tr>
-              <td><span class="icon"></span> Term:</td>
-              <td>Kitty</td>
+              <td><span class="icon"></span> {m['root.fetch.feild_8.name']()}:</td>
+              <td>{m['root.fetch.feild_8.value']()}</td>
             </tr>
           </tbody>
         </table>
@@ -87,73 +107,69 @@
     </div>
   </div>
 
-  <h2><span class="icon">󰞋</span> About Me</h2>
+  <h2><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
   <p class="pl-2">
-    I'm a computer science student focused on <strong>cybersecurity</strong> and <strong>networking</strong>,
-    with a strong interest in low-level systems, Linux, and open‑source software.
-    I enjoy learning how things work under the hood — from memory management
-    to network protocols — and applying that knowledge in practical projects.
+  {m["root.about_me.text"]()}
   </p>
 
-  <h2><span class="icon"></span> Programming Languages</h2>
+  <h2><span class="icon"></span> {m["root.programming_langs.title"]()}</h2>
   <div class="my-grid">
-    <div class="card"><span class="icon"></span> Rust</div>
-    <div class="card"><span class="icon"></span> Zig (0.16)</div>
-    <div class="card"><span class="icon"></span> JavaScript</div>
-    <div class="card"><span class="icon"></span> TypeScript</div>
-    <div class="card"><span class="icon"></span> Lua</div>
-    <div class="card"><span class="icon"></span> Python</div>
-    <div class="card"><span class="icon"></span> PHP</div>
-    <div class="card"><span class="icon"></span> Java</div>
-    <div class="card"><span class="icon"></span> C#</div>
+    <div class="card"><span class="icon"></span> {pro_langs[0]}</div>
+    <div class="card"><span class="icon"></span> {pro_langs[1]}</div>
+    <div class="card"><span class="icon"></span> {pro_langs[2]}</div>
+    <div class="card"><span class="icon"></span> {pro_langs[3]}</div>
+    <div class="card"><span class="icon"></span> {pro_langs[4]}</div>
+    <div class="card"><span class="icon"></span> {pro_langs[5]}</div>
+    <div class="card"><span class="icon"></span> {pro_langs[6]}</div>
+    <div class="card"><span class="icon"></span> {pro_langs[7]}</div>
+    <div class="card"><span class="icon"></span> {pro_langs[8]}</div>
   </div>
 
-  <h2><span class="icon">󱥬</span> Markup Languages</h2>
+  <h2><span class="icon">󱥬</span> {m["root.markup_langs.title"]()}</h2>
   <div class="my-grid">
-    <div class="card"><span class="icon"></span> HTML & CSS</div>
-    <div class="card"><span class="icon"></span> Markdown</div>
-    <div class="card"><span class="icon"></span> LaTeX</div>
+    <div class="card"><span class="icon"></span> {mark_langs[0]}</div>
+    <div class="card"><span class="icon"></span> {mark_langs[1]}</div>
+    <div class="card"><span class="icon"></span> {mark_langs[2]}</div>
   </div>
 
-  <h2><span class="icon">󰏓</span> Frontend & Frameworks</h2>
+  <h2><span class="icon">󰏓</span> {m["root.frontend_frameworks.title"]()}</h2>
   <div class="my-grid">
-    <div class="card"><span class="icon"></span> Bun</div>
-    <div class="card"><span class="icon"></span> Svelte</div>
-    <div class="card"><span class="icon"></span> Vue.js</div>
-    <div class="card"><span class="icon"></span> Laravel</div>
-    <div class="card"><span class="icon"></span> Blazor</div>
+    <div class="card"><span class="icon"></span> {frames_front[0]}</div>
+    <div class="card"><span class="icon"></span> {frames_front[1]}</div>
+    <div class="card"><span class="icon"></span> {frames_front[2]}</div>
+    <div class="card"><span class="icon"></span> {frames_front[3]}</div>
+    <div class="card"><span class="icon"></span> {frames_front[4]}</div>
   </div>
 
-  <h2><span class="icon"></span>Skills</h2>
+  <h2><span class="icon"></span>{m["root.skills.title"]()}</h2>
   <div class="my-grid">
-    <div class="card"><span class="icon"></span> Git</div>
-    <div class="card"><span class="icon"></span> Docker</div>
-    <div class="card"><span class="icon"></span> Tailwindcss</div>
-    <div class="card"><span class="icon"></span> SQL</div>
-    <div class="card"><span class="icon"></span> SurrealDB</div>
+    <div class="card"><span class="icon"></span> {skills[0]}</div>
+    <div class="card"><span class="icon"></span> {skills[1]}</div>
+    <div class="card"><span class="icon"></span> {skills[2]}</div>
+    <div class="card"><span class="icon"></span> {skills[3]}</div>
+    <div class="card"><span class="icon"></span> {skills[4]}</div>
   </div>
 
-  <h2><span class="icon">󰌢</span> Cybersecurity & Networking</h2>
+  <h2><span class="icon">󰌢</span> {m["root.cybersecurity_networking.title"]()}</h2>
   <ul>
-    <li>Foundations of networking (IP, subnetting, routing)</li>
-    <li>Security principles and threat models</li>
-    <li>Interest in web penetration testing</li>
-    <li>Privacy & digital security research</li>
+    <li>{m["root.cybersecurity_networking.point_1"]()}</li>
+    <li>{m["root.cybersecurity_networking.point_2"]()}</li>
+    <li>{m["root.cybersecurity_networking.point_3"]()}</li>
+    <li>{m["root.cybersecurity_networking.point_4"]()}</li>
   </ul>
 
-  <h2><span class="icon">󰆍</span> Environment</h2>
+  <h2><span class="icon">󰆍</span> {m["root.environment.title"]()}</h2>
   <div class="my-grid">
-    <div class="card"><span class="icon"></span> Arch Linux</div>
-    <div class="card"><span class="icon">󱘆</span> Niri</div>
-    <div class="card"><span class="icon"></span> Neovim (NvChad)</div>
-    <div class="card"><span class="icon"></span> Tmux</div>
-    <div class="card"><span class="icon"></span> CaskaydiaCove (Nerd Font)</div>
+    <div class="card"><span class="icon"></span> {environment[0]}</div>
+    <div class="card"><span class="icon">󱘆</span> {environment[1]}</div>
+    <div class="card"><span class="icon"></span> {environment[2]}</div>
+    <div class="card"><span class="icon"></span> {environment[3]}</div>
+    <div class="card"><span class="icon"></span> {environment[4]}</div>
   </div>
 
-  <h2><span class="icon">󰧑</span> Philosophy</h2>
+  <h2><span class="icon">󰧑</span> {m["root.philosophy.title"]()}</h2>
+  {m["root.philosophy.text"]()}
   <p class="pl-2">
-    I believe in continuous learning (not thorw Youtube courses obviously ), simplicity, and building strong foundations.
-    I prefer tools that respect user freedom, transparency, and <strong>*performance</strong>.
   </p>
 </div>
 

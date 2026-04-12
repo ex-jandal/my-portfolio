@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { blur, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
+  import * as m from "$lib/paraglide/messages";
 	import ProjectCard from '../../compunentes/project-card.svelte';
   import PG_showcase from '../../lib/assets/project_showcase/PG_chatting_app.png'
   import qd_showcase from '../../lib/assets/project_showcase/qd_knowledge_manager.png'
@@ -118,8 +119,8 @@
 </style>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
-  <h2 class="frist-h2"><span class="icon"></span> Projects</h2>
-  <div class="grid md:grid-cols-2 grid-cols-1 mt-10 gap-4">
+  <h2 class="frist-h2"><span class="icon"></span> {m['projects.title']()}</h2>
+  <div class="grid md:grid-cols-2 grid-cols-1 mt-10 gap-4" dir="ltr">
     {#each projects as item}
       <ProjectCard {...item}/>
     {/each}

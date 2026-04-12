@@ -1,13 +1,18 @@
 <script lang="ts">
-import { slide } from "svelte/transition";
-import tmux_nvim_showcase from "$lib/assets/tmux-nvim-showcase.png";
-import rofi_showcase from "$lib/assets/rofi-showcase.png";
+  import { slide } from "svelte/transition";
+  import tmux_nvim_showcase from "$lib/assets/tmux-nvim-showcase.png";
+  import rofi_showcase from "$lib/assets/rofi-showcase.png";
+  import * as m from "$lib/paraglide/messages";
+
+  let stack = m["my-dots.stack.list"]()
+    .split(' ')
+    .map((i) => i.replaceAll("_", " "));
 </script>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
   <section class="hero">
-    <h2 class="frist-h2"><span class="icon">󰟃</span> Dotfiles</h2>
-    <p class="comment">// Minimal, productive, and aesthetic Arch Linux workflow</p>
+    <h2 class="frist-h2"><span class="icon">󰟃</span> {m["my-dots.title"]()}</h2>
+    <p class="comment">&af; {m["my-dots.quote"]()}</p>
 
     <video class="mt-4 rounded-sm border border-gruvbox-aqua" autoplay loop>
       <source src="https://github.com/user-attachments/assets/0ce09895-6bb8-44ed-a365-dd4656c52949">
@@ -17,35 +22,35 @@ import rofi_showcase from "$lib/assets/rofi-showcase.png";
   </section>
 
   <section class="stack">
-    <h2><span class="icon"></span> Stack</h2>
+    <h2><span class="icon"></span> {m["my-dots.stack.title"]()}</h2>
     <ul class="my-grid">
-      <li class="card"><span class="icon"></span> Arch Linux</li>
-      <li class="card"><span class="icon">󱘆</span> Niri (Wayland)</li>
-      <li class="card"><span class="icon"></span> Fish Shell</li>
-      <li class="card"><span class="icon"></span> Neovim</li>
-      <li class="card"><span class="icon"></span> Waybar</li>
-      <li class="card"><span class="icon">󰎟</span> Mako</li>
-      <li class="card"><span class="icon">󱓞</span> Rofi</li>
-      <li class="card"><span class="icon"></span> Tmux</li>
-      <li class="card"><span class="icon"></span> Gruvbox Hard</li>
-      <li class="card"><span class="icon"></span> CaskaydiaCove Nerd Font</li>
+      <li class="card"><span class="icon"></span> {stack[0]}</li>
+      <li class="card"><span class="icon">󱘆</span> {stack[1]}</li>
+      <li class="card"><span class="icon"></span> {stack[2]}</li>
+      <li class="card"><span class="icon"></span> {stack[3]}</li>
+      <li class="card"><span class="icon"></span> {stack[4]}</li>
+      <li class="card"><span class="icon">󰎟</span> {stack[5]}</li>
+      <li class="card"><span class="icon">󱓞</span> {stack[6]}</li>
+      <li class="card"><span class="icon"></span> {stack[7]}</li>
+      <li class="card"><span class="icon"></span> {stack[8]}</li>
+      <li class="card"><span class="icon"></span> {stack[9]}</li>
     </ul>
   </section>
 
   <section class="features">
-    <h2><span class="icon">󰛓</span> Features</h2>
+    <h2><span class="icon">󰛓</span> {m["my-dots.features.title"]()}</h2>
     <ul>
-      <li class="card"><span class="icon">󰧑</span> Keyboard-driven workflow (minimal mouse usage)</li>
-      <li class="card"><span class="icon"></span> Consistent Gruvbox theming across the system</li>
-      <li class="card"><span class="icon">󱐋</span> Fast startup & low resource usage</li>
-      <li class="card"><span class="icon"></span> Modular and clean configuration structure</li>
-      <li class="card"><span class="icon">󱠧</span> Integrated CLI prayer-time utilities (<a href="https://github.com/0xzer0x/go-pray">go-pray</a>)</li>
+      <li class="card"><span class="icon">󰧑</span> {m["my-dots.features.item_1"]()}</li>
+      <li class="card"><span class="icon"></span> {m["my-dots.features.item_2"]()}</li>
+      <li class="card"><span class="icon">󱐋</span> {m["my-dots.features.item_3"]()}</li>
+      <li class="card"><span class="icon"></span> {m["my-dots.features.item_4"]()}</li>
+      <li class="card"><span class="icon">󱠧</span> {m["my-dots.features.item_5.text"]()} (<a href="https://github.com/0xzer0x/go-pray">{m["my-dots.features.item_5.app_name"]()}</a>)</li>
     </ul>
   </section>
 
   <section>
-    <h2><span class="icon"></span> Repository Structure</h2>
-    <pre class="ascii-art bg-gruvbox-dark0 p-4 rounded-sm">
+    <h2><span class="icon"></span> {m["my-dots.repository_structure"]()}</h2>
+    <pre class="ascii-art bg-gruvbox-dark0 p-4 rounded-sm" dir="ltr">
 .
 ├── dot-config
 │   ├── alacritty
@@ -85,17 +90,16 @@ import rofi_showcase from "$lib/assets/rofi-showcase.png";
   </section>
 
   <section>
-    <h2><span class="icon">󰧑</span> Dots Philosophy</h2>
-    <div class="quote">
-      // "Simplicity is not the absence of complexity, but mastery over it."
-    </div>
+    <h2><span class="icon">󰧑</span> {m["my-dots.dots_philosophy.title"]()}</h2>
+    <div class="quote">&af; {m["my-dots.dots_philosophy.text"]()}</div>
   </section>
 
   <div class="lastly text-center text-gruvbox-gray border-t mt-5 pt-5 border-gruvbox-dark4">
-    <strong>Sultan Al-Salahi</strong><br>
-    Cybersecurity & Networking student<br>
-    Arch Linux • Niri • Neovim<br><br>
-    <a href="https://codeberg.org/ex-jandal/my-dots" target="_blank"><span class="icon"></span>Codeberg/my-dots</a>
+    <strong>{m["my-dots.footer.my_name"]()}</strong><br>
+    {m["my-dots.footer.feild"]()}<br>
+    {m["my-dots.footer.tools"]()}<br><br>
+    <a href="https://codeberg.org/ex-jandal/my-dots" target="_blank"><span class="icon"></span>Codeberg/my-dots</a><br/>
+    <a href="https://github.com/ex-jandal/my-dots" target="_blank"><span class="icon"></span>Github/my-dots</a>
   </div>
 </div>
 

@@ -2,6 +2,8 @@
 	import { blur, slide } from 'svelte/transition';
   import emailjs from '@emailjs/browser';
 	import { SpenerConfig, SpenerKey } from './types';
+  import * as m from "$lib/paraglide/messages";
+  import { getLocale } from "$lib/paraglide/runtime.js";
 	import { 
     PUBLIC_EMAILJS_PUBLIC_KEY, 
     PUBLIC_EMAILJS_SERVICE_ID, 
@@ -67,6 +69,13 @@
     spenerStatus = SpenerKey.Hide;
   };
 
+  let contact_list = m["contact.media.list"]()
+    .split(' ')
+    .map((i) => i.replaceAll("_", " "));
+
+  let message_feild = m["contact.send_message.feilds"]()
+    .split(' ')
+    .map((i) => i.replaceAll("_", " "));
 </script>
 
 {#key spenerStatus}
@@ -80,41 +89,41 @@
 {/key}
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
-  <h2 class="frist-h2"><span class="icon"></span> Connect</h2>
+  <h2 class="frist-h2"><span class="icon"></span> {m['contact.media.title']()}</h2>
 
   <div class="pl-2">
-    <p><span class="icon"></span> Codeberg: <a href="https://codeberg.org/ex-jandal" target="_blank">@ex-jandal</a></p>
-    <p><span class="icon"></span> Discord <a href="https://discord.com/users/884869855042490528" target="_blank">@ex.jandal</a></p>
-    <p><span class="icon"></span> Telegram <a href="https://t.me/ab0_jandal" target="_blank">@ab0_jandal</a></p>
-    <p><span class="icon"></span> GitHub: <a href="https://github.com/ex-jandal" target="_blank">@ex-jandal</a></p>
-    <p><span class="icon">󰇮</span> Email: <a href="mailto:sultan.majed@proton.me" target="_blank">sultan.majed@proton.me</a></p>
+    <p><span class="icon"></span> {contact_list[0]}: <a href="https://codeberg.org/ex-jandal" target="_blank">@ex-jandal</a></p>
+    <p><span class="icon"></span> {contact_list[1]}: <a href="https://discord.com/users/884869855042490528" target="_blank">@ex.jandal</a></p>
+    <p><span class="icon"></span> {contact_list[2]}: <a href="https://t.me/ab0_jandal" target="_blank">@ab0_jandal</a></p>
+    <p><span class="icon"></span> {contact_list[3]}: <a href="https://github.com/ex-jandal" target="_blank">@ex-jandal</a></p>
+    <p><span class="icon">󰇮</span> {contact_list[4]}: <a href="mailto:sultan.majed@proton.me" target="_blank">sultan.majed@proton.me</a></p>
     <!-- <p><span class="icon">󰏲</span> Phone: <a href="tel:+967782424366">+967 78-2424-366</a></p> -->
   </div>
   
-  <h2><span class="icon">󰍡</span> Send Me a Message</h2>
+  <h2><span class="icon">󰍡</span> {m['contact.send_message.title']()}</h2>
   {#if status == 200}
     <p class="p-4 my-4 text-center text-gruvbox-dark0 bg-gruvbox-bright-green border-2 border-gruvbox-dark0 rounded-lg">
-      Message sent successfully!
+      {m['contact.send_message.message_status']()}
     </p>
   {/if}
   <form class="p-4 flex flex-col gap-4 bg-gruvbox-dark0 rounded-lg" onsubmit={sendEmail}>
     <div class="relative">
-      <span class="absolute top-2 left-4"></span>
-      <input bind:value={name} class="block pl-10 w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="text" placeholder="Name" required />
+      <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}"></span>
+      <input bind:value={name} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="text" placeholder="{message_feild[0]}" required />
     </div>
     <div class="relative">
-      <span class="absolute top-2 left-4"></span>
-      <input bind:value={email} class="block pl-10 w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="email" placeholder="Email" required />
+      <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}"></span>
+      <input bind:value={email} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="email" placeholder="{message_feild[1]}" required />
     </div>
     <div class="relative">
-      <span class="absolute top-2 left-4">󰇮</span>
-      <input bind:value={title} class="block pl-10 w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="text" placeholder="Title" required />
+      <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}">󰇮</span>
+      <input bind:value={title} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="text" placeholder="{message_feild[2]}" required />
     </div>
     <div class="relative">
-      <span class="absolute top-3 left-4">󰍩</span>
-      <textarea bind:value={message} class="block pl-10 pt-3 w-full h-40 bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" placeholder="Message"></textarea>
+      <span class="absolute top-3 {(getLocale() == 'ar') ? 'right-4': 'left-4'}">󰍩</span>
+      <textarea bind:value={message} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} pt-3 w-full h-40 bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" placeholder="{message_feild[3]}"></textarea>
     </div>
-    <button class="bg-gruvbox-orange p-2 rounded-md" type="submit">Send</button>
+    <button class="bg-gruvbox-orange p-2 rounded-md" type="submit">{m['contact.send_message.button']()}</button>
   </form>
 </div>
 

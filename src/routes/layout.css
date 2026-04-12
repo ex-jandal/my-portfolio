@@ -3,6 +3,7 @@
 @plugin '@tailwindcss/typography';
 
 @import './CascidaCodeFont.css';
+@import './Rubik.css';
 
 body {
   background-color: var(--color-gruvbox-dark0);
@@ -108,8 +109,9 @@ footer {
 }
 
 @theme {
-  --default-font-family: 'CascidaCode', 'NerdIcons', monospace;
+  /* --default-font-family: 'CascidaCode', 'NerdIcons', monospace; */
   --font-main: 'CascidaCode', 'NerdIcons', monospace; /* CascidaCode font*/
+  --font-arabic: 'Rubik', 'NerdIcons';
   --font-icons: 'NerdIcons';
   /* Absolute Zero Backgrounds */
   /* --color-gruvbox-dark0: #000000; */

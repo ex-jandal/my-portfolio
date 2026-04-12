@@ -1,0 +1,130 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name} from en!",
+  "prompt_bar": {
+    "name": "abu_jandal",
+    "pages": "./ ./my-dots ./projects ./contact",
+    "sep": ",",
+    "clickable": "More"
+  },
+  "footer": {
+    "quote_1": "// \"Talk is cheap. Show me the code.\" — Linus Torvalds",
+    "quote_2": "// All wrongs reversed. 󱤹 Copyleft 2026."
+  },
+  "root": {
+    "fetch": {
+      "title": "Let's Fetch",
+      "feild_1": {
+        "name": "Name",
+        "value": "Sultan Majed"
+      },
+      "feild_2": {
+        "name": "Age",
+        "value": "years old"
+      },
+      "feild_3": {
+        "name": "Major",
+        "value": "Cybersecurity"
+      },
+      "feild_4": {
+        "name": "Langs",
+        "value": "en, ara"
+      },
+      "feild_5": {
+        "name": "Distro",
+        "value": "Arch Linux"
+      },
+      "feild_6": {
+        "name": "WM",
+        "value": "Niri"
+      },
+      "feild_7": {
+        "name": "Shell",
+        "value": "Fish"
+      },
+      "feild_8": {
+        "name": "Term",
+        "value": "Kitty"
+      }
+    },
+    "about_me": {
+      "title": "About Me",
+      "text": "I'm a computer science student focused on **cybersecurity** and **networking**, with a strong interest in low-level systems, Linux, and open‑source software. I enjoy learning how things work under the hood — from memory management to network protocols — and applying that knowledge in practical projects."
+    },
+    "programming_langs": {
+      "title": "Programming Languages",
+      "langs": "Rust Zig_(16.2) JavaScript TypeScript Lua Python PHP Java C#"
+    },
+    "markup_langs": {
+      "title": "Markup Lang",
+      "langs": "HTML_&_CSS Markdown LaTeX"
+    },
+    "frontend_frameworks": {
+      "title": "Frontend & Frameworks",
+      "objects": "Bun SvelteKit Vue.js Laravel Blazor"
+    },
+    "skills": {
+      "title": "Skills",
+      "list": "Git Docker Tailwindcss SQL SurrealDB"
+    },
+    "cybersecurity_networking": {
+      "title": "Cybersecurity & Networking",
+      "point_1": "Foundations of networking (IP, subnetting, routing)",
+      "point_2": "Security principles and threat models",
+      "point_3": "Interest in web penetration testing",
+      "point_4": "Privacy & digital security research"
+    },
+    "environment": {
+      "title": "Environment",
+      "list": "Arch_Linux Niri Neovim_(NvChad) Tmux CaskaydiaCove_(Nerd_Font)"
+    },
+    "philosophy": {
+      "title": "Philosophy",
+      "text": "I believe in continuous learning (not thorw Youtube courses obviously ), simplicity, and building strong foundations. I prefer tools that respect user freedom, transparency, and **\\*performance**."
+    }
+  },
+  "my-dots": {
+    "title": "Dotfiles",
+    "quote": "// Minimal, productive, and aesthetic Arch Linux workflow",
+    "stack": {
+      "title": "Stack",
+      "list": "Arch_Linux Niri_(Wayland) Fish_Shell Neovim Waybar Mako Rofi Tmux Gruvbox_Hard CaskaydiaCove_Nerd_Font"
+    },
+    "features": {
+      "title": "Features",
+      "item_1": "Keyboard-driven workflow (minimal mouse usage)",
+      "item_2": "Consistent Gruvbox theming across the system",
+      "item_3": "Fast startup & low resource usage",
+      "item_4": "Modular and clean configuration structure",
+      "item_5": {
+        "text": "Integrated CLI prayer-time utilities",
+        "app_name": "go-pray"
+      } 
+    },
+    "repository_structure": "Repository Structure",
+    "dots_philosophy": {
+      "title": "Dots Philosophy",
+      "text": "// \"Simplicity is not the absence of complexity, but mastery over it.\""
+    },
+    "footer": {
+      "my_name": "Sultan Al-Salahi",
+      "feild": "Cybersecurity & Networking student",
+      "tools": "Arch Linux • Niri • Neovim"
+    }
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "contact": {
+    "media": {
+      "title": "Connect",
+      "list": "Codeberg Discord Telegram Github Email"
+    },
+    "send_message": {
+      "title": "Send Me a Message",
+      "feilds": "Name Email Title Message",
+      "message_status": "Message sent successfully!",
+      "button": "Send"
+    }
+  }
+}
