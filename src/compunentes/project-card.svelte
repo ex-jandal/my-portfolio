@@ -1,155 +1,170 @@
 <script lang="ts">
-interface Props {
-  title: string,
-    icon?: string,
-  description: string,
-  license: string,
-  showcase?: string,
-  linkCodeberg?: string,
-  linkGithub?: string,
-  mainLanguages: string[],
-  os: string[],
-}
+  import * as m from "$lib/paraglide/messages";
 
-let {title, icon, description, license, showcase, linkCodeberg, linkGithub, mainLanguages, os}: Props = $props() ;
+  let platform = m["projects.platform"]()
+    .split(' ')
 
-export const COLORS: Record<string, string> = {
-  /* ───── Languages ───── */
-  JavaScript: 'from-yellow-500 via-yellow-600 to-yellow-700',
-  TypeScript: 'from-blue-500 via-blue-600 to-indigo-600',
-  Java: 'from-orange-400 via-orange-500 to-blue-800',
-  Python: 'from-blue-500 via-sky-500 to-yellow-400',
-  Rust: 'from-orange-600 via-orange-700 to-red-800',
-  Zig: 'from-yellow-500 via-amber-600 to-orange-600',
-  C: 'from-blue-600 to-blue-800',
-  Cpp: 'from-blue-500 to-indigo-700',
-  CSharp: 'from-purple-500 via-purple-600 to-indigo-600',
-  Go: 'from-cyan-500 via-sky-500 to-blue-600',
-  PHP: 'from-indigo-400 via-purple-500 to-purple-600',
-  Swift: 'from-rose-500 via-rose-600 to-red-700',
-  Assembly: 'from-[#8a6a1f] via-[#6e4c13] to-[#4b330c]',
+  interface Props {
+    title: string,
+      icon?: string,
+    description: string,
+    license: string,
+    showcase?: string,
+    linkCodeberg?: string,
+    linkGithub?: string,
+    mainLanguages: string[],
+    os: string[],
+  }
 
-  /* ───── Rust Stuff ───── */
-  Axum:    'from-orange-500 via-red-500 to-red-600',
-  Clap:    'from-orange-700 via-red-800 to-rose-900',
-  Tokio:   'from-amber-400 via-orange-500 to-orange-600',
-  Tracing: 'from-yellow-400 via-orange-400 to-red-500',
-  Ed25519: 'from-rose-600 via-red-700 to-orange-800',
-  Sha2:    'from-orange-400 via-rose-500 to-red-700',
+  let {
+    title, 
+    icon, 
+    description, 
+    license, 
+    showcase, 
+    linkCodeberg, 
+    linkGithub, 
+    mainLanguages, 
+    os
+  }: Props = $props() ;
 
-  /* ───── Frameworks ───── */
-  Svelte: 'from-orange-400 via-orange-500 to-red-600',
-  Vue: 'from-green-400 via-green-500 to-emerald-600',
-  React: 'from-cyan-400 via-sky-500 to-blue-500',
-  Angular: 'from-red-500 via-red-600 to-rose-700',
-  Laravel: 'from-red-400 via-orange-500 to-red-600',
-  'Spring Boot': 'from-green-500 via-emerald-600 to-teal-600',
-  Django: 'from-green-700 via-green-800 to-zinc-900',
-  Flask: 'from-gray-500 to-gray-700',
-  NodeJS: 'from-green-500 via-lime-500 to-emerald-600',
-  Blazor: 'from-purple-500 via-indigo-600 to-blue-700',
-  '.NET': 'from-purple-500 via-purple-600 to-indigo-700',
-  Ratatui: 'from-zinc-400 via-zinc-500 to-gray-200',
-  Rich: 'from-zinc-400 via-zinc-500 to-gray-200',
+  export const COLORS: Record<string, string> = {
+    /* ───── Languages ───── */
+    JavaScript: 'from-yellow-500 via-yellow-600 to-yellow-700',
+    TypeScript: 'from-blue-500 via-blue-600 to-indigo-600',
+    Java: 'from-orange-400 via-orange-500 to-blue-800',
+    Python: 'from-blue-500 via-sky-500 to-yellow-400',
+    Rust: 'from-orange-600 via-orange-700 to-red-800',
+    Zig: 'from-yellow-500 via-amber-600 to-orange-600',
+    C: 'from-blue-600 to-blue-800',
+    Cpp: 'from-blue-500 to-indigo-700',
+    CSharp: 'from-purple-500 via-purple-600 to-indigo-600',
+    Go: 'from-cyan-500 via-sky-500 to-blue-600',
+    PHP: 'from-indigo-400 via-purple-500 to-purple-600',
+    Swift: 'from-rose-500 via-rose-600 to-red-700',
+    Assembly: 'from-[#8a6a1f] via-[#6e4c13] to-[#4b330c]',
 
-  /* ───── Databases ───── */
-  Postgres: 'from-blue-400 via-blue-500 to-indigo-600',
-  MySQL: 'from-sky-500 via-blue-500 to-orange-500',
-  MariaDB: 'from-amber-400 via-orange-500 to-red-600',
-  MongoDB: 'from-green-500 via-green-600 to-emerald-700',
-  Redis: 'from-red-500 via-red-600 to-rose-700',
+    /* ───── Rust Stuff ───── */
+    Axum:    'from-orange-500 via-red-500 to-red-600',
+    Clap:    'from-orange-700 via-red-800 to-rose-900',
+    Tokio:   'from-amber-400 via-orange-500 to-orange-600',
+    Tracing: 'from-yellow-400 via-orange-400 to-red-500',
+    Ed25519: 'from-rose-600 via-red-700 to-orange-800',
+    Sha2:    'from-orange-400 via-rose-500 to-red-700',
 
-  /* ───── Cybersecurity Tools ───── */
-  Nmap: 'from-indigo-500 via-blue-600 to-cyan-600',
-  Metasploit: 'from-red-600 via-rose-700 to-zinc-900',
-  Burp: 'from-orange-500 via-amber-500 to-yellow-500',
-  Wireshark: 'from-sky-500 via-blue-600 to-indigo-700',
-  Hydra: 'from-red-700 via-red-800 to-black',
-  John: 'from-zinc-600 via-zinc-700 to-black',
+    /* ───── Frameworks ───── */
+    Svelte: 'from-orange-400 via-orange-500 to-red-600',
+    Vue: 'from-green-400 via-green-500 to-emerald-600',
+    React: 'from-cyan-400 via-sky-500 to-blue-500',
+    Angular: 'from-red-500 via-red-600 to-rose-700',
+    Laravel: 'from-red-400 via-orange-500 to-red-600',
+    'Spring Boot': 'from-green-500 via-emerald-600 to-teal-600',
+    Django: 'from-green-700 via-green-800 to-zinc-900',
+    Flask: 'from-gray-500 to-gray-700',
+    NodeJS: 'from-green-500 via-lime-500 to-emerald-600',
+    Blazor: 'from-purple-500 via-indigo-600 to-blue-700',
+    '.NET': 'from-purple-500 via-purple-600 to-indigo-700',
+    Ratatui: 'from-zinc-400 via-zinc-500 to-gray-200',
+    Rich: 'from-zinc-400 via-zinc-500 to-gray-200',
 
-  /* ───── DevOps / OS ───── */
-  Linux: 'from-zinc-700 via-zinc-800 to-black',
-  Docker: 'from-sky-400 via-sky-500 to-blue-600',
-  Kubernetes: 'from-blue-500 via-indigo-600 to-purple-700',
-  Git: 'from-orange-500 via-orange-600 to-red-600',
-  GitHub: 'from-zinc-700 via-zinc-800 to-black',
-};
+    /* ───── Databases ───── */
+    Postgres: 'from-blue-400 via-blue-500 to-indigo-600',
+    MySQL: 'from-sky-500 via-blue-500 to-orange-500',
+    MariaDB: 'from-amber-400 via-orange-500 to-red-600',
+    MongoDB: 'from-green-500 via-green-600 to-emerald-700',
+    Redis: 'from-red-500 via-red-600 to-rose-700',
 
-export function colorize(thing: string) {
-  return COLORS[thing]
-    ? `bg-gradient-to-tr ${COLORS[thing]}`
-    : '';
-}
+    /* ───── Cybersecurity Tools ───── */
+    Nmap: 'from-indigo-500 via-blue-600 to-cyan-600',
+    Metasploit: 'from-red-600 via-rose-700 to-zinc-900',
+    Burp: 'from-orange-500 via-amber-500 to-yellow-500',
+    Wireshark: 'from-sky-500 via-blue-600 to-indigo-700',
+    Hydra: 'from-red-700 via-red-800 to-black',
+    John: 'from-zinc-600 via-zinc-700 to-black',
 
-export const ICONS: Record<string, string> = {
-  JavaScript: '',
-  TypeScript: '󰛦',
-  Java: '',
-  Python: '',
-  Rust: '',
-  Zig: '',
-  C: '',
-  Cpp: '',
-  CSharp: '',
-  Go: '',
-  PHP: '󰌟',
-  Assembly: '',
+    /* ───── DevOps / OS ───── */
+    Linux: 'from-zinc-700 via-zinc-800 to-black',
+    Docker: 'from-sky-400 via-sky-500 to-blue-600',
+    Kubernetes: 'from-blue-500 via-indigo-600 to-purple-700',
+    Git: 'from-orange-500 via-orange-600 to-red-600',
+    GitHub: 'from-zinc-700 via-zinc-800 to-black',
+  };
 
-  /* ───── Rust Stuff ───── */
-  Axum:'󰒍',
-  Clap: '',
-  Tokio: '',
-  Tracing: '󰦨',
-  Tauri: '󰌹',
-  Ed25519: '󰌋',
-  Sha2: '󰈷',
+  export function colorize(thing: string) {
+    return COLORS[thing]
+      ? `bg-gradient-to-tr ${COLORS[thing]}`
+      : '';
+  }
 
-  Svelte: '',
-  Vue: '',
-  React: '',
-  Angular: '',
-  Laravel: '󰫐',
-  'Spring Boot': '',
-  Django: '',
-  Flask: '󰬠',
-  NodeJS: '',
-  Swift: '󰛥',
-  Blazor: '',
-  '.NET': '',
-  Ratatui: '',
-  Rich: '',
+  export const ICONS: Record<string, string> = {
+    JavaScript: '',
+    TypeScript: '󰛦',
+    Java: '',
+    Python: '',
+    Rust: '',
+    Zig: '',
+    C: '',
+    Cpp: '',
+    CSharp: '',
+    Go: '',
+    PHP: '󰌟',
+    Assembly: '',
 
-  Postgres: '',
-  MySQL: '',
-  MariaDB: '',
-  MongoDB: '',
-  Redis: '',
-  SQLlite: '',
+    /* ───── Rust Stuff ───── */
+    Axum:'󰒍',
+    Clap: '',
+    Tokio: '',
+    Tracing: '󰦨',
+    Tauri: '󰌹',
+    Ed25519: '󰌋',
+    Sha2: '󰈷',
 
-  /* Cybersecurity */
-  Nmap: '󰺮',
-  Metasploit: '󰯄',
-  Burp: '󰖟',
-  Wireshark: '󰁪',
-  Hydra: '',
-  John: '󰯂',
+    Svelte: '',
+    Vue: '',
+    React: '',
+    Angular: '',
+    Laravel: '󰫐',
+    'Spring Boot': '',
+    Django: '',
+    Flask: '󰬠',
+    NodeJS: '',
+    Swift: '󰛥',
+    Blazor: '',
+    '.NET': '',
+    Ratatui: '',
+    Rich: '',
 
-  Linux: '',
-  MacOS: '',
-  Windows: '󰨡',
-  Web: '󰖟',
-  ".Net": '',
-  Docker: '󰡨',
-  Kubernetes: '󱃾',
-  Git: '',
-  GitHub: '',
+    Postgres: '',
+    MySQL: '',
+    MariaDB: '',
+    MongoDB: '',
+    Redis: '',
+    SQLlite: '',
 
-  Any: '',
-};
+    /* Cybersecurity */
+    Nmap: '󰺮',
+    Metasploit: '󰯄',
+    Burp: '󰖟',
+    Wireshark: '󰁪',
+    Hydra: '',
+    John: '󰯂',
 
-export function iconize(thing: string) {
-  return ICONS[thing] ?? '';
-}
+    Linux: '',
+    MacOS: '',
+    Windows: '󰨡',
+    Web: '󰖟',
+    ".Net": '',
+    Docker: '󰡨',
+    Kubernetes: '󱃾',
+    Git: '',
+    GitHub: '',
+
+    Any: '',
+  };
+
+  export function iconize(thing: string) {
+    return ICONS[thing] ?? '';
+  }
 </script>
 
 <dev class="pro-card group rounded-sm flex flex-col gap-4 
@@ -216,14 +231,14 @@ export function iconize(thing: string) {
         <a class="block w-full bg-[#4794CC] text-gruvbox-light1 px-2 py-1 text-center rounded-md 
           hover:scale-[101%] hover:bg-gruvbox-dark1 hover:text-[#4794CC] border-2 border-[#4794CC]" href="{linkCodeberg}" target="_blank">
           <span class="text-xl"></span>
-          <span class="font-bold">Codeberg</span>
+          <span class="font-bold">{platform[0]}</span>
         </a>
       {/if}
       {#if linkGithub}
         <a class="block w-full bg-gruvbox-dark1 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
           hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-gruvbox-dark0 border-2 border-gruvbox-dark1" href="{linkGithub}" target="_blank">
           <span class="text-xl"></span>
-          <span>GitHub</span>
+          <span>{platform[1]}</span>
         </a>
       {/if}
       </div>

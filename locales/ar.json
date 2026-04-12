@@ -113,7 +113,8 @@
     }
   },
   "projects": {
-    "title": "المشاريع"
+    "title": "المشاريع",
+    "platform": "كودبيرج جيتهب"
   },
   "contact": {
     "media": {

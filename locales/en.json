@@ -113,7 +113,8 @@
     }
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "platform": "Codeberg Github"
   },
   "contact": {
     "media": {
