@@ -2,6 +2,7 @@
 	import { slide } from 'svelte/transition';
   import * as m from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
+  import SvelteMarkdown from 'svelte-markdown'
 
   let age: number | null = null;
 
@@ -109,7 +110,7 @@
 
   <h2><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
   <p class="pl-2">
-  {m["root.about_me.text"]()}
+    <SvelteMarkdown source={m["root.about_me.text"]()}/>
   </p>
 
   <h2><span class="icon"></span> {m["root.programming_langs.title"]()}</h2>
@@ -168,7 +169,7 @@
   </div>
 
   <h2><span class="icon">󰧑</span> {m["root.philosophy.title"]()}</h2>
-  {m["root.philosophy.text"]()}
+    <SvelteMarkdown source={m["root.philosophy.text"]()}/>
   <p class="pl-2">
   </p>
 </div>
