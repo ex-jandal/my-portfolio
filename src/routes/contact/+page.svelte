@@ -91,12 +91,53 @@
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
   <h2 class="frist-h2"><span class="icon"></span> {m['contact.media.title']()}</h2>
 
-  <div class="pl-2">
-    <p><span class="icon"></span> {contact_list[0]}: <a href="https://codeberg.org/ex-jandal" target="_blank">@ex-jandal</a></p>
-    <p><span class="icon"></span> {contact_list[1]}: <a href="https://discord.com/users/884869855042490528" target="_blank">@ex.jandal</a></p>
-    <p><span class="icon"></span> {contact_list[2]}: <a href="https://t.me/ab0_jandal" target="_blank">@ab0_jandal</a></p>
-    <p><span class="icon"></span> {contact_list[3]}: <a href="https://github.com/ex-jandal" target="_blank">@ex-jandal</a></p>
-    <p><span class="icon">󰇮</span> {contact_list[4]}: <a href="mailto:sultan.majed@proton.me" target="_blank">sultan.majed@proton.me</a></p>
+  <div class="pl-2 my-grid">
+    <a class=" bg-[#4794CC] text-gruvbox-light1 px-2 py-1 text-center rounded-md 
+      hover:scale-[101%] hover:bg-gruvbox-dark1 hover:text-[#4794CC] border-2 border-[#4794CC]" 
+      href="https://codeberg.org/ex-jandal" target="_blank">
+      <span class="text-xl"></span>
+      <span class="font-bold">{contact_list[0]}</span>
+    </a>
+
+    <a class="block w-full bg-gruvbox-dark0 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
+      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-gruvbox-dark0 border-2 border-gruvbox-dark0" 
+      href="https://github.com/ex-jandal" target="_blank">
+      <span class="text-xl"></span>
+      <span>{contact_list[3]}</span>
+    </a>
+
+    <a class="block w-full bg-purple-600 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
+      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-purple-600 border-2 border-purple-600" 
+      href="https://discord.com/users/884869855042490528" target="_blank">
+      <span class="text-xl"></span>
+      <span>{contact_list[1]}</span>
+    </a>
+
+    <a class="block w-full bg-blue-500 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
+      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-blue-500 border-2 border-blue-500" 
+      href="https://t.me/ab0_jandal" target="_blank">
+      <span class="text-xl"></span>
+      <span>{contact_list[2]}</span>
+    </a>
+
+    <a class="block w-full bg-purple-800 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
+      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-purple-800 border-2 border-purple-800" 
+      href="mailto:sultan.majed@proton.me" target="_blank">
+      <span class="text-xl">󰰙</span>
+      <span>{contact_list[4]}</span>
+    </a>
+
+    <a class="block w-full bg-gruvbox-red text-gruvbox-light1 px-2 py-1 text-center rounded-md 
+      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-gruvbox-red border-2 border-gruvbox-red" 
+      href="mailto:sultan.m.alsalahi@gmail.com" target="_blank">
+      <span class="text-xl">󰊫</span>
+      <span>{contact_list[5]}</span>
+    </a>
+    <!-- <p><span class="icon"></span> {contact_list[0]}: <a href="https://codeberg.org/ex-jandal" target="_blank">@ex-jandal</a></p> -->
+    <!-- <p><span class="icon"></span> {contact_list[1]}: <a href="https://discord.com/users/884869855042490528" target="_blank">@ex.jandal</a></p> -->
+    <!-- <p><span class="icon"></span> {contact_list[2]}: <a href="https://t.me/ab0_jandal" target="_blank">@ab0_jandal</a></p> -->
+    <!-- <p><span class="icon"></span> {contact_list[3]}: <a href="https://github.com/ex-jandal" target="_blank">@ex-jandal</a></p> -->
+    <!-- <p><span class="icon">󰇮</span> {contact_list[4]}: <a href="mailto:sultan.majed@proton.me" target="_blank">sultan.majed@proton.me</a></p> -->
     <!-- <p><span class="icon">󰏲</span> Phone: <a href="tel:+967782424366">+967 78-2424-366</a></p> -->
   </div>
   
@@ -131,8 +172,8 @@
   .frist-h2 {
     margin-top: 0;
   }
-  a {
-    color: var(--color-gruvbox-bright-blue);
-  }
+  /* a { */
+  /*   color: var(--color-gruvbox-bright-blue); */
+  /* } */
 </style>
 
