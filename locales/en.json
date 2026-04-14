@@ -53,7 +53,7 @@
     },
     "programming_langs": {
       "title": "Programming Languages",
-      "langs": "Rust Zig_(16.2) JavaScript TypeScript Lua Python PHP Java C#"
+      "langs": "Rust Zig_(16.0-dev) JavaScript TypeScript Lua Python PHP Java C#"
     },
     "markup_langs": {
       "title": "Markup Lang",
