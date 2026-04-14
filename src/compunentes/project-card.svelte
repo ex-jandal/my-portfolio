@@ -192,18 +192,18 @@
         <span>{license}</span>
       </div>
 
-      <div class="text-[12px] pt-1 flex flex-row gap-2">
+      <div class="text-[12px] pt-1 flex flex-row flex-wrap gap-2">
         {#each os as i}
           <span class="bg-gruvbox-dark2 px-2 rounded-xl">{iconize(i.split(' ')[0])} {i}</span>
         {/each}
       </div>
 
-      <div class="pro-card_description py-2 text-transparent bg-clip-text bg-linear-60 from-gruvbox-light2 to-gruvbox-light4 italic">
-        {description}
-      </div>
     </div>
 
     <div class="flex flex-col gap-2 text-sm">
+      <div class="pro-card_description py-2 text-transparent bg-clip-text bg-linear-60 from-gruvbox-light2 to-gruvbox-light4 italic">
+        {description}
+      </div>
       <div class="flex flex-row flex-wrap gap-2 text-sm">
         {#each mainLanguages as lang}
           <div class="
