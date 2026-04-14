@@ -152,6 +152,8 @@
     Linux: '',
     MacOS: '',
     Windows: '󰨡',
+    FreeBSD: '',
+    OpenBSD: '',
     Web: '󰖟',
     ".Net": '',
     Docker: '󰡨',

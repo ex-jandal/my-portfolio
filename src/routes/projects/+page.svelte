@@ -89,7 +89,7 @@
       linkCodeberg: "https://codeberg.org/ex-jandal/electro-sos",
       linkGithub: "https://github.com/ex-jandal/electro-sos",
       mainLanguages: ['Zig', 'C', 'Clap'],
-      os: ['Linux', 'MacOS', 'FreeBSD'],
+      os: ['Linux', 'MacOS', 'FreeBSD', 'OpenBSD'],
     },
     {
       title: "Android Emulator Selector",
