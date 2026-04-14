@@ -10,6 +10,7 @@
   import file_veiwer_showcase from '../../lib/assets/project_showcase/file_viewer.png'
   import whatsdown_showcase from '../../lib/assets/project_showcase/whatsdown.png'
   import android_emu_showcase from '../../lib/assets/project_showcase/android_emu_selector.png'
+  import electro_sos_showcase from '../../lib/assets/project_showcase/electro_sos.png';
 
   interface Projects {
     title: string,
@@ -78,6 +79,17 @@
       linkGithub: "https://github.com/ex-jandal/radium-shell-rs",
       mainLanguages: ['Rust', 'Ratatui'],
       os: ['Linux', 'MacOS'],
+    },
+    {
+      title: "Electro SOS ",
+      icon: "⏼",
+      description: 'static electricity warning system "It is just advanced stupidity :)"',
+      license: "MIT license",
+      showcase: electro_sos_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/electro-sos",
+      linkGithub: "https://github.com/ex-jandal/electro-sos",
+      mainLanguages: ['Zig', 'C', 'Clap'],
+      os: ['Linux', 'MacOS', 'FreeBSD'],
     },
     {
       title: "Android Emulator Selector",
