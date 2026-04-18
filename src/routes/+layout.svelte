@@ -3,8 +3,9 @@
   import { page } from '$app/state';
   // import { locales, localizeHref } from '$lib/paraglide/runtime';
   import './layout.css';
-  import favicon from '$lib/assets/favicon.svg';
-  import favicon256 from '../lib/assets/favicon256.png';
+  // import favicon from '$lib/assets/favicon.svg';
+  import aj_logo from '$lib/assets/AJ_brand.svg';
+  // import favicon256 from '../lib/assets/favicon256.png';
 
   import { setLocale, getLocale } from "$lib/paraglide/runtime.js";
   import * as m from '$lib/paraglide/messages';
@@ -45,7 +46,7 @@
   <meta name="twitter:description" content="Cybersecurity • Arch Linux • Rustaceans">
   <meta name="twitter:image" content="{PUBLIC_URL}/images/me-preview.jpg">
 
-  <link rel="icon" href={favicon} />
+  <link rel="icon" href={aj_logo} />
   <title>Abu Jandal - The humble servant of Allah</title>
 
 </svelte:head>
@@ -57,7 +58,7 @@
   <header class="sticky z-20 top-2 bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-sm">
     <nav class="relative flex flex-col md:flex-row md:justify-between md:items-center pl-2 pr-2 py-2">
       <div class="flex flex-row items-center gap-2">
-        <img src="{favicon256}" class="h-12 hidden sm:inline {(currentLang === 'ar' ? 'pl-2 border-l' : 'pr-2 border-r')} border-gruvbox-green" alt="">
+        <img src="{aj_logo}" class="h-12 scale-110 hidden sm:inline {(currentLang === 'ar' ? 'pl-2 border-l' : 'pr-2 border-r')} border-gruvbox-green" alt="">
         <!-- <h1>It's me. Abu_jandal </h1> -->
 
         <div class="text-md flex flex-col gap-1 py-1">
@@ -68,7 +69,7 @@
           </div>
 
           <div class="ml-4 flex flex-row">
-            <img src="{favicon256}" class="h-6 inline sm:hidden {(currentLang === 'ar' ? 'pl-2 ml-2 border-l' : 'pr-2 mr-2 border-r')} border-gruvbox-green" alt="">
+            <img src="{aj_logo}" class="h-6 inline sm:hidden {(currentLang === 'ar' ? 'pl-2 ml-2 border-l' : 'pr-2 mr-2 border-r')} border-gruvbox-green" alt="">
             <div class="text-gruvbox-bright-blue flex flex-row gap-1 z-20">
               <span class="text-gruvbox-bright-green flex flex-row gap-2"><span>󱆃</span> cd</span>
               <span class="text-gruvbox-bright-green">[</span>

@@ -3,6 +3,7 @@
   import * as m from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
   import Markdown from 'svelte-markdown'
+  import aj_logo from '$lib/assets/AJ_brand.svg';
 
   let age: number | null = null;
 
@@ -41,7 +42,7 @@
 
   <div class="bg-gruvbox-dark0 py-10 sm:px-0 {(getLocale() == 'ar') ? 'sm:pl-50' : 'sm:pr-50'} px-5 flex sm:flex-row flex-col justify-evenly items-center rounded-sm">
     <div class="sm:min-w-70 flex justify-center items-center" dir="ltr">
-      <pre class="ascii-art text-[10px] tracking-widest">
+      <pre class="hidden ascii-art text-[10px] tracking-widest">
                          ________
                         | ______o|
        _______________  ||__---_||
@@ -58,6 +59,7 @@
   jgs/::======::: .:.:::\ \\_)   \
      `""""""""""""""""""`  '-----'
       </pre>
+      <img src="{aj_logo}" class="max-w-70 drop-shadow-md drop-shadow-gruvbox-dark2" alt="logo"/>
     </div>
     <div class="">
       <div class="mb-5 border-gruvbox-blue {(getLocale() == 'ar') ? 'pr-1 border-r-2 rounded-r-sm' : 'pl-1 border-l-2 rounded-l-sm'}">
