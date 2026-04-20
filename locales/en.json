@@ -45,6 +45,10 @@
       "feild_8": {
         "name": "Term",
         "value": "Ghostty"
+      },
+      "buttons": {
+        "projects": "My Projects",
+        "contact": "Contact Me..!"
       }
     },
     "about_me": {

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
+  import { page } from '$app/state';
   import * as m from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
   import Markdown from 'svelte-markdown'
@@ -40,73 +41,83 @@
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
   <h1> {m['root.fetch.title']()} <span class="pl-1 text-gruvbox-gray text-[18px]"></span></h1>
 
-  <div class="bg-gruvbox-dark0 py-10 sm:px-0 {(getLocale() == 'ar') ? 'sm:pl-50' : 'sm:pr-50'} px-5 flex sm:flex-row flex-col justify-evenly items-center rounded-sm">
-    <div class="sm:min-w-70 flex justify-center items-center" dir="ltr">
-      <pre class="hidden ascii-art text-[10px] tracking-widest">
-                         ________
-                        | ______o|
-       _______________  ||__---_||
-      |  ___________  | | ______ |
-      | |           | | ||______||
-      | | #         | | |--------|
-      | |           | | |      O |
-      | |           | | |      | |
-      | '-----------' | |      | |
-      |_____________-_| |      | |
-       ___/_______\____ |::::::::|
-      / _______________\-.__
-      /:::::::::':::'::\ .\\\---.
-  jgs/::======::: .:.:::\ \\_)   \
-     `""""""""""""""""""`  '-----'
-      </pre>
-      <img src="{aj_logo}" class="max-w-70 drop-shadow-md drop-shadow-gruvbox-dark2" alt="logo"/>
-    </div>
-    <div class="">
-      <div class="mb-5 border-gruvbox-blue {(getLocale() == 'ar') ? 'pr-1 border-r-2 rounded-r-sm' : 'pl-1 border-l-2 rounded-l-sm'}">
-        <table>
-          <tbody>
-            <tr>
-              <td><span class="icon"></span> {m['root.fetch.feild_1.name']()}:</td>
-              <td> {m['root.fetch.feild_1.value']()}</td>
-            </tr>
-            <tr>
-              <td><span class="icon">󰻗</span> {m['root.fetch.feild_2.name']()}:</td>
-              <td> {age} {m['root.fetch.feild_2.value']()}</td>
-            </tr>
-            <tr>
-              <td><span class="icon"></span> {m['root.fetch.feild_3.name']()}:</td>
-              <td> {m['root.fetch.feild_3.value']()}</td>
-            </tr>
-            <tr>
-              <td><span class="icon"></span> {m['root.fetch.feild_4.name']()}:</td>
-              <td>{m['root.fetch.feild_4.value']()}</td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="bg-gruvbox-dark0 py-10 sm:px-0 px-5 rounded-sm">
+    <div class="flex sm:flex-row flex-col justify-evenly items-center {(getLocale() == 'ar') ? 'sm:pl-50' : 'sm:pr-50'}">
+      <div class="sm:min-w-70 flex justify-center items-center" dir="ltr">
+        <pre class="hidden ascii-art text-[10px] tracking-widest">
+                           ________
+                          | ______o|
+         _______________  ||__---_||
+        |  ___________  | | ______ |
+        | |           | | ||______||
+        | | #         | | |--------|
+        | |           | | |      O |
+        | |           | | |      | |
+        | '-----------' | |      | |
+        |_____________-_| |      | |
+         ___/_______\____ |::::::::|
+        / _______________\-.__
+        /:::::::::':::'::\ .\\\---.
+    jgs/::======::: .:.:::\ \\_)   \
+       `""""""""""""""""""`  '-----'
+        </pre>
+        <img src="{aj_logo}" class="max-w-70 drop-shadow-md drop-shadow-gruvbox-dark2" alt="logo"/>
       </div>
+      <div class="">
+        <div class="mb-5 border-gruvbox-blue {(getLocale() == 'ar') ? 'pr-1 border-r-2 rounded-r-sm' : 'pl-1 border-l-2 rounded-l-sm'}">
+          <table>
+            <tbody>
+              <tr>
+                <td><span class="icon"></span> {m['root.fetch.feild_1.name']()}:</td>
+                <td> {m['root.fetch.feild_1.value']()}</td>
+              </tr>
+              <tr>
+                <td><span class="icon">󰻗</span> {m['root.fetch.feild_2.name']()}:</td>
+                <td> {age} {m['root.fetch.feild_2.value']()}</td>
+              </tr>
+              <tr>
+                <td><span class="icon"></span> {m['root.fetch.feild_3.name']()}:</td>
+                <td> {m['root.fetch.feild_3.value']()}</td>
+              </tr>
+              <tr>
+                <td><span class="icon"></span> {m['root.fetch.feild_4.name']()}:</td>
+                <td>{m['root.fetch.feild_4.value']()}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      <div class="border-gruvbox-blue {(getLocale() == 'ar') ? 'pr-1 border-r-2 rounded-r-sm' : 'pl-1 border-l-2 rounded-l-sm'}">
-        <table>
-          <tbody>
-            <tr>
-              <td><span class="icon"></span> {m['root.fetch.feild_5.name']()}:</td>
-              <td>{m['root.fetch.feild_5.value']()}</td>
-            </tr>
-            <tr>
-              <td><span class="icon"></span> {m['root.fetch.feild_6.name']()}:</td>
-              <td>{m['root.fetch.feild_6.value']()}</td>
-            </tr>
-            <tr>
-              <td><span class="icon"></span> {m['root.fetch.feild_7.name']()}:</td>
-              <td>{m['root.fetch.feild_7.value']()}</td>
-            </tr>
-            <tr>
-              <td><span class="icon"></span> {m['root.fetch.feild_8.name']()}:</td>
-              <td>{m['root.fetch.feild_8.value']()}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="border-gruvbox-blue {(getLocale() == 'ar') ? 'pr-1 border-r-2 rounded-r-sm' : 'pl-1 border-l-2 rounded-l-sm'}">
+          <table>
+            <tbody>
+              <tr>
+                <td><span class="icon"></span> {m['root.fetch.feild_5.name']()}:</td>
+                <td>{m['root.fetch.feild_5.value']()}</td>
+              </tr>
+              <tr>
+                <td><span class="icon"></span> {m['root.fetch.feild_6.name']()}:</td>
+                <td>{m['root.fetch.feild_6.value']()}</td>
+              </tr>
+              <tr>
+                <td><span class="icon"></span> {m['root.fetch.feild_7.name']()}:</td>
+                <td>{m['root.fetch.feild_7.value']()}</td>
+              </tr>
+              <tr>
+                <td><span class="icon"></span> {m['root.fetch.feild_8.name']()}:</td>
+                <td>{m['root.fetch.feild_8.value']()}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+    </div>
+    <div class="pt-10 sm:px-20 flex flex-col sm:flex-row items-center sm:items-end">
+      <a class="px-6 py-2 flex flex-row justify-center items-center gap-2 bg-gruvbox-orange rounded-xl border-2 border-gruvbox-orange group hover:bg-white hover:text-gruvbox-orange" href="/projects">
+        {m['root.fetch.buttons.projects']()}
+        <span class="px-1.5 py-0.5 text-gruvbox-light2 rounded-full duration-300 {(getLocale() == 'ar') ? 'group-hover:-translate-x-2' : 'group-hover:translate-x-2'} group-hover:text-gruvbox-orange">{(getLocale() == 'ar') ? '󰁎' : '󰁕'}</span>
+      </a>
+      <a class="px-4 py-2 text-gruvbox-bright-blue underline hover:text-gruvbox-blue" href="/contact">
+        {m['root.fetch.buttons.contact']()}</a>
     </div>
   </div>
 

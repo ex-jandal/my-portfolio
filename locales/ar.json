@@ -45,6 +45,10 @@
       "feild_8": {
         "name": "الطرفية",
         "value": "جوستي"
+      },
+      "buttons": {
+        "projects": "مشاريعي",
+        "contact": "تواصل معي..!"
       }
     },
     "about_me": {
