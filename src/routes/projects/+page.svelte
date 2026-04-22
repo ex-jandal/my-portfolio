@@ -11,6 +11,7 @@
   import whatsdown_showcase from '../../lib/assets/project_showcase/whatsdown.png'
   import android_emu_showcase from '../../lib/assets/project_showcase/android_emu_selector.png'
   import electro_sos_showcase from '../../lib/assets/project_showcase/electro_sos.png';
+  import ara_filter_showcase from '../../lib/assets/project_showcase/ara_filter.png';
 
   interface Projects {
     title: string,
@@ -79,6 +80,17 @@
       linkGithub: "https://github.com/ex-jandal/radium-shell-rs",
       mainLanguages: ['Rust', 'Ratatui'],
       os: ['Linux', 'MacOS'],
+    },
+    {
+      title: "Arabic Filter",
+      icon: "",
+      description: 'It is a Rust-based tool designed to normalize and clean Arabic text.',
+      license: "MIT license",
+      showcase: ara_filter_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/ara_filter",
+      linkGithub: "https://github.com/ex-jandal/ara_filter",
+      mainLanguages: ['Rust'],
+      os: ['Any OS'],
     },
     {
       title: "Electro SOS ",
