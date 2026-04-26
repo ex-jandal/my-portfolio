@@ -4,6 +4,7 @@
   import * as m from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
   import Markdown from 'svelte-markdown'
+  import ShineImage from '../compunentes/shine-image.svelte';
   import aj_logo from '$lib/assets/AJ_brand.svg';
 
   let age: number | null = null;
@@ -39,9 +40,11 @@
 </script>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
-  <h1> {m['root.fetch.title']()} <span class="pl-1 text-gruvbox-gray text-[18px]"></span></h1>
+  <h1 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"> {m['root.fetch.title']()} <span class="pl-1 text-gruvbox-gray text-[18px]"></span></h1>
 
-  <div class="bg-gruvbox-dark0 py-10 sm:px-0 px-5 rounded-sm">
+  <div class="relative py-10 sm:px-0 px-5 rounded-lg
+    after:content-[''] after:absolute after:top-0 after:left-0 after:right-0 after:z-[-1] after:w-full after:h-full after:bg-black/20 after:rounded-2xl
+  ">
     <div class="flex sm:flex-row flex-col justify-evenly items-center {(getLocale() == 'ar') ? 'sm:pl-50' : 'sm:pr-50'}">
       <div class="sm:min-w-70 flex justify-center items-center" dir="ltr">
         <pre class="hidden ascii-art text-[10px] tracking-widest">
@@ -61,7 +64,9 @@
     jgs/::======::: .:.:::\ \\_)   \
        `""""""""""""""""""`  '-----'
         </pre>
-        <img src="{aj_logo}" class="max-w-70 drop-shadow-md drop-shadow-gruvbox-dark2" alt="logo"/>
+        <!-- <img src="{aj_logo}" class="max-w-70 drop-shadow-md drop-shadow-gruvbox-dark2 block w-full transition-transform duration-500 group-hover:scale-105" alt="logo"/> -->
+        
+        <ShineImage src="{aj_logo}" alt="logo"/>
       </div>
       <div class="">
         <div class="mb-5 border-gruvbox-blue {(getLocale() == 'ar') ? 'pr-1 border-r-2 rounded-r-sm' : 'pl-1 border-l-2 rounded-l-sm'}">
@@ -121,12 +126,12 @@
     </div>
   </div>
 
-  <h2><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
   <p class="pl-2">
     <Markdown isInline source={m["root.about_me.text"]()}/>
   </p>
 
-  <h2><span class="icon"></span> {m["root.programming_langs.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["root.programming_langs.title"]()}</h2>
   <div class="my-grid">
     <div class="card"><span class="icon"></span> {pro_langs[0]}</div>
     <div class="card"><span class="icon"></span> {pro_langs[1]}</div>
@@ -139,14 +144,14 @@
     <div class="card"><span class="icon"></span> {pro_langs[8]}</div>
   </div>
 
-  <h2><span class="icon">󱥬</span> {m["root.markup_langs.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󱥬</span> {m["root.markup_langs.title"]()}</h2>
   <div class="my-grid">
     <div class="card"><span class="icon"></span> {mark_langs[0]}</div>
     <div class="card"><span class="icon"></span> {mark_langs[1]}</div>
     <div class="card"><span class="icon"></span> {mark_langs[2]}</div>
   </div>
 
-  <h2><span class="icon">󰏓</span> {m["root.frontend_frameworks.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰏓</span> {m["root.frontend_frameworks.title"]()}</h2>
   <div class="my-grid">
     <div class="card"><span class="icon"></span> {frames_front[0]}</div>
     <div class="card"><span class="icon"></span> {frames_front[1]}</div>
@@ -155,7 +160,7 @@
     <div class="card"><span class="icon"></span> {frames_front[4]}</div>
   </div>
 
-  <h2><span class="icon"></span>{m["root.skills.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span>{m["root.skills.title"]()}</h2>
   <div class="my-grid">
     <div class="card"><span class="icon"></span> {skills[0]}</div>
     <div class="card"><span class="icon"></span> {skills[1]}</div>
@@ -164,7 +169,7 @@
     <div class="card"><span class="icon"></span> {skills[4]}</div>
   </div>
 
-  <h2><span class="icon">󰌢</span> {m["root.cybersecurity_networking.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰌢</span> {m["root.cybersecurity_networking.title"]()}</h2>
   <ul>
     <li>{m["root.cybersecurity_networking.point_1"]()}</li>
     <li>{m["root.cybersecurity_networking.point_2"]()}</li>
@@ -172,7 +177,7 @@
     <li>{m["root.cybersecurity_networking.point_4"]()}</li>
   </ul>
 
-  <h2><span class="icon">󰆍</span> {m["root.environment.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰆍</span> {m["root.environment.title"]()}</h2>
   <div class="my-grid">
     <div class="card"><span class="icon"></span> {environment[0]}</div>
     <div class="card"><span class="icon">󱘆</span> {environment[1]}</div>
@@ -181,7 +186,7 @@
     <div class="card"><span class="icon"></span> {environment[4]}</div>
   </div>
 
-  <h2><span class="icon">󰧑</span> {m["root.philosophy.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰧑</span> {m["root.philosophy.title"]()}</h2>
     <Markdown isInline source={m["root.philosophy.text"]()}/>
   <p class="pl-2">
   </p>

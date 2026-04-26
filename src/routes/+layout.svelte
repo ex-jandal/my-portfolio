@@ -55,8 +55,8 @@
   class="max-w-257 m-auto {(currentLang == 'ar') ? 'font-arabic' : 'font-main'}" 
   dir="{(currentLang === 'ar') ? 'rtl' : 'ltr'}"
 >
-  <header class="sticky z-20 top-2 bg-gruvbox-dark3 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-sm">
-    <nav class="relative flex flex-col md:flex-row md:justify-between md:items-center pl-2 pr-2 py-2">
+  <header class="sticky z-20 top-2 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-xl sm:rounded-2xl after:content-[''] after:absolute after:top-0 after:-z-10 after:w-full after:h-full after:backdrop-blur-lg after:rounded-xl after:sm:rounded-2xl">
+    <nav class="relative flex flex-col md:flex-row md:justify-between md:items-center px-2 sm:px-4 py-2">
       <div class="flex flex-row items-center gap-2">
         <img src="{aj_logo}" class="h-12 scale-110 hidden sm:inline {(currentLang === 'ar' ? 'pl-2 border-l' : 'pr-2 border-r')} border-gruvbox-green" alt="">
         <!-- <h1>It's me. Abu_jandal </h1> -->
@@ -148,7 +148,7 @@
   <!-- </dev> -->
 
   <main 
-    class="m-2 sm:m-5 mt-0 p-2 sm:p-5 bg-gruvbox-dark1 rounded-sm" 
+    class="m-2 sm:m-5 mt-0 p-2 sm:p-5 backdrop-blur-xs rounded-xl sm:rounded-2xl shadow-sm shadow-gruvbox-aqua" 
   >
     {@render children()}
     <footer>
@@ -156,7 +156,7 @@
       <p class="comment">&af; {m['footer.quote_2']()}</p>
     </footer>
     <!-- <script src="https://keepandroidopen.org/banner.js"></script> -->
-    <script src="{PUBLIC_URL}/scripts/keepandroidopen_banner.js"></script>
+    <!-- <script src="{PUBLIC_URL}/scripts/keepandroidopen_banner.js"></script> -->
   </main>
   <!-- <div style="display:none"> -->
   <!--   {#each locales as locale} -->
@@ -167,6 +167,7 @@
   <!-- </div> -->
   <!---->
 </div>
+
 <style>
 a:hover {
   text-decoration: none;

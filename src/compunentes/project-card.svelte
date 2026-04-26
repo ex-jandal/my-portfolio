@@ -256,7 +256,7 @@
     font-size: 0.9rem;
   }
   .pro-card {
-    background: var(--color-gruvbox-dark0);
+    /* background: var(--color-gruvbox-dark0); */
     border: 1px solid var(--color-gruvbox-orange);
     /* padding: 1em; */
   }

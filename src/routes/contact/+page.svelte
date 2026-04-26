@@ -89,7 +89,7 @@
 {/key}
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
-  <h2 class="frist-h2"><span class="icon"></span> {m['contact.media.title']()}</h2>
+  <h2 class="frist-h2 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m['contact.media.title']()}</h2>
 
   <div class="pl-2 my-grid">
     <a class=" bg-[#4794CC] text-gruvbox-light1 px-2 py-1 text-center rounded-md 
@@ -141,28 +141,28 @@
     <!-- <p><span class="icon">󰏲</span> Phone: <a href="tel:+967782424366">+967 78-2424-366</a></p> -->
   </div>
   
-  <h2><span class="icon">󰍡</span> {m['contact.send_message.title']()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰍡</span> {m['contact.send_message.title']()}</h2>
   {#if status == 200}
     <p class="p-4 my-4 text-center text-gruvbox-dark0 bg-gruvbox-bright-green border-2 border-gruvbox-dark0 rounded-lg">
       {m['contact.send_message.message_status']()}
     </p>
   {/if}
-  <form class="p-4 flex flex-col gap-4 bg-gruvbox-dark0 rounded-lg" onsubmit={sendEmail}>
+  <form class="p-2 sm:p-4 flex flex-col gap-4 rounded-lg" onsubmit={sendEmail}>
     <div class="relative">
       <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}"></span>
-      <input bind:value={name} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="text" placeholder="{message_feild[0]}" required />
+      <input bind:value={name} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-transparent rounded-md focus:border-gruvbox-aqua" type="text" placeholder="{message_feild[0]}" required />
     </div>
     <div class="relative">
       <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}"></span>
-      <input bind:value={email} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="email" placeholder="{message_feild[1]}" required />
+      <input bind:value={email} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-transparent rounded-md focus:border-gruvbox-aqua" type="email" placeholder="{message_feild[1]}" required />
     </div>
     <div class="relative">
       <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}">󰇮</span>
-      <input bind:value={title} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" type="text" placeholder="{message_feild[2]}" required />
+      <input bind:value={title} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-transparent rounded-md focus:border-gruvbox-aqua" type="text" placeholder="{message_feild[2]}" required />
     </div>
     <div class="relative">
       <span class="absolute top-3 {(getLocale() == 'ar') ? 'right-4': 'left-4'}">󰍩</span>
-      <textarea bind:value={message} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} pt-3 w-full h-40 bg-gruvbox-dark1 rounded-md focus:border-gruvbox-aqua" placeholder="{message_feild[3]}"></textarea>
+      <textarea bind:value={message} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} pt-3 w-full h-40 bg-transparent rounded-md focus:border-gruvbox-aqua" placeholder="{message_feild[3]}"></textarea>
     </div>
     <button class="bg-gruvbox-orange p-2 rounded-md" type="submit">{m['contact.send_message.button']()}</button>
   </form>

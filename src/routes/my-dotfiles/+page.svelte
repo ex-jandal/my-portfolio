@@ -4,6 +4,7 @@
   import rofi_showcase from "$lib/assets/rofi-showcase.png";
   import * as m from "$lib/paraglide/messages";
 	import { PUBLIC_URL } from '$env/static/public';
+	import { getLocale } from "$lib/paraglide/runtime";
 
   let stack = m["my-dots.stack.list"]()
     .split(' ')
@@ -12,7 +13,7 @@
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
   <section class="hero">
-    <h2 class="frist-h2"><span class="icon">󰟃</span> {m["my-dots.title"]()}</h2>
+    <h2 class="frist-h2 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰟃</span> {m["my-dots.title"]()}</h2>
     <p class="comment">&af; {m["my-dots.quote"]()}</p>
 
     <div class="relative flex justify-center items-center overflow-hidden mt-4 rounded-sm border border-gruvbox-aqua">
@@ -27,7 +28,7 @@
   </section>
 
   <section class="stack">
-    <h2><span class="icon"></span> {m["my-dots.stack.title"]()}</h2>
+    <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["my-dots.stack.title"]()}</h2>
     <ul class="my-grid">
       <li class="card"><span class="icon"></span> {stack[0]}</li>
       <li class="card"><span class="icon">󱘆</span> {stack[1]}</li>
@@ -43,7 +44,7 @@
   </section>
 
   <section class="features">
-    <h2><span class="icon">󰛓</span> {m["my-dots.features.title"]()}</h2>
+    <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰛓</span> {m["my-dots.features.title"]()}</h2>
     <ul>
       <li class="card"><span class="icon">󰧑</span> {m["my-dots.features.item_1"]()}</li>
       <li class="card"><span class="icon"></span> {m["my-dots.features.item_2"]()}</li>
@@ -54,8 +55,8 @@
   </section>
 
   <section>
-    <h2><span class="icon"></span> {m["my-dots.repository_structure"]()}</h2>
-    <pre class="ascii-art bg-gruvbox-dark0 p-4 rounded-sm" dir="ltr">
+    <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["my-dots.repository_structure"]()}</h2>
+    <pre class="ascii-art bg-gruvbox-dark0/50 p-4 rounded-sm" dir="ltr">
 .
 ├── dot-config
 │   ├── alacritty
@@ -95,8 +96,8 @@
   </section>
 
   <section>
-    <h2><span class="icon">󰧑</span> {m["my-dots.dots_philosophy.title"]()}</h2>
-    <div class="quote">&af; {m["my-dots.dots_philosophy.text"]()}</div>
+    <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰧑</span> {m["my-dots.dots_philosophy.title"]()}</h2>
+    <div class="quote bg-gruvbox-dark0/50">&af; {m["my-dots.dots_philosophy.text"]()}</div>
   </section>
 
   <div class="lastly text-center text-gruvbox-gray border-t mt-5 pt-5 border-gruvbox-dark4">
