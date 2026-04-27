@@ -36,6 +36,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "highlight.js": "^11.11.1",
+    "highlightjs-zig": "^1.0.2",
     "svelte-markdown": "^0.4.1"
   }
 }

@@ -8,8 +8,11 @@
   function handleMouseMove(e: MouseEvent): void {
     if (!container) return;
     const rect = container.getBoundingClientRect();
-    x = e.clientX - rect.left;
-    y = e.clientY - rect.top;
+    setTimeout((resolve) => {
+      x = e.clientX - rect.left;
+      y = e.clientY - rect.top;
+      return resolve;
+    }, 50)
   }
 </script>
 
@@ -17,7 +20,7 @@
   bind:this={container}
   onmousemove={handleMouseMove}
   role="presentation"
-  class="group relative inline-block overflow-hidden hover:scale-110 transition-all duration-300"
+  class="group relative inline-block drop-shadow-lg drop-shadow-black overflow-hidden hover:scale-110 transition-all duration-300"
   style="--x: {x}px; --y: {y}px;"
 >
   <img 

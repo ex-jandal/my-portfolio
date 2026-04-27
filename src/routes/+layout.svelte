@@ -52,7 +52,7 @@
 </svelte:head>
 
 <div 
-  class="max-w-257 m-auto {(currentLang == 'ar') ? 'font-arabic' : 'font-main'}" 
+  class="max-w-257 m-auto font-main" 
   dir="{(currentLang === 'ar') ? 'rtl' : 'ltr'}"
 >
   <header class="sticky z-20 top-2 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-xl sm:rounded-2xl after:content-[''] after:absolute after:top-0 after:-z-10 after:w-full after:h-full after:backdrop-blur-lg after:rounded-xl after:sm:rounded-2xl">
@@ -148,7 +148,11 @@
   <!-- </dev> -->
 
   <main 
-    class="m-2 sm:m-5 mt-0 p-2 sm:p-5 backdrop-blur-xs rounded-xl sm:rounded-2xl shadow-sm shadow-gruvbox-aqua" 
+    class="
+      relative m-2 sm:m-5 mt-0 p-2 sm:p-5 rounded-xl sm:rounded-2xl shadow-sm shadow-gruvbox-aqua overflow-hidden
+      after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:left-0 after:right-0 after:z-[-1] 
+      after:backdrop-blur-xs
+    " 
   >
     {@render children()}
     <footer>
