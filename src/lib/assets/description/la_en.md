@@ -1,8 +1,6 @@
 ### TL;DR
 **Laravel** is a web application framework for PHP with expressive, elegant syntax. It is designed to take the "drudgery" out of web development by providing built-in solutions for common tasks like authentication, routing, sessions, and caching, following the **Model-View-Controller (MVC)** architectural pattern.
 
----
-
 ## The "Developer Happiness" Framework
 Laravel is widely considered the most popular PHP framework because it prioritizes the developer experience. It turns complex PHP code into readable, almost English-like sentences.
 

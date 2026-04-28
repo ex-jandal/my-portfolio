@@ -1,8 +1,6 @@
 ### TL;DR
 **JavaScript** is the high-level, interpreted backbone of the modern web. Originally built for browser interactivity, it has evolved into a versatile, **event-driven** language that powers everything from massive server-side backends (Node.js) to cross-platform mobile apps.
 
----
-
 ## What is JavaScript?
 If HTML is the structure and CSS is the style, **JavaScript is the brain**. It allows websites to respond to user input, fetch data asynchronously, and update the UI without refreshing the page.
 

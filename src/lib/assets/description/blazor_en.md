@@ -1,8 +1,6 @@
 ### TL;DR
 **Blazor** is a web framework from Microsoft that allows you to build interactive web UIs using **C#** instead of JavaScript. It is part of the .NET ecosystem and enables developers to share code and libraries between the server and the client, making "Full-stack C#" a reality.
 
----
-
 ## How Blazor Works
 The "magic" of Blazor lies in its ability to run C# code directly in the browser. It does this using two different hosting models:
 

@@ -1,8 +1,6 @@
 ### TL;DR
 **Bun** is a fast, all-in-one **JavaScript runtime**, package manager, and bundler written in Zig. It was built from the ground up to replace Node.js, focusing on extreme performance, native TypeScript support, and a unified developer experience.
 
----
-
 ## The "Everything" Tool
 Bun is designed to eliminate the "toolchain fatigue" of modern web development. Instead of installing five different tools for testing, bundling, and running code, you just use `bun`.
 

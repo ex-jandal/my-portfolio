@@ -1,8 +1,6 @@
 ### TL;DR
 **Rust** is a multi-paradigm systems language designed for **performance and safety**. It provides the low-level control of C++ but uses a strict "Ownership" system to guarantee memory safety and thread-safety at compile time, without needing a garbage collector.
 
----
-
 ## Why Rust?
 Rust is the language of choice for developers who need their code to be both **blazing fast** and **bulletproof**. It is widely used for browser engines (Firefox), operating systems, and high-performance backends.
 

@@ -1,8 +1,6 @@
 ### TL;DR
 **Svelte** is a radical approach to building user interfaces. While traditional frameworks like React and Vue do the bulk of their work in the *browser*, Svelte shifts that work into a **compile step** that happens when you build your app, resulting in highly optimized, "vanilla" JavaScript.
 
----
-
 ## The "Cybernetically Enhanced" Framework
 Svelte's core philosophy is **less boilerplate and more performance**. It doesn't use a Virtual DOM; instead, it surgically updates the DOM only when the state changes.
 

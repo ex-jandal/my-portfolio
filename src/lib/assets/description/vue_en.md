@@ -1,8 +1,6 @@
 ### TL;DR
 **Vue.js** is the "Progressive Framework" designed to be approachable yet powerful. It strikes a perfect balance between the structure of Angular and the flexibility of React, using a **template-based** system and an industry-leading **Reactivity API** to build interactive web interfaces.
 
----
-
 ## The Best of Both Worlds
 Vue is famous for its "gentle learning curve." You can use it as a simple script tag to add a bit of magic to a legacy page, or scale it up into a massive Single Page Application (SPA) using **Svelte-like** Single File Components (SFCs).
 

@@ -1,8 +1,6 @@
 ### TL;DR
 **Markdown** is a lightweight **markup language** that allows you to format plain text using simple symbols. It is the industry standard for documentation, designed to be easily readable by humans while being perfectly convertible into structured HTML for browsers.
 
----
-
 ## The "Readability First" Language
 Created in 2004, Markdown's philosophy is that a formatting syntax should not get in the way of reading the content. It is the default language for **GitHub READMEs**, technical blogs, and static site generators.
 
@@ -23,7 +21,7 @@ Since you're building a website, here is exactly how you'd write a section in yo
 # This is an H1 Header
 ## This is an H2 Subheader
 
-This is a paragraph with **bold text**, *italicized text*, and a [Link to Fanuni](https://fanuni.app).
+This is a paragraph with **bold text**, *italicized text*, and a [Link to Codeberg](https://codeberg.org).
 
 ### My Tech Stack
 - Rust

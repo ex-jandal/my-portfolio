@@ -1,8 +1,6 @@
 ### **ملخص سريع (TL;DR)**
 تُعد لغتا **HTML** و **CSS** الثنائي التأسيسي لشبكة الويب. توفر **HTML** (لغة توصيف النص الفائق) **البنية** والمعنى لصفحة الويب، بينما توفر **CSS** (أوراق الأنماط المتتالية) **العرض المرئي** والتنسيق.
 
----
-
 ## **الهيكل العظمي والمظهر خارجي**
 في تطوير الويب، تعمل هاتان اللغتان جنباً إلى جنب؛ فلا يمكن بناء موقع ويب حديث بدونهما معاً.
 
@@ -46,3 +44,24 @@
   }
 </style>
 ```
+
+<div class="profile-card">
+  <h1>Abu_Jandal</h1>
+  <p>مطوّر فول ستاك (Full-stack Developer)</p>
+</div>
+
+<style>
+  .profile-card {
+    background-color: #282828; /* Gruvbox Dark */
+    color: #ebdbb2;           /* Gruvbox Light */
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #d79921;
+    text-align: center;
+  }
+  
+  h1 { 
+    margin: 0; 
+    font-family: 'Fira Code', monospace; 
+  }
+</style>

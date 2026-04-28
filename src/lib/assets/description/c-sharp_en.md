@@ -1,8 +1,6 @@
 ### TL;DR
 **C#** (C-Sharp) is a modern, object-oriented language developed by Microsoft. It is the primary language for the **.NET** ecosystem, widely used for building everything from enterprise web applications to high-performance cross-platform games using the **Unity** engine.
 
----
-
 ## The Versatile Giant
 C# balances the power of C++ with the ease of use of Java. It is a **statically-typed** language that runs on the Common Language Runtime (CLR), providing a rich set of features like LINQ, async/await, and strong versioning support.
 
@@ -16,7 +14,7 @@ C# balances the power of C++ with the ease of use of Java. It is a **statically-
 
 ---
 
-### Code Example: Properties and LINQ
+### Snippet
 C# syntax is known for being "clean" and reducing boilerplate code compared to Java.
 
 ```csharp

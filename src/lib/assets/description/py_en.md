@@ -1,8 +1,6 @@
 ### TL;DR
 **Python** is a high-level, interpreted language focused on **readability and developer productivity**. Known for its "batteries included" philosophy, it features a massive standard library and a simple syntax that reads almost like English, making it the world's most popular language for Data Science, AI, and Automation.
 
----
-
 ## The Power of Python
 Python’s greatest strength is its **ecosystem**. Whether you are building a web server, training a neural network, or writing a quick script to normalize Arabic diacritics, there is likely already a high-quality library (package) to help you do it.
 

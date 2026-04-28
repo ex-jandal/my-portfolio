@@ -96,7 +96,7 @@
         </div>
       </div>
       <div class="p-3 sm:p-5 overflow-y-scroll">
-        <div class="flex flex-col gap-4 justify-center items-center">
+        <div class="pt-8 flex flex-col gap-4 justify-center items-center">
           <div class="h-20 text-9xl text-center {iconColor}">{icon}</div>
           <div bind:this={container} class="mt-20 pb-50 w-full text-lg prose prose-gruvbox prose-pre:p-0 prose-pre:font-code prose-pre:text-lg prose-pre:text-left prose-pre:text-wrap">
             <SvelteMarkdown source={description}/>

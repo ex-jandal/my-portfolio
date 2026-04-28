@@ -1,8 +1,6 @@
 ### TL;DR
 **LaTeX** (pronounced *lay-tek*) is a high-quality **document preparation system** used for technical and scientific documentation. Unlike a standard word processor (Word), LaTeX uses a "Markup" approach where you focus on the **content** and structure, leaving the professional **typesetting** and formatting to the system.
 
----
-
 ## Why Use LaTeX?
 LaTeX is the global standard for academic papers, theses, and complex technical books. It excels at handling things that make standard software crash or look messy.
 

@@ -1,8 +1,6 @@
 ### TL;DR
 **HTML** and **CSS** are the foundational duo of the web. **HTML** (HyperText Markup Language) provides the **structure** and meaning of a webpage, while **CSS** (Cascading Style Sheets) provides the **visual presentation** and layout.
 
----
-
 ## The Skeleton and the Skin
 In web development, these two languages work in tandem. You cannot have a modern website without both.
 
@@ -42,3 +40,20 @@ Here is how you link the structure to the style:
   h1 { margin: 0; font-family: 'Fira Code', monospace; }
 </style>
 ```
+
+<div class="profile-card">
+  <h1>Abu_Jandal</h1>
+  <p>Full-stack Developer</p>
+</div>
+
+<style>
+  .profile-card {
+    background-color: #282828; /* Gruvbox Dark */
+    color: #ebdbb2;           /* Gruvbox Light */
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #d79921;
+  }
+  
+  h1 { margin: 0; font-family: 'Fira Code', monospace; }
+</style>

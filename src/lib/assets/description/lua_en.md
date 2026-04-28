@@ -1,8 +1,6 @@
 ### TL;DR
 **Lua** is a lightweight, high-level scripting language designed primarily for **embedded use** in applications. It is famous for being one of the fastest scripting languages in existence, especially when using the **LuaJIT** compiler, and is the go-to choice for game engines and configuration tools.
 
----
-
 ## Why Lua?
 Lua doesn't try to do everything. Instead, it provides a small set of powerful tools (like **Tables**) that allow you to build any complex data structure you need.
 

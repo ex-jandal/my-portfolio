@@ -1,8 +1,6 @@
 ### TL;DR
 **Java** is a high-level, class-based, object-oriented language designed to have as few implementation dependencies as possible. Its famous "Write Once, Run Anywhere" (WORA) philosophy means compiled Java code can run on all platforms that support a **Java Virtual Machine (JVM)** without the need for recompilation.
 
----
-
 ## The Enterprise Powerhouse
 Java is the backbone of the corporate world, powering billions of devices, including Android apps, high-frequency trading platforms, and massive server-side enterprise systems.
 

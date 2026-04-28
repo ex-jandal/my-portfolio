@@ -1,8 +1,6 @@
 ### TL;DR
 **PHP** is the pragmatic workhorse of the internet. A server-side scripting language designed specifically for **web development**, it powers over 75% of the web—including giants like WordPress, Wikipedia, and Slack—offering a seamless path from simple scripts to robust, enterprise-level frameworks.
 
----
-
 ## Why PHP Still Rules
 Despite being one of the older languages in the stack, PHP has undergone a massive "glow-up" with versions 8.x, introducing high-performance features that keep it competitive with modern runtimes.
 

@@ -59,6 +59,36 @@
   import blazoer_desc_en from'$lib/assets/description/blazor_en.md?raw';
   import blazoer_desc_ar from'$lib/assets/description/blazor_ar.md?raw';
 
+  import git_desc_en from'$lib/assets/description/git_en.md?raw';
+  import git_desc_ar from'$lib/assets/description/git_ar.md?raw';
+
+  import docker_desc_en from'$lib/assets/description/docker_en.md?raw';
+  import docker_desc_ar from'$lib/assets/description/docker_ar.md?raw';
+
+  import tailcss_desc_en from'$lib/assets/description/tailcss_en.md?raw';
+  import tailcss_desc_ar from'$lib/assets/description/tailcss_ar.md?raw';
+
+  import sql_desc_en from'$lib/assets/description/sql_en.md?raw';
+  import sql_desc_ar from'$lib/assets/description/sql_ar.md?raw';
+
+  import surreal_desc_en from'$lib/assets/description/surreal_en.md?raw';
+  import surreal_desc_ar from'$lib/assets/description/surreal_ar.md?raw';
+
+  import arch_desc_en from'$lib/assets/description/arch_en.md?raw';
+  import arch_desc_ar from'$lib/assets/description/arch_ar.md?raw';
+
+  import niri_desc_en from'$lib/assets/description/niri_en.md?raw';
+  import niri_desc_ar from'$lib/assets/description/niri_ar.md?raw';
+
+  import nvim_desc_en from'$lib/assets/description/nvim_en.md?raw';
+  import nvim_desc_ar from'$lib/assets/description/nvim_ar.md?raw';
+
+  import tmux_desc_en from'$lib/assets/description/tmux_en.md?raw';
+  import tmux_desc_ar from'$lib/assets/description/tmux_ar.md?raw';
+
+  import nerdfont_desc_en from'$lib/assets/description/nerdfont_en.md?raw';
+  import nerdfont_desc_ar from'$lib/assets/description/nerdfont_ar.md?raw';
+
   let age: number | null = null;
 
   let currentDate = new Date();
@@ -113,11 +143,11 @@
     .map((i) => i.replaceAll("_", " "));
 
   let skills = [
-    ['', 'text-gruvbox-red', skills_list[0], ""], 
-    ['', 'text-gruvbox-blue', skills_list[1], ""], 
-    ['', 'text-gruvbox-bright-blue', skills_list[2], ""], 
-    ['', 'text-gruvbox-bright-blue', skills_list[3], ""], 
-    ['', 'text-gruvbox-purple', skills_list[4], ""], 
+    ['', 'text-gruvbox-red', skills_list[0], (getLocale() == 'ar'? git_desc_ar: git_desc_en)], 
+    ['', 'text-gruvbox-blue', skills_list[1], (getLocale() == 'ar'? docker_desc_ar: docker_desc_en)], 
+    ['', 'text-gruvbox-bright-blue', skills_list[2], (getLocale() == 'ar'? tailcss_desc_ar: tailcss_desc_en)], 
+    ['', 'text-gruvbox-bright-blue', skills_list[3], (getLocale() == 'ar'? sql_desc_ar: sql_desc_en)], 
+    ['', 'text-gruvbox-purple', skills_list[4], (getLocale() == 'ar'? surreal_desc_ar: surreal_desc_en)], 
   ];
 
   let environment_list = m["root.environment.list"]()
@@ -125,11 +155,11 @@
     .map((i) => i.replaceAll("_", " "));
 
   let environment = [
-    ['', 'text-gruvbox-blue', environment_list[0]], 
-    ['󱘆', 'text-gruvbox-orange', environment_list[1]], 
-    ['', 'text-gruvbox-green', environment_list[2]], 
-    ['', 'text-gruvbox-bright-green', environment_list[3]], 
-    ['', 'text-gruvbox-purple', environment_list[4]], 
+    ['', 'text-gruvbox-blue', environment_list[0], (getLocale() == 'ar'? arch_desc_ar: arch_desc_en)], 
+    ['󱘆', 'text-gruvbox-orange', environment_list[1], (getLocale() == 'ar'? niri_desc_ar: niri_desc_en)], 
+    ['', 'text-gruvbox-green', environment_list[2], (getLocale() == 'ar'? nvim_desc_ar: nvim_desc_en)], 
+    ['', 'text-gruvbox-bright-green', environment_list[3], (getLocale() == 'ar'? tmux_desc_ar: tmux_desc_en)], 
+    ['', 'text-gruvbox-light1', environment_list[4], (getLocale() == 'ar'? nerdfont_desc_ar: nerdfont_desc_en)], 
   ];
 </script>
 

@@ -1,8 +1,6 @@
 ### TL;DR
 **Zig 0.16** is a modern, general-purpose systems language and toolchain designed for **robustness, optimality, and maintainability**. It is intended to be a "better C," removing hidden control flow and memory allocations while providing a powerful build system that replaces Make and CMake.
 
----
-
 ## Why Zig?
 Zig is unique because it has **no hidden control flow** (no hidden memory allocations, no hidden function calls) and **no preprocessor**. What you see in the code is exactly what happens.
 
