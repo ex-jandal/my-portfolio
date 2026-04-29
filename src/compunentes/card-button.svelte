@@ -103,10 +103,10 @@
             class="
               mt-20 pb-50 w-full text-lg prose prose-gruvbox 
               prose-pre:p-0 prose-pre:font-code prose-pre:text-lg 
-              prose-pre:text-left prose-pre:whitespace-pre-wrap 
-              prose-pre:break-all
+              prose-pre:text-left 
             "
           >
+            <!-- prose-pre:whitespace-pre-wrap prose-pre:break-all -->
             <SvelteMarkdown source={description}/>
           </div>
         </div>
