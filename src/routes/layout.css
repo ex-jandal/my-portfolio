@@ -96,7 +96,7 @@ footer {
   font-family: 'NerdIcons';
   font-style: normal;
   font-weight: 400;
-  src: url('$lib/assets/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf');
+  src: url('$lib/assets/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular-subset.woff2');
 }
 .ascii-art {
   font-family: 'CascidaCode', 'NerdIcons';
