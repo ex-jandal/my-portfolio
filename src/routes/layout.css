@@ -92,11 +92,20 @@ footer {
   color: var(--color-gruvbox-bright-aqua);
 }
 
+/* @font-face { */
+/*   font-family: 'NerdIcons'; */
+/*   font-style: normal; */
+/*   font-weight: 400; */
+/*   src: url('$lib/assets/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf'); */
+/* } */
+
 @font-face {
+  src: url('$lib/assets/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular-subset.woff2') format("woff2"), 
+       url('$lib/assets/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular-subset.zopfli.woff') format("woff"), 
+       url('$lib/assets/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular-subset.ttf') format("truetype");
   font-family: 'NerdIcons';
   font-style: normal;
   font-weight: 400;
-  src: url('$lib/assets/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular-subset.woff2');
 }
 .ascii-art {
   font-family: 'CascidaCode', 'NerdIcons';
