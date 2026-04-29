@@ -166,8 +166,8 @@
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
   <h1 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"> {m['root.fetch.title']()} <span class="pl-1 text-gruvbox-gray text-[18px]"></span></h1>
 
-  <div class="py-10 sm:px-0 px-5 rounded-lg
-    after:content-[''] after:absolute after:top-0 after:left-0 after:right-0 after:z-[-1] after:w-full after:h-full after:bg-black/20 after:rounded-2xl
+  <div class="relative py-10 sm:px-0 px-5 rounded-lg
+    after:content-[''] after:absolute after:top-0 after:left-0 after:right-0 after:z-[-1] after:w-full after:h-full after:bg-black/10 after:backdrop-blur-xs after:rounded-4xl
   ">
     <div class="flex sm:flex-row flex-col justify-evenly items-center {(getLocale() == 'ar') ? 'sm:pl-50' : 'sm:pr-50'}">
       <div class="sm:min-w-70 flex justify-center items-center" dir="ltr">
