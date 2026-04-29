@@ -149,7 +149,7 @@
 
   <main 
     class="
-      relative m-2 sm:m-5 mt-0 p-2 sm:p-5 rounded-xl sm:rounded-2xl shadow-sm shadow-gruvbox-aqua overflow-hidden
+      relative m-2 mb-4 sm:m-5 mt-0 p-2 sm:p-5 rounded-xl sm:rounded-2xl shadow-sm shadow-gruvbox-aqua overflow-hidden
       after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:left-0 after:right-0 after:z-[-1] 
       after:backdrop-blur-xs
     " 
