@@ -16,4 +16,4 @@
 
 ### **توضيح بالصورة**
 
-![](/desc_images/tmux_image.png)
+![](/desc_images/tmux_image.webp)

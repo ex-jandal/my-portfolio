@@ -16,4 +16,4 @@ Neovim's mission is to modernize Vim while keeping its legendary modal editing e
 
 ### Image Explains
 
-![](/desc_images/nvim_image.png)
+![](/desc_images/nvim_image.webp)

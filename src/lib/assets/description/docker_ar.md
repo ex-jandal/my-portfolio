@@ -17,4 +17,5 @@
 ---
 
 ### **توضيح بالصورة**
-![](/desc_images/docker_image.png)
+
+![](/desc_images/docker_image.webp)

@@ -16,4 +16,4 @@
 
 ### **توضيح بالصورة**
 
-![](/desc_images/nvim_image.png)
+![](/desc_images/nvim_image.webp)

@@ -16,4 +16,4 @@ Unlike "user-friendly" distros like Ubuntu or Fedora that come with pre-configur
 
 ### Image Explains
 
-![](/desc_images/niri_image.png)
+![](/desc_images/niri_image.webp)

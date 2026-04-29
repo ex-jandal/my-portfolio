@@ -19,5 +19,5 @@
 
 ### **توضيح بالصورة**
 
-![](/desc_images/git_image.png)
+![](/desc_images/git_image.webp)
 

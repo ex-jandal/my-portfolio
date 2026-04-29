@@ -16,4 +16,4 @@ If you find traditional tilers (like i3 or Hyprland) too rigid, Niri offers a mo
 
 ### Image Explains
 
-![](/desc_images/niri_image.png)
+![](/desc_images/niri_image.webp)

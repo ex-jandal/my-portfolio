@@ -15,4 +15,5 @@ Before Docker, we used Virtual Machines (VMs). Docker revolutionized this by mak
 ---
 
 ### Image Explains
-![](/desc_images/docker_image.png)
+
+![](/desc_images/docker_image.webp)

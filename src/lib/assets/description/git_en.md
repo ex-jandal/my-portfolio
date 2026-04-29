@@ -19,4 +19,4 @@ Git is essential because it allows you to "save" your project at specific points
 
 ### Image Explains
 
-![](/desc_images/git_image.png)
+![](/desc_images/git_image.webp)

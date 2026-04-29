@@ -2,16 +2,16 @@
 	import { slide } from 'svelte/transition';
   import * as m from "$lib/paraglide/messages";
 	import ProjectCard from '../../compunentes/project-card.svelte';
-  import PG_showcase from '../../lib/assets/project_showcase/PG_chatting_app.png'
-  import qd_showcase from '../../lib/assets/project_showcase/qd_knowledge_manager.png'
-  import psg_showcase from '../../lib/assets/project_showcase/proxy_security_gaurid.png'
-  import radium_showcase from '../../lib/assets/project_showcase/radium_shell.png'
-  import karkadeh_showcase from '../../lib/assets/project_showcase/karka_deh.png'
-  import file_veiwer_showcase from '../../lib/assets/project_showcase/file_viewer.png'
-  import whatsdown_showcase from '../../lib/assets/project_showcase/whatsdown.png'
-  import android_emu_showcase from '../../lib/assets/project_showcase/android_emu_selector.png'
-  import electro_sos_showcase from '../../lib/assets/project_showcase/electro_sos.png';
-  import ara_filter_showcase from '../../lib/assets/project_showcase/ara_filter.png';
+  import PG_showcase from '$lib/assets/project_showcase/PG_chatting_app.webp'
+  import qd_showcase from '$lib/assets/project_showcase/qd_knowledge_manager.webp'
+  import psg_showcase from '$lib/assets/project_showcase/proxy_security_gaurid.webp'
+  import radium_showcase from '$lib/assets/project_showcase/radium_shell.webp'
+  import karkadeh_showcase from '$lib/assets/project_showcase/karka_deh.webp'
+  import file_veiwer_showcase from '$lib/assets/project_showcase/file_viewer.webp'
+  import whatsdown_showcase from '$lib/assets/project_showcase/whatsdown.webp'
+  import android_emu_showcase from '$lib/assets/project_showcase/android_emu_selector.webp'
+  import electro_sos_showcase from '$lib/assets/project_showcase/electro_sos.webp';
+  import ara_filter_showcase from '$lib/assets/project_showcase/ara_filter.webp';
 
   interface Projects {
     title: string,

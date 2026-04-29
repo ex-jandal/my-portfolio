@@ -16,4 +16,4 @@ For a power user, `tmux` is the glue that holds a development environment togeth
 
 ### Image Explains
 
-![](/desc_images/tmux_image.png)
+![](/desc_images/tmux_image.webp)

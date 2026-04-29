@@ -17,4 +17,4 @@ Cascadia Code was originally built alongside the Windows Terminal. It is known f
 
 ### Image Explains
 
-![](/desc_images/nerdfont_image.png)
+![](/desc_images/nerdfont_image.webp)

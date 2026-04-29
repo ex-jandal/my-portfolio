@@ -16,4 +16,4 @@
 
 ### **توضيح بالصورة**
 
-![](/desc_images/niri_image.png)
+![](/desc_images/niri_image.webp)

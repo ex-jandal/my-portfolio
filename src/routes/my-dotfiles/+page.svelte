@@ -1,7 +1,7 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
-  import tmux_nvim_showcase from "$lib/assets/tmux-nvim-showcase.png";
-  import rofi_showcase from "$lib/assets/rofi-showcase.png";
+  import tmux_nvim_showcase from "$lib/assets/tmux-nvim-showcase.webp";
+  import rofi_showcase from "$lib/assets/rofi-showcase.webp";
   import * as m from "$lib/paraglide/messages";
 	import { PUBLIC_URL } from '$env/static/public';
 	import { getLocale } from "$lib/paraglide/runtime";

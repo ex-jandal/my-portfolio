@@ -18,21 +18,21 @@
 بما أنك تبني موقعاً إلكترونياً، إليك بالضبط كيف ستكتب قسماً في ملف الـ `.md` الخاص بك:
 
 ```markdown
-# هذا عنوان رئيسي H1
-## هذا عنوان فرعي H2
+# This is an H1 Header
+## This is an H2 Subheader
 
-هذه فقرة تحتوي على **نص عريض**، و *نص مائل*، و [رابط إلى كودبيرج](https://codeberg.org).
+This is a paragraph with **bold text**, *italicized text*, and a [Link to Codeberg](https://codeberg.org).
 
-### مهاراتي التقنية
+### My Tech Stack
 - Rust
 - Zig
 - Neovim
 
-> "الكلام رخيص، أرني الكود البرمجي." - لينوس تورفالدس
+> "Talk is cheap. Show me the code." - Linus Torvalds
 
-ألقِ نظرة على كتلة الكود هذه:
+Check out this code block:
 ```rust
 fn main() {
-    println!("أهلاً يا Abu_Jandal!");
+    println!("Hello, Abu_Jandal!");
 }```
 ```
