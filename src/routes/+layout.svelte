@@ -9,7 +9,55 @@
 
   import { setLocale, getLocale } from "$lib/paraglide/runtime.js";
   import * as m from '$lib/paraglide/messages';
-	import { PUBLIC_URL } from '$env/static/public';
+	import { PUBLIC_URL, PUBLIC_GOATCOUNTER_API } from '$env/static/public';
+	import { onMount } from 'svelte';
+
+  async function getTotalCommits(): Promise<number> {
+    const url = `https://api.github.com/repos/ex-jandal/my-portfolio/commits?per_page=1`;
+    
+    try {
+      const response = await fetch(url, {
+        // headers: {
+        //   "Accept": "application/vnd.github+json",
+        //   // Best Practice: Always include a User-Agent or Auth token to avoid strict rate limiting
+        //   // "Authorization": `Bearer ${process.env.GITHUB_TOKEN}` 
+        // }
+      });
+
+      if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
+
+      const linkHeader = response.headers.get("link");
+
+      if (!linkHeader) {
+        // If no Link header, there is only one page (meaning 0 or 1 commit)
+        const commits: any = await response.json();
+        return commits.length;
+      }
+
+      // Improved Regex: Handles different spacing/ordering in the Link header
+      const match = linkHeader.match(/page=(\d+)>;\s*rel="last"/);
+      return match ? parseInt(match[1], 10) : 1;
+      
+    } catch (error) {
+      console.error("Failed to fetch commit count:", error);
+      return 0;
+    }
+  }
+
+  let views: string = $state("-");
+  let commits: string | number = $state("-");
+
+  onMount(async () => {
+    const res = await fetch('https://ex-jandal.goatcounter.com/api/v0/stats/total', {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${PUBLIC_GOATCOUNTER_API}`,
+      }
+      });
+    const data: any = await res.json();
+    views = data.total;
+    commits = await getTotalCommits();
+  });
 
   let currentLang = $state(getLocale());
 
@@ -147,6 +195,24 @@
   <!--   >Learn More</a> -->
   <!-- </dev> -->
 
+  <div class="
+      relative m-2 mb-4 sm:m-5 mt-0 p-2 sm:p-5 rounded-xl sm:rounded-2xl shadow-sm shadow-gruvbox-aqua overflow-hidden
+      after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:left-0 after:right-0 after:z-[-1] 
+      after:backdrop-blur-xs flex flex-row justify-center items-center
+    "
+  >
+    <div class="w-full flex flex-col justify-center items-center text-center align-middle {(getLocale() == 'ar')? 'border-l': 'border-r'} border-gruvbox-light0/20">
+      <span class="icon pl-1.5"></span>
+      <span>{(getLocale() == 'ar')? 'مشاهدة': 'views'}</span>
+      <span class="bold"><strong>{views}</strong></span>
+    </div>
+
+    <a href="https://github.com/ex-jandal/my-portfolio" target="_blank" class="w-full flex flex-col justify-center items-center text-center align-middle">
+      <span class="icon pl-1.5"></span>
+      <span>{(getLocale() == 'ar')? 'التعديلات': 'commits'}</span>
+      <span class="bold"><strong>{commits}</strong></span>
+    </a>
+  </div>
   <main 
     class="
       relative m-2 mb-4 sm:m-5 mt-0 p-2 sm:p-5 rounded-xl sm:rounded-2xl shadow-sm shadow-gruvbox-aqua overflow-hidden
@@ -159,6 +225,8 @@
       <p class="comment">&af; {m['footer.quote_1']()}</p>
       <p class="comment">&af; {m['footer.quote_2']()}</p>
     </footer>
+    <script data-goatcounter="https://ex-jandal.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
     <!-- <script src="https://keepandroidopen.org/banner.js"></script> -->
     <!-- <script src="{PUBLIC_URL}/scripts/keepandroidopen_banner.js"></script> -->
   </main>
