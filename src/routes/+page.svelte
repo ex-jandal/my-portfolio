@@ -253,14 +253,14 @@
     </div>
   </div>
 
-  <div class="bg-gruvbox-dark0/90 mt-5 px-2 py-4 sm:px-4 sm:py-6 flex flex-col gap-5 rounded-2xl">
+  <a href="https://github.com/ex-jandal" target="_blank" class="bg-gruvbox-dark0/60 mt-5 px-2 py-4 sm:px-4 sm:py-6 flex flex-col gap-5 rounded-2xl">
     <span class="block px-6 text-xl">
-      <span class="icon"></span>
-      <strong>Github Activity:</strong>
+      <span class="icon px-0.5"></span>
+      <strong>{(getLocale() == 'ar')? 'سجل الألتزام': 'Commit History'}:</strong>
     </span>
     <!-- this one does not work in Yemen: https://raw.githubusercontent.com/ex-jandal/ex-jandal/output/github-snake.svg -->
-    <img class="m-auto" src="https://cdn.jsdelivr.net/gh/ex-jandal/ex-jandal@output/github-snake-dark.svg" alt="">
-  </div>
+    <img class="m-auto" src="https://cdn.jsdelivr.net/gh/ex-jandal/ex-jandal@output/github-snake-dark.svg" alt="" />
+  </a>
 
   <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
   <p class="pl-2">
