@@ -2,11 +2,25 @@
 	import { slide } from 'svelte/transition';
   import * as m from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
+	import { onMount } from 'svelte';
 
   import Markdown from 'svelte-markdown'
   import ShineImage from '../compunentes/shine-image.svelte';
   import aj_logo from '$lib/assets/AJ_brand.svg';
   import CardButton from '../compunentes/card-button.svelte';
+
+  let age: number | null = $state(null);
+
+  onMount(async () => {
+    let currentDate = new Date();
+    let DoB = new Date("Aug 14 2005");
+
+    age = currentDate.getFullYear() - DoB.getFullYear();
+
+    if (currentDate.getMonth() < DoB.getMonth()) {
+      age--;
+    }
+  })
 
   import rust_desc_en from'$lib/assets/description/rust_en.md?raw';
   import rust_desc_ar from'$lib/assets/description/rust_ar.md?raw';
@@ -88,17 +102,6 @@
 
   import nerdfont_desc_en from'$lib/assets/description/nerdfont_en.md?raw';
   import nerdfont_desc_ar from'$lib/assets/description/nerdfont_ar.md?raw';
-
-  let age: number | null = null;
-
-  let currentDate = new Date();
-  let DoB = new Date("Aug 14 2005");
-
-  age = currentDate.getFullYear() - DoB.getFullYear();
-
-  if (currentDate.getMonth() < DoB.getMonth()) {
-    age--;
-  }
 
   let pro_langs = m["root.programming_langs.langs"]()
     .split(' ')
@@ -190,7 +193,7 @@
         </pre>
         <!-- <img src="{aj_logo}" class="max-w-70 drop-shadow-md drop-shadow-gruvbox-dark2 block w-full transition-transform duration-500 group-hover:scale-105" alt="logo"/> -->
         
-        <ShineImage src="{aj_logo}" alt="logo"/>
+        <ShineImage src={aj_logo} alt="logo"/>
       </div>
       <div class="">
         <div class="mb-5 border-gruvbox-blue {(getLocale() == 'ar') ? 'pr-1 border-r-2 rounded-r-sm' : 'pl-1 border-l-2 rounded-l-sm'}">
@@ -248,6 +251,14 @@
       <a class="px-4 py-2 text-gruvbox-bright-blue underline hover:text-gruvbox-blue" href="/contact">
         {m['root.fetch.buttons.contact']()}</a>
     </div>
+  </div>
+
+  <div class="bg-gruvbox-dark0/90 mt-5 px-2 py-4 sm:px-4 sm:py-6 flex flex-col gap-5 rounded-2xl">
+    <span class="block px-6 text-xl">
+      <span class="icon"></span>
+      <strong>Github Activity:</strong>
+    </span>
+    <img class="m-auto" src="https://raw.githubusercontent.com/ex-jandal/ex-jandal/output/github-snake.svg" alt="">
   </div>
 
   <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
