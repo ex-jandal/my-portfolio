@@ -108,15 +108,15 @@
     .map((i) => i.replaceAll("_", " "));
 
   let langs = [
-    ['', 'gruvbox-bright-red', pro_langs[0], (getLocale() == 'ar'? rust_desc_ar: rust_desc_en)], 
-    ['', 'gruvbox-yellow', pro_langs[1], (getLocale() == 'ar'? zig_desc_ar: zig_desc_en)], 
-    ['', 'gruvbox-yellow', pro_langs[2], (getLocale() == 'ar'? js_desc_ar: js_desc_en)], 
-    ['', 'gruvbox-blue', pro_langs[3], (getLocale() == 'ar'? ts_desc_ar: ts_desc_en)], 
-    ['', 'gruvbox-blue', pro_langs[4], (getLocale() == 'ar'? lua_desc_ar: lua_desc_en)], 
-    ['', 'gruvbox-blue', pro_langs[5], (getLocale() == 'ar'? py_desc_ar: py_desc_en)], 
-    ['', 'gruvbox-bright-purple', pro_langs[6], (getLocale() == 'ar'? php_desc_ar: php_desc_en)], 
-    ['', 'gruvbox-orange', pro_langs[7], (getLocale() == 'ar'? java_desc_ar: java_desc_en)], 
-    ['', 'gruvbox-purple', pro_langs[8], (getLocale() == 'ar'? csharp_desc_ar: csharp_desc_en)], 
+    ['', 'text-gruvbox-bright-red', pro_langs[0], (getLocale() == 'ar'? rust_desc_ar: rust_desc_en)], 
+    ['', 'text-gruvbox-yellow', pro_langs[1], (getLocale() == 'ar'? zig_desc_ar: zig_desc_en)], 
+    ['', 'text-gruvbox-yellow', pro_langs[2], (getLocale() == 'ar'? js_desc_ar: js_desc_en)], 
+    ['', 'text-gruvbox-blue', pro_langs[3], (getLocale() == 'ar'? ts_desc_ar: ts_desc_en)], 
+    ['', 'text-gruvbox-blue', pro_langs[4], (getLocale() == 'ar'? lua_desc_ar: lua_desc_en)], 
+    ['', 'text-gruvbox-blue', pro_langs[5], (getLocale() == 'ar'? py_desc_ar: py_desc_en)], 
+    ['', 'text-gruvbox-bright-purple', pro_langs[6], (getLocale() == 'ar'? php_desc_ar: php_desc_en)], 
+    ['', 'text-gruvbox-orange', pro_langs[7], (getLocale() == 'ar'? java_desc_ar: java_desc_en)], 
+    ['', 'text-gruvbox-purple', pro_langs[8], (getLocale() == 'ar'? csharp_desc_ar: csharp_desc_en)], 
   ];
 
   let mark_langs = m["root.markup_langs.langs"]()
@@ -124,9 +124,9 @@
     .map((i) => i.replaceAll("_", " "));
 
   let marks = [
-    ['', 'gruvbox-orange', mark_langs[0], (getLocale() == 'ar'? html_css_desc_ar: html_css_desc_en)], 
-    ['', 'gruvbox-light0', mark_langs[1], (getLocale() == 'ar'? md_desc_ar: md_desc_en)], 
-    ['', 'gruvbox-green', mark_langs[2], (getLocale() == 'ar'? tex_desc_ar: tex_desc_en)], 
+    ['', 'text-gruvbox-orange', mark_langs[0], (getLocale() == 'ar'? html_css_desc_ar: html_css_desc_en)], 
+    ['', 'text-gruvbox-light0', mark_langs[1], (getLocale() == 'ar'? md_desc_ar: md_desc_en)], 
+    ['', 'text-gruvbox-green', mark_langs[2], (getLocale() == 'ar'? tex_desc_ar: tex_desc_en)], 
   ];
 
   let frames_front = m["root.frontend_frameworks.objects"]()
@@ -134,11 +134,11 @@
     .map((i) => i.replaceAll("_", " "));
 
   let frames = [
-    ['', 'gruvbox-light2', frames_front[0], (getLocale() == 'ar'? bun_desc_ar: bun_desc_en)], 
-    ['', 'gruvbox-orange', frames_front[1], (getLocale() == 'ar'? sv_desc_ar: sv_desc_en)], 
-    ['', 'gruvbox-green', frames_front[2], (getLocale() == 'ar'? vue_desc_ar: vue_desc_en)], 
-    ['', 'gruvbox-red', frames_front[3], (getLocale() == 'ar'? la_desc_ar: la_desc_en)], 
-    ['', 'gruvbox-purple', frames_front[4], (getLocale() == 'ar'? blazoer_desc_ar: blazoer_desc_en)], 
+    ['', 'text-gruvbox-light2', frames_front[0], (getLocale() == 'ar'? bun_desc_ar: bun_desc_en)], 
+    ['', 'text-gruvbox-orange', frames_front[1], (getLocale() == 'ar'? sv_desc_ar: sv_desc_en)], 
+    ['', 'text-gruvbox-green', frames_front[2], (getLocale() == 'ar'? vue_desc_ar: vue_desc_en)], 
+    ['', 'text-gruvbox-red', frames_front[3], (getLocale() == 'ar'? la_desc_ar: la_desc_en)], 
+    ['', 'text-gruvbox-purple', frames_front[4], (getLocale() == 'ar'? blazoer_desc_ar: blazoer_desc_en)], 
   ];
 
   let skills_list = m["root.skills.list"]()
@@ -146,11 +146,11 @@
     .map((i) => i.replaceAll("_", " "));
 
   let skills = [
-    ['', 'gruvbox-red', skills_list[0], (getLocale() == 'ar'? git_desc_ar: git_desc_en)], 
-    ['', 'gruvbox-blue', skills_list[1], (getLocale() == 'ar'? docker_desc_ar: docker_desc_en)], 
-    ['', 'gruvbox-bright-blue', skills_list[2], (getLocale() == 'ar'? tailcss_desc_ar: tailcss_desc_en)], 
-    ['', 'gruvbox-bright-blue', skills_list[3], (getLocale() == 'ar'? sql_desc_ar: sql_desc_en)], 
-    ['', 'gruvbox-purple', skills_list[4], (getLocale() == 'ar'? surreal_desc_ar: surreal_desc_en)], 
+    ['', 'text-gruvbox-red', skills_list[0], (getLocale() == 'ar'? git_desc_ar: git_desc_en)], 
+    ['', 'text-gruvbox-blue', skills_list[1], (getLocale() == 'ar'? docker_desc_ar: docker_desc_en)], 
+    ['', 'text-gruvbox-bright-blue', skills_list[2], (getLocale() == 'ar'? tailcss_desc_ar: tailcss_desc_en)], 
+    ['', 'text-gruvbox-bright-blue', skills_list[3], (getLocale() == 'ar'? sql_desc_ar: sql_desc_en)], 
+    ['', 'text-gruvbox-purple', skills_list[4], (getLocale() == 'ar'? surreal_desc_ar: surreal_desc_en)], 
   ];
 
   let environment_list = m["root.environment.list"]()
@@ -158,11 +158,11 @@
     .map((i) => i.replaceAll("_", " "));
 
   let environment = [
-    ['', 'gruvbox-blue', environment_list[0], (getLocale() == 'ar'? arch_desc_ar: arch_desc_en)], 
-    ['󱘆', 'gruvbox-orange', environment_list[1], (getLocale() == 'ar'? niri_desc_ar: niri_desc_en)], 
-    ['', 'gruvbox-green', environment_list[2], (getLocale() == 'ar'? nvim_desc_ar: nvim_desc_en)], 
-    ['', 'gruvbox-bright-green', environment_list[3], (getLocale() == 'ar'? tmux_desc_ar: tmux_desc_en)], 
-    ['', 'gruvbox-light1', environment_list[4], (getLocale() == 'ar'? nerdfont_desc_ar: nerdfont_desc_en)], 
+    ['', 'text-gruvbox-blue', environment_list[0], (getLocale() == 'ar'? arch_desc_ar: arch_desc_en)], 
+    ['󱘆', 'text-gruvbox-orange', environment_list[1], (getLocale() == 'ar'? niri_desc_ar: niri_desc_en)], 
+    ['', 'text-gruvbox-green', environment_list[2], (getLocale() == 'ar'? nvim_desc_ar: nvim_desc_en)], 
+    ['', 'text-gruvbox-bright-green', environment_list[3], (getLocale() == 'ar'? tmux_desc_ar: tmux_desc_en)], 
+    ['', 'text-gruvbox-light1', environment_list[4], (getLocale() == 'ar'? nerdfont_desc_ar: nerdfont_desc_en)], 
   ];
 </script>
 

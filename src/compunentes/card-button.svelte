@@ -97,7 +97,7 @@
       </div>
       <div class="p-3 sm:p-5 overflow-y-scroll">
         <div class="pt-8 flex flex-col gap-4 justify-center items-center">
-          <div class="h-20 text-9xl text-center text-{iconColor}">{icon}</div>
+          <div class="h-20 text-9xl text-center {iconColor}">{icon}</div>
           <div 
             bind:this={container} 
             class="
