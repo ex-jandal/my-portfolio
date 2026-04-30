@@ -88,19 +88,19 @@
 </div>
 
 {#if isPopupOpen}
+  <!-- pb-25 pt-25 -->
   <div 
     class="
       fixed top-0 left-0 right-0 bottom-0
       flex flex-col justify-center items-center
-      px-2 pb-25 pt-25
-      z-50
+      px-2 z-50
     "
   >
     <div class="
         bg-gruvbox-dark0 rounded-lg
         text-gruvbox-light1
         flex flex-col overflow-hidden
-        max-w-257 w-full h-[calc(100vh-50px)] sm:h-[calc(100vh-100px)] lg:max-h-300
+        max-w-257 w-full h-[calc(100vh-10vh)] lg:max-h-300
       "
       in:slide={{ duration: 200, delay: 200 }} 
       out:slide={{ duration: 200 }} 
@@ -134,8 +134,8 @@
       </div>
     </div>
     <button 
-      in:fade={{ duration: 400 }}
-      out:fade={{ duration: 400 }}
+      in:fade={{ duration: 200, delay: 200 }}
+      out:fade={{ duration: 200, delay: 200 }}
       onclick={closePopup} 
       class="
         <!-- bg-gruvbox-black/50  -->

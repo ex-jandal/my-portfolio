@@ -35,7 +35,6 @@
     padding: 20px;
     border-radius: 8px;
     border: 2px solid #d79921;
-    text-align: center;
   }
   
   h1 { 
@@ -46,7 +45,7 @@
 ```
 
 <div class="profile-card">
-  <h1>Abu_Jandal</h1>
+  <h1>أبو_جندل</h1>
   <p>مطوّر فول ستاك (Full-stack Developer)</p>
 </div>
 
@@ -57,7 +56,6 @@
     padding: 20px;
     border-radius: 8px;
     border: 2px solid #d79921;
-    text-align: center;
   }
   
   h1 { 

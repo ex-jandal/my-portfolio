@@ -126,7 +126,7 @@
   let marks = [
     ['', 'text-gruvbox-orange', mark_langs[0], (getLocale() == 'ar'? html_css_desc_ar: html_css_desc_en)], 
     ['', 'text-gruvbox-light0', mark_langs[1], (getLocale() == 'ar'? md_desc_ar: md_desc_en)], 
-    ['', 'text-gruvbox-green', mark_langs[2], (getLocale() == 'ar'? tex_desc_ar: tex_desc_en)], 
+    ['', 'text-gruvbox-green', mark_langs[2], (getLocale() == 'ar'? tex_desc_ar: tex_desc_en)], 
   ];
 
   let frames_front = m["root.frontend_frameworks.objects"]()

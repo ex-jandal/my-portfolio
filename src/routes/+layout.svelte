@@ -104,9 +104,9 @@
   dir="{(currentLang === 'ar') ? 'rtl' : 'ltr'}"
 >
   <header class="sticky z-20 top-2 shadow-gruvbox-bright-orange shadow-sm text-gruvbox-bright-orange m-2 mb-5 sm:m-5 rounded-xl sm:rounded-2xl after:content-[''] after:absolute after:top-0 after:-z-10 after:w-full after:h-full after:backdrop-blur-lg after:rounded-xl after:sm:rounded-2xl">
-    <nav class="relative flex flex-col md:flex-row md:justify-between md:items-center px-2 sm:px-4 py-2">
+    <nav class="relative flex flex-col px-2 sm:px-4 py-2">
       <div class="flex flex-row items-center gap-2">
-        <img src="{aj_logo}" class="h-12 scale-110 hidden sm:inline {(currentLang === 'ar' ? 'pl-2 border-l' : 'pr-2 border-r')} border-gruvbox-green" alt="">
+        <img src="{aj_logo}" class="h-12 scale-110 hidden sm:inline {(currentLang === 'ar' ? 'pl-2 ml-2 border-l' : 'pr-2 mr-2 border-r')} border-gruvbox-green" alt="">
         <!-- <h1>It's me. Abu_jandal </h1> -->
 
         <div class="text-md flex flex-col gap-1 py-1">
@@ -156,14 +156,14 @@
           </div>
         </div>
       </div>
-      <button class="cursor-pointer px-3 py-1 sm:mt-2 w-15 absolute bottom-1.75 md:relative md:top-0 flex flex-row self-end justify-between items-center bg-gruvbox-dark0 gap-1 rounded-full" dir="ltr" onclick={swapLang}>
+      <button class="cursor-pointer px-3 py-1 sm:mt-2 w-24 absolute bottom-1.75 flex flex-row self-end justify-between items-center bg-gruvbox-dark1 gap-1 rounded-full" dir="ltr" onclick={swapLang}>
         {#key currentLang}
-          <div class="absolute {(currentLang == 'ar') ? 'right-px' : 'left-px'} bg-gruvbox-orange  text-gruvbox-light0 leading-0 w-7 h-7 scale-125 text-center flex justify-center items-center rounded-full">
-            
+          <div class="absolute {(currentLang == 'ar') ? 'right-px' : 'left-px'} bg-gruvbox-orange  text-gruvbox-light0 leading-0 w-12 h-7 scale-90 text-center flex justify-center items-center rounded-full">
+            <span class="text-2xl"></span>
           </div>
         {/key}
-        <div class="flex">E</div>
-        <div class="flex">ع</div>
+        <div class="flex">Eng</div>
+        <div class="flex">عربي</div>
       </button>
     </nav>
   </header>
