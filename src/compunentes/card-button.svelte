@@ -38,16 +38,37 @@
     return () => observer.disconnect();
   });
 
-  let show_window = $state(false);
-  function window_toggle() {
-    show_window = show_window ? false : true
+  let isPopupOpen = $state(false);
+
+  function openPopup() {
+    isPopupOpen = true;
+    // Push a dummy state so there's something to "go back" from
+    history.pushState({ popup: "open" }, "");
+  }
+
+  function closePopup() {
+    isPopupOpen = false;
+    // If the user closed it manually (not via back button), 
+    // you might want to clear the dummy state to keep history clean
+    if (history.state?.popup === "open") {
+      history.back();
+    }
+  }
+
+  function handleBackNavigation(_event: any) {
+    if (isPopupOpen) {
+      // Prevent navigation and just close the UI element
+      isPopupOpen = false;
+    }
   }
 
   let { icon, iconColor, text, description } = $props();
 </script>
 
+<svelte:window on:popstate={handleBackNavigation} />
+
 <div class="">
-  <button onclick={window_toggle} 
+  <button onclick={openPopup} 
     class="
       flex flex-row items-center justify-between
       w-full h-full text-start 
@@ -66,7 +87,7 @@
   </button>
 </div>
 
-{#if show_window}
+{#if isPopupOpen}
   <div 
     class="
       fixed top-0 left-0 right-0 bottom-0
@@ -88,10 +109,10 @@
         <div>{(getLocale() == 'ar'? 'نافذة':'Window')} - {text}</div>
         <div class="leading-5 text-[12px] text-gruvbox-black flex flex-row justify-between items-center gap-2">
           <button 
-            onclick={window_toggle} 
+            onclick={closePopup} 
             class="w-6 h-6 cursor-pointer text-center bg-gruvbox-yellow rounded-full"></button>
           <button 
-            onclick={window_toggle} 
+            onclick={closePopup} 
             class="w-6 h-6 cursor-pointer text-center bg-gruvbox-red rounded-full">󰅖</button>
         </div>
       </div>
@@ -115,7 +136,7 @@
     <button 
       in:fade={{ duration: 400 }}
       out:fade={{ duration: 400 }}
-      onclick={window_toggle} 
+      onclick={closePopup} 
       class="
         <!-- bg-gruvbox-black/50  -->
         fixed top-0 left-0 right-0 bottom-0
