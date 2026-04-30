@@ -258,7 +258,8 @@
       <span class="icon"></span>
       <strong>Github Activity:</strong>
     </span>
-    <img class="m-auto" src="https://raw.githubusercontent.com/ex-jandal/ex-jandal/output/github-snake.svg" alt="">
+    <!-- this one does not work in Yemen: https://raw.githubusercontent.com/ex-jandal/ex-jandal/output/github-snake.svg -->
+    <img class="m-auto" src="https://cdn.jsdelivr.net/gh/ex-jandal/ex-jandal@output/github-snake-dark.svg" alt="">
   </div>
 
   <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
