@@ -107,6 +107,14 @@ footer {
   font-style: normal;
   font-weight: 400;
 }
+
+@font-face {
+  src: url('$lib/assets/Rakkas/Rakkas-Regular.ttf') format("truetype");
+  font-family: 'Rakkas';
+  font-style: normal;
+  font-weight: 400;
+}
+
 .ascii-art {
   font-family: 'CascidaCode', 'NerdIcons';
   white-space: pre;
@@ -169,9 +177,10 @@ footer {
 }
 
 @theme {
-  /* --default-font-family: 'CascidaCode', 'NerdIcons', monospace; */
+  --default-font-family: 'Rubik', 'NerdIcons', monospace;
   --font-main: 'Rubik', 'NerdIcons', monospace; /* CascidaCode font*/
   --font-code: 'CascidaCode', 'NerdIcons', monospace;
+  --font-quote: 'Rakkas', serif;
   --font-arabic: 'Rubik', 'NerdIcons';
   --font-icons: 'NerdIcons';
   /* Absolute Zero Backgrounds */
