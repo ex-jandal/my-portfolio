@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Soul Programming Language - Full Showcase</title>
+    <style>
+      /* Gruvbox Dark Hard Palette */
+      :root {
+        --bg0-hard: #1d2021; /* Background */
+        --fg0: #fbf1c7; /* Foreground */
+        --gray: #928374; /* Comments */
+        --red: #fb4934; /* Keywords */
+        --green: #b8bb26; /* Strings */
+        --yellow: #fabd2f; /* Types / Classes */
+        --blue: #83a598; /* Functions / Procs */
+        --purple: #d3869b; /* Numbers / Constants */
+        --aqua: #8ec07c; /* Operators / Delimiters */
+        --orange: #fe8019; /* Tags / Specials */
+      }
+
+      body {
+        background-color: #121212;
+        color: var(--fg0);
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 40px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      header {
+        border-bottom: 1px solid #3c3836;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+      }
+
+      pre {
+        background-color: var(--bg0-hard);
+        padding: 2rem;
+        border-radius: 12px;
+        overflow-x: auto;
+        border: 1px solid #3c3836;
+        font-family: "JetBrains Mono", "JetBrains Mono NL", "Fira Code", monospace;
+        font-variant-ligatures: normal; 
+        letter-spacing: 0.02em;
+        line-height: 1.5;
+        font-size: 18px;
+        tab-size: 2;
+      }
+
+      /* Syntax Highlighting */
+      .c {
+        color: var(--gray);
+      } /* Comment */
+      .k {
+        color: var(--red);
+      } /* Keyword */
+      .t {
+        color: var(--yellow);
+      } /* Type */
+      .s {
+        color: var(--green);
+      } /* String */
+      .n {
+        color: var(--purple);
+      } /* Number */
+      .p {
+        color: var(--blue);
+      } /* Proc/Function */
+      .o {
+        color: var(--aqua);
+      } /* Operator */
+      .tg {
+        color: var(--orange);
+      } /* Tag/Property */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 style="color: var(--fg0); margin: 0">Soul Language Showcase</h1>
+        <code style="color: var(--orange)">v0.1.0-alpha</code>
+      </header>
+
+      <pre>
+<span class="c">// Varibles definitions.</span>
+var_name <span class="o">=</span> <span class="n">10</span>;
+var_name<span class="o">::</span> <span class="k">fxd</span> <span class="o">=</span> <span class="n">10</span>;
+var_name<span class="o">::</span> <span class="k">mut</span> <span class="t">u8</span> <span class="o">=</span> uninit;
+
+<span class="c">// pointers</span>
+ptr_name<span class="o">::</span> <span class="k">fxd</span> <span class="o">*</span><span class="k">mut</span> <span class="t">u8</span> <span class="o">=</span> <span class="o">&amp;</span>var_name;
+
+<span class="c">// functions or procedure here are..</span>
+<span class="c">// different. :)</span>
+<span class="c">// they are like varibles definition.</span>
+<span class="c">// and yes.. Soul doesn't support multi-line comments</span>
+<span class="p">fun_name</span><span class="o">::</span> <span class="k">proc</span>(_ignored<span class="o">::</span> <span class="t">f64</span>) <span class="o">-&gt;</span> <span class="t">type</span> {
+  <span class="p">print</span>(_ignored);
+  <span class="k">ret</span> value;
+}
+
+<span class="c">// here is how to comment a code block.</span>
+<span class="c">/-fun_name:: proc(para:: u8) -&gt; void { 
+  ...
+}</span>
+
+<span class="c">// struct are cool too. :)</span>
+<span class="k">pub</span> <span class="t">Name</span><span class="o">::</span> <span class="k">struct</span>() {
+  <span class="tg">.properity_name</span><span class="o">::</span> <span class="t">u8</span>,
+  <span class="tg">.properity_name</span><span class="o">::</span> <span class="o">*</span><span class="k">mut</span> <span class="t">str</span>,
+
+  <span class="k">pub</span> <span class="p">method_name</span><span class="o">::</span> <span class="k">proc</span>(self<span class="o">:</span> <span class="k">mut</span> <span class="o">*</span><span class="t">Self</span>, input<span class="o">:</span> <span class="o">*</span><span class="t">str</span>) <span class="o">-&gt;</span> <span class="t">type</span> {
+    _ <span class="o">=</span> input;
+    ...
+  }
+
+  <span class="p">method_name</span><span class="o">::</span> <span class="k">proc</span>(<span class="t">void</span>) <span class="o">-&gt;</span> <span class="t">type</span> {
+    ...
+  }
+}
+
+<span class="c">// Anonymise struct,</span>
+<span class="c">// or can used as a short-hand struct.</span>
+<span class="t">Name</span><span class="o">::</span> <span class="o">.</span>{
+  <span class="tg">.properity_name</span><span class="o">:</span> <span class="t">u8</span>,
+  <span class="tg">.properity_name</span><span class="o">:</span> <span class="o">*</span><span class="t">str</span>,
+}
+
+<span class="c">// also anonymise struct but with no-field name,</span>
+<span class="c">// or just say a tuple</span>
+<span class="t">Name</span><span class="o">::</span> <span class="o">.</span>{ <span class="t">u8</span>, <span class="o">*</span><span class="t">str</span> }
+
+<span class="c">// this one is a tagged union,</span>
+<span class="c">// can be used as a enum or union.</span>
+<span class="k">pub</span> <span class="t">Name</span><span class="o">::</span> <span class="p">tags</span>() {
+  <span class="tg">.VarOne</span>,
+  <span class="tg">.VarTwo</span>(<span class="t">i32</span>),
+  <span class="tg">.VarTree</span> <span class="o">.</span>{ <span class="tg">.x</span><span class="o">::</span> <span class="t">f32</span>, <span class="tg">.y</span><span class="o">::</span> <span class="t">f32</span>},
+  ...
+}
+
+<span class="c">// Optional values are just tags in Soul programming,</span>
+<span class="c">// also Result.</span>
+var_name<span class="o">::</span> <span class="k">mut</span> <span class="t">Opt</span>(<span class="t">u8</span>) <span class="o">=</span> <span class="tg">.null</span>;
+
+<span class="c">// Soul Support error union or tags.</span>
+fut_err<span class="o">::</span> <span class="k">error</span> {
+  <span class="tg">.Stopped</span>,
+  <span class="c">// quoted-identifiers to use a keyword or wired text as a varible or function name</span>
+  <span class="tg">.</span><span class="s">#"can't get the value"</span>,
+  <span class="tg">.SomthingElseGoesWrong</span>,
+}
+
+<span class="c">// tags with generics and method support like Zig and Rust (Maybe).</span>
+<span class="k">pub</span> <span class="t">Fut</span><span class="o">::</span> <span class="p">tags</span>(T<span class="o">::</span> <span class="t">u8</span> <span class="o">|</span> <span class="t">f32</span> <span class="o">|</span> <span class="o">*</span><span class="k">mut</span> <span class="t">str</span>) {
+  <span class="p">rsv</span>(T),
+  <span class="p">rjc</span>(fut_err),
+
+  <span class="k">pub</span> <span class="p">await</span><span class="o">::</span> <span class="k">proc</span>(self<span class="o">::</span> <span class="o">*</span><span class="k">mut</span> <span class="t">Self</span>) <span class="o">-&gt;</span> <span class="t">Result</span>(T) {
+    <span class="c">// .. Wating logic</span>
+    <span class="k">if</span> <span class="k">true</span> {
+      <span class="k">ret</span> <span class="tg">.ok</span>(T);
+    } <span class="k">else</span> {
+      self<span class="o">.*</span> <span class="o">=</span> <span class="tg">.rjc</span>(fut_err<span class="o">.</span><span class="s">#"can't get the value"</span>);
+      <span class="k">ret</span> self<span class="o">.*</span>;
+    }
+  }
+}
+
+<span class="k">async</span> <span class="p">fun_name</span><span class="o">::</span> <span class="k">proc</span>(input<span class="o">::</span> <span class="t">f64</span>) <span class="o">-&gt;</span> <span class="t">Fut</span><span class="o">&lt;</span><span class="t">type</span><span class="o">&gt;</span> {
+  <span class="k">if</span> input <span class="o">&gt;=</span> <span class="n">0</span> {
+    <span class="k">ret</span> <span class="tg">.rjc</span>(<span class="tg">.SomthingElseGoesWrong</span>);
+  }
+  <span class="k">ret</span> <span class="tg">.rsv</span>(input <span class="o">+</span> <span class="n">42.0</span>);
+}
+
+<span class="k">proc</span> <span class="p">main</span>(init<span class="o">:</span> std.Init) <span class="o">-&gt;</span> <span class="t">Result</span><span class="o">&lt;</span><span class="t">u8</span><span class="o">&gt;</span> {
+  fut_handler<span class="o">::</span> <span class="k">mut</span> <span class="t">Fut</span> <span class="o">=</span> <span class="p">fun_name</span>(<span class="n">42.0</span>);
+  fut_handler.<span class="p">await</span>();
+  <span class="k">ret</span> <span class="n">0</span>;
+}
+
+<span class="k">match</span> var_name {
+  <span class="n">0</span> <span class="o">=&gt;</span> <span class="p">proc</span>(),
+  <span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span> <span class="o">=&gt;</span> <span class="p">another_proc</span>(),
+  <span class="o">...</span> <span class="o">=&gt;</span> {
+    <span class="p">general_proc</span>();
+    <span class="k">ret</span> <span class="n">1</span>;
+  },
+}
+
+<span class="k">for</span> iterator <span class="k">as</span> i {
+  <span class="p">do_something</span>(i);
+}
+
+<span class="k">for</span> (iterator, <span class="n">0</span><span class="o">..</span>) <span class="k">as</span> (i, idx) {
+  <span class="p">do_something</span>(i, idx);
+}
+
+var<span class="o">::</span> <span class="k">mut</span> <span class="t">u8</span> <span class="o">=</span> <span class="n">0</span>
+<span class="k">while</span> var <span class="o">&lt;=</span> <span class="n">10</span> <span class="o">::</span> var <span class="o">+=</span> <span class="n">1</span> {
+  <span class="p">print_proc</span>(<span class="s">"{}"</span>, var);
+}</pre>
+    </div>
+  </body>
+</html>
