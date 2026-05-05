@@ -178,7 +178,7 @@ fut_err<span class="o">::</span> <span class="k">error</span> {
   <span class="k">ret</span> <span class="tg">.rsv</span>(input <span class="o">+</span> <span class="n">42.0</span>);
 }
 
-<span class="k">proc</span> <span class="p">main</span>(init<span class="o">:</span> std.Init) <span class="o">-&gt;</span> <span class="t">Result</span><span class="o">&lt;</span><span class="t">u8</span><span class="o">&gt;</span> {
+<span class="p">main</span><span class="o">::</span> <span class="k">proc</span>(init<span class="o">:</span> std.Init) <span class="o">-&gt;</span> <span class="t">Result</span><span class="o">&lt;</span><span class="t">u8</span><span class="o">&gt;</span> {
   fut_handler<span class="o">::</span> <span class="k">mut</span> <span class="t">Fut</span> <span class="o">=</span> <span class="p">fun_name</span>(<span class="n">42.0</span>);
   fut_handler.<span class="p">await</span>();
   <span class="k">ret</span> <span class="n">0</span>;
