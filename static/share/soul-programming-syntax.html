@@ -44,7 +44,8 @@
         overflow-x: auto;
         border: 1px solid #3c3836;
         font-family: "JetBrains Mono", "JetBrains Mono NL", "Fira Code", monospace;
-        font-variant-ligatures: normal; 
+        font-variant-ligatures: none; 
+        text-rendering: optimizeLegibility;
         letter-spacing: 0.02em;
         line-height: 1.5;
         font-size: 18px;
@@ -81,7 +82,7 @@
   <body>
     <div class="container">
       <header>
-        <h1 style="color: var(--fg0); margin: 0">Soul Language Showcase</h1>
+        <h1 style="color: var(--fg0); margin: 0">Soul Programming Showcase</h1>
         <code style="color: var(--orange)">v0.1.0-alpha</code>
       </header>
 
@@ -204,7 +205,25 @@ fut_err<span class="o">::</span> <span class="k">error</span> {
 var<span class="o">::</span> <span class="k">mut</span> <span class="t">u8</span> <span class="o">=</span> <span class="n">0</span>
 <span class="k">while</span> var <span class="o">&lt;=</span> <span class="n">10</span> <span class="o">::</span> var <span class="o">+=</span> <span class="n">1</span> {
   <span class="p">print_proc</span>(<span class="s">"{}"</span>, var);
-}</pre>
+}
+<span class="c">// self invoked function</span>
+result<span class="o">::</span> <span class="t">u32</span> <span class="o">=</span> (<span class="k">proc</span>() { <span class="k">ret</span> <span class="n">10</span>; })();
+
+<span class="c">// arrow function</span>
+result<span class="o">::</span> <span class="t">u32</span> <span class="o">=</span> () <span class="o">=></span> <span class="n">10</span>;
+<span class="c">// or</span>
+result<span class="o">::</span> <span class="t">u32</span> <span class="o">=</span> () <span class="o">=></span> { 
+    a <span class="o">=</span> <span class="n">6</span> <span class="o">+</span> <span class="n">4</span>;
+    <span class="k">ret</span> a;
+};
+
+<span class="c">// importing library</span>
+std<span class="o">::</span> <span class="k">import</span>(<span class="s">"std"</span>);
+
+<span class="c">// import another Soul file</span>
+code<span class="o">::</span> <span class="k">import</span>(<span class="s">"code.soul"</span>);
+<span class="c">// or</span>
+code<span class="o">::</span> <span class="k">import</span>(<span class="s">"mod/code.soul"</span>);</pre>
     </div>
   </body>
 </html>
