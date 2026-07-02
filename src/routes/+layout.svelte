@@ -11,7 +11,7 @@
   import * as m from '$lib/paraglide/messages';
 	import { PUBLIC_URL, PUBLIC_GOATCOUNTER_API } from '$env/static/public';
 	import { onMount } from 'svelte';
-  import arabicQuotes from '$lib/assets/arabic-quotes.json';
+  // import arabicQuotes from '$lib/assets/arabic-quotes.json';
 
   async function getTotalCommits(): Promise<number | string> {
     const url = `https://api.github.com/repos/ex-jandal/my-portfolio/commits?per_page=1`;
@@ -45,21 +45,21 @@
     }
   }
 
-  interface Quote {
-    quote: string, 
-    author: string, 
-    tags: Array<string>
-  }
+  // interface Quote {
+  //   quote: string, 
+  //   author: string, 
+  //   tags: Array<string>
+  // }
 
   let views: string = $state("-");
   let commits: string | number = $state("-");
-  let currentQuote: Quote | null = $state(null);
+  // let currentQuote: Quote | null = $state(null);
 
-  function shuffleQuote() {
-    const rand = Math.floor(Math.random() * arabicQuotes.length);
-    console.log(rand)
-    currentQuote = arabicQuotes[rand];
-  }
+  // function shuffleQuote() {
+  //   const rand = Math.floor(Math.random() * arabicQuotes.length);
+  //   console.log(rand)
+  //   currentQuote = arabicQuotes[rand];
+  // }
 
   onMount(async () => {
     const res = await fetch('https://ex-jandal.goatcounter.com/api/v0/stats/total', {
@@ -72,7 +72,7 @@
     views = data.total;
     commits = await getTotalCommits();
 
-    shuffleQuote();
+    // shuffleQuote();
   });
 
   let currentLang = $state(getLocale());
@@ -230,27 +230,27 @@
     </a>
   </div>
 
-  {#if currentQuote}
-    <div class="
-        text-right
-        relative m-2 mb-4 sm:m-5 mt-0 p-5 sm:p-7 rounded-xl sm:rounded-2xl shadow-sm shadow-gruvbox-aqua overflow-hidden
-        after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:left-0 after:right-0 after:z-[-1] 
-        after:backdrop-blur-xs flex flex-row justify-between items-center gap-5
-      "
-      dir="rtl"
-    >
-      <button class="h-10 min-w-10" onclick={shuffleQuote}></button>
-      <div class="grow">
-        <div class="text-gruvbox-bright-orange text-2xl sm:text-3xl underline font-quote">
-          {currentQuote?.quote.trim()}
-        </div>
-
-        <div class="text-gruvbox-aqua text-left">
-          {currentQuote?.author}
-        </div>
-      </div>
-    </div>
-  {/if}
+  <!-- {#if currentQuote} -->
+  <!--   <div class=" -->
+  <!--       text-right -->
+  <!--       relative m-2 mb-4 sm:m-5 mt-0 p-5 sm:p-7 rounded-xl sm:rounded-2xl shadow-sm shadow-gruvbox-aqua overflow-hidden -->
+  <!--       after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:left-0 after:right-0 after:z-[-1]  -->
+  <!--       after:backdrop-blur-xs flex flex-row justify-between items-center gap-5 -->
+  <!--     " -->
+  <!--     dir="rtl" -->
+  <!--   > -->
+  <!--     <button class="h-10 min-w-10" onclick={shuffleQuote}></button> -->
+  <!--     <div class="grow"> -->
+  <!--       <div class="text-gruvbox-bright-orange text-2xl sm:text-3xl underline font-quote"> -->
+  <!--         {currentQuote?.quote.trim()} -->
+  <!--       </div> -->
+  <!---->
+  <!--       <div class="text-gruvbox-aqua text-left"> -->
+  <!--         {currentQuote?.author} -->
+  <!--       </div> -->
+  <!--     </div> -->
+  <!--   </div> -->
+  <!-- {/if} -->
 
   <main 
     class="
