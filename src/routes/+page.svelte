@@ -103,6 +103,15 @@
   import nerdfont_desc_en from'$lib/assets/description/nerdfont_en.md?raw';
   import nerdfont_desc_ar from'$lib/assets/description/nerdfont_ar.md?raw';
 
+  import c_desc_en from'$lib/assets/description/c_en.md?raw';
+  import c_desc_ar from'$lib/assets/description/c_ar.md?raw';
+
+  import obsidian_desc_en from'$lib/assets/description/obsidian_en.md?raw';
+  import obsidian_desc_ar from'$lib/assets/description/obsidian_ar.md?raw';
+
+  import vmm_desc_en from'$lib/assets/description/vmm_en.md?raw';
+  import vmm_desc_ar from'$lib/assets/description/vmm_ar.md?raw';
+
   let pro_langs = m["root.programming_langs.langs"]()
     .split(' ')
     .map((i) => i.replaceAll("_", " "));
@@ -110,13 +119,14 @@
   let langs = [
     ['', 'text-gruvbox-bright-red', pro_langs[0], (getLocale() == 'ar'? rust_desc_ar: rust_desc_en)], 
     ['', 'text-gruvbox-yellow', pro_langs[1], (getLocale() == 'ar'? zig_desc_ar: zig_desc_en)], 
-    ['', 'text-gruvbox-yellow', pro_langs[2], (getLocale() == 'ar'? js_desc_ar: js_desc_en)], 
-    ['', 'text-gruvbox-blue', pro_langs[3], (getLocale() == 'ar'? ts_desc_ar: ts_desc_en)], 
-    ['', 'text-gruvbox-blue', pro_langs[4], (getLocale() == 'ar'? lua_desc_ar: lua_desc_en)], 
-    ['', 'text-gruvbox-blue', pro_langs[5], (getLocale() == 'ar'? py_desc_ar: py_desc_en)], 
-    ['', 'text-gruvbox-bright-purple', pro_langs[6], (getLocale() == 'ar'? php_desc_ar: php_desc_en)], 
-    ['', 'text-gruvbox-orange', pro_langs[7], (getLocale() == 'ar'? java_desc_ar: java_desc_en)], 
-    ['', 'text-gruvbox-purple', pro_langs[8], (getLocale() == 'ar'? csharp_desc_ar: csharp_desc_en)], 
+    ['', 'text-gruvbox-blue', pro_langs[2], (getLocale() == 'ar'? c_desc_ar: c_desc_en)], 
+    ['', 'text-gruvbox-yellow', pro_langs[3], (getLocale() == 'ar'? js_desc_ar: js_desc_en)], 
+    ['', 'text-gruvbox-blue', pro_langs[4], (getLocale() == 'ar'? ts_desc_ar: ts_desc_en)], 
+    ['', 'text-gruvbox-blue', pro_langs[5], (getLocale() == 'ar'? lua_desc_ar: lua_desc_en)], 
+    ['', 'text-gruvbox-blue', pro_langs[6], (getLocale() == 'ar'? py_desc_ar: py_desc_en)], 
+    ['', 'text-gruvbox-bright-purple', pro_langs[7], (getLocale() == 'ar'? php_desc_ar: php_desc_en)], 
+    ['', 'text-gruvbox-orange', pro_langs[8], (getLocale() == 'ar'? java_desc_ar: java_desc_en)], 
+    ['', 'text-gruvbox-purple', pro_langs[9], (getLocale() == 'ar'? csharp_desc_ar: csharp_desc_en)], 
   ];
 
   let mark_langs = m["root.markup_langs.langs"]()
@@ -153,6 +163,53 @@
     ['', 'text-gruvbox-purple', skills_list[4], (getLocale() == 'ar'? surreal_desc_ar: surreal_desc_en)], 
   ];
 
+  let journey_phases = [
+    {
+      title: m["journey.phase_0.title"](),
+      status: m["journey.phase_0.status"](),
+      description: m["journey.phase_0.description"](),
+      books: m["journey.phase_0.books"](),
+      icon: '󰧑',
+      color: 'text-gruvbox-bright-green',
+      border: 'border-gruvbox-bright-green/50',
+      dot: 'bg-gruvbox-bright-green border-gruvbox-bright-green',
+      badge: 'bg-gruvbox-bright-green text-gruvbox-dark0',
+    },
+    {
+      title: m["journey.phase_1.title"](),
+      status: m["journey.phase_1.status"](),
+      description: m["journey.phase_1.description"](),
+      books: m["journey.phase_1.books"](),
+      icon: '󰂅',
+      color: 'text-gruvbox-blue',
+      border: 'border-gruvbox-blue/40',
+      dot: 'bg-gruvbox-blue border-gruvbox-blue',
+      badge: 'bg-gruvbox-blue text-gruvbox-light1',
+    },
+    {
+      title: m["journey.phase_2.title"](),
+      status: m["journey.phase_2.status"](),
+      description: m["journey.phase_2.description"](),
+      books: m["journey.phase_2.books"](),
+      icon: '󰓦',
+      color: 'text-gruvbox-gray',
+      border: 'border-gruvbox-dark2',
+      dot: 'bg-gruvbox-dark2 border-gruvbox-gray',
+      badge: 'bg-gruvbox-dark2 text-gruvbox-gray',
+    },
+    {
+      title: m["journey.phase_3.title"](),
+      status: m["journey.phase_3.status"](),
+      description: m["journey.phase_3.description"](),
+      books: m["journey.phase_3.books"](),
+      icon: '󰖟',
+      color: 'text-gruvbox-gray',
+      border: 'border-gruvbox-dark2',
+      dot: 'bg-gruvbox-dark2 border-gruvbox-gray',
+      badge: 'bg-gruvbox-dark2 text-gruvbox-gray',
+    },
+  ];
+
   let environment_list = m["root.environment.list"]()
     .split(' ')
     .map((i) => i.replaceAll("_", " "));
@@ -163,6 +220,8 @@
     ['', 'text-gruvbox-green', environment_list[2], (getLocale() == 'ar'? nvim_desc_ar: nvim_desc_en)], 
     ['', 'text-gruvbox-bright-green', environment_list[3], (getLocale() == 'ar'? tmux_desc_ar: tmux_desc_en)], 
     ['', 'text-gruvbox-light1', environment_list[4], (getLocale() == 'ar'? nerdfont_desc_ar: nerdfont_desc_en)], 
+    ['', 'text-gruvbox-purple', environment_list[5], (getLocale() == 'ar'? obsidian_desc_ar: obsidian_desc_en)], 
+    ['', 'text-gruvbox-red', environment_list[6], (getLocale() == 'ar'? vmm_desc_ar: vmm_desc_en)], 
   ];
 </script>
 
@@ -253,28 +312,24 @@
     </div>
   </div>
 
-  <a href="https://github.com/ex-jandal" target="_blank" class="bg-gruvbox-dark1/40 mt-5 px-2 py-4 sm:px-4 sm:py-6 flex flex-col rounded-2xl">
-    <span class="block px-6 text-md sm:text-xl">
-      <span class="icon px-0.5"></span>
-      <strong>{(getLocale() == 'ar')? 'سجل الألتزام على قيتهب': 'Github Commit History'}:</strong>
-    </span>
-    <!-- this one does not work in Yemen: https://raw.githubusercontent.com/ex-jandal/ex-jandal/output/github-snake.svg -->
-    <img class="m-auto" src="https://cdn.jsdelivr.net/gh/ex-jandal/ex-jandal@output/github-snake-dark.svg" alt="Github Snake" />
-  </a>
-
-  <a href="https://codeberg.org/ex-jandal" target="_blank" class="bg-gruvbox-dark1/40 mt-5 px-2 py-4 sm:px-4 sm:py-6 flex flex-col rounded-2xl">
-    <span class="block px-6 text-md sm:text-xl">
-      <span class="icon px-0.5"></span>
-      <strong>{(getLocale() == 'ar')? 'سجل الألتزام على كودبريج': 'Codeberg Commit History'}:</strong>
-    </span>
-    <!-- this one does not work in Yemen: https://raw.githubusercontent.com/ex-jandal/ex-jandal/output/codeberg-snake.svg -->
-    <img class="m-auto" src="https://cdn.jsdelivr.net/gh/ex-jandal/ex-jandal@output/codeberg-snake-dark.svg" alt="Codeberg Snake" />
-  </a>
-
   <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
   <p class="pl-2">
     <Markdown isInline source={m["root.about_me.text"]()}/>
   </p>
+
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰧑</span> {m["root.philosophy.title"]()}</h2>
+    <Markdown isInline source={m["root.philosophy.text"]()}/>
+  <p class="pl-2">
+  </p>
+
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰧑</span> {m["root.current_focus.title"]()}</h2>
+  <ul class="{(getLocale() == 'ar') ? 'pr-2' : 'pl-2'} space-y-1.5 [&>li]:flex [&>li]:items-start [&>li]:gap-2">
+    <li><span class="text-gruvbox-bright-green">󰍹</span> {m["root.current_focus.point_1"]()}</li>
+    <li><span class="text-gruvbox-blue"></span> {m["root.current_focus.point_2"]()}</li>
+    <li><span class="text-gruvbox-bright-aqua"></span> {m["root.current_focus.point_3"]()}</li>
+    <li><span class="text-gruvbox-orange">󰂅</span> {m["root.current_focus.point_4"]()}</li>
+  </ul>
+
 
   <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["root.programming_langs.title"]()}</h2>
   <div class="my-grid">
@@ -283,34 +338,26 @@
     {/each}
   </div>
 
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󱥬</span> {m["root.markup_langs.title"]()}</h2>
-  <div class="my-grid">
-    {#each marks as m}
-      <CardButton icon={m[0]} iconColor={m[1]} text={m[2]} description={m[3]}/>
-    {/each}
-  </div>
-
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰏓</span> {m["root.frontend_frameworks.title"]()}</h2>
-  <div class="my-grid">
-    {#each frames as f}
-      <CardButton icon={f[0]} iconColor={f[1]} text={f[2]} description={f[3]}/>
-    {/each}
-  </div>
-
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span>{m["root.skills.title"]()}</h2>
-  <div class="my-grid">
-    {#each skills as s}
-      <CardButton icon={s[0]} iconColor={s[1]} text={s[2]} description={s[3]}/>
-    {/each}
-  </div>
-
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰌢</span> {m["root.cybersecurity_networking.title"]()}</h2>
-  <ul>
-    <li>{m["root.cybersecurity_networking.point_1"]()}</li>
-    <li>{m["root.cybersecurity_networking.point_2"]()}</li>
-    <li>{m["root.cybersecurity_networking.point_3"]()}</li>
-    <li>{m["root.cybersecurity_networking.point_4"]()}</li>
-  </ul>
+  <!-- <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󱥬</span> {m["root.markup_langs.title"]()}</h2> -->
+  <!-- <div class="my-grid"> -->
+  <!--   {#each marks as m} -->
+  <!--     <CardButton icon={m[0]} iconColor={m[1]} text={m[2]} description={m[3]}/> -->
+  <!--   {/each} -->
+  <!-- </div> -->
+  <!---->
+  <!-- <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰏓</span> {m["root.frontend_frameworks.title"]()}</h2> -->
+  <!-- <div class="my-grid"> -->
+  <!--   {#each frames as f} -->
+  <!--     <CardButton icon={f[0]} iconColor={f[1]} text={f[2]} description={f[3]}/> -->
+  <!--   {/each} -->
+  <!-- </div> -->
+  <!---->
+  <!-- <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span>{m["root.skills.title"]()}</h2> -->
+  <!-- <div class="my-grid"> -->
+  <!--   {#each skills as s} -->
+  <!--     <CardButton icon={s[0]} iconColor={s[1]} text={s[2]} description={s[3]}/> -->
+  <!--   {/each} -->
+  <!-- </div> -->
 
   <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰆍</span> {m["root.environment.title"]()}</h2>
   <div class="my-grid">
@@ -319,10 +366,33 @@
     {/each}
   </div>
 
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰧑</span> {m["root.philosophy.title"]()}</h2>
-    <Markdown isInline source={m["root.philosophy.text"]()}/>
-  <p class="pl-2">
-  </p>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󱗗</span> {m["journey.title"]()}</h2>
+  <p class="pl-2 text-sm text-gruvbox-gray mb-6">{m["journey.subtitle"]()}</p>
+  <div class="relative {(getLocale() == 'ar') ? 'pr-8' : 'pl-8'} space-y-0">
+    <div class="absolute {(getLocale() == 'ar') ? 'right-3.75' : 'left-3.75'} top-3 bottom-3 w-0.5 bg-gruvbox-orange/30"></div>
+
+    {#each journey_phases as phase, i}
+      <div class="relative pb-8 last:pb-0">
+        <div class="absolute {(getLocale() == 'ar') ? '-right-6.25' : '-left-6.25'} top-2 w-[18px] h-[18px] rounded-full border-2 {phase.dot}"></div>
+        <div class="{(getLocale() == 'ar') ? 'mr-4' : 'ml-4'} p-4 border rounded-lg bg-gruvbox-dark1/20 {phase.border}">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xl {phase.color}">{phase.icon}</span>
+            <span class="font-bold text-base">{phase.title}</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-bold {phase.badge}">{phase.status}</span>
+          </div>
+          <p class="mt-2 text-sm text-gruvbox-light2">{phase.description}</p>
+          {#if phase.books}
+            <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+              <span class="text-xs text-gruvbox-gray"></span>
+              {#each phase.books.split(' ') as book}
+                <span class="px-2 py-0.5 text-xs bg-gruvbox-dark2 text-gruvbox-light2 rounded-md">{book}</span>
+              {/each}
+            </div>
+          {/if}
+        </div>
+      </div>
+    {/each}
+  </div>
 </div>
 
 <style>

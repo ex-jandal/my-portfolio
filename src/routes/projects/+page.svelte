@@ -12,6 +12,7 @@
   import android_emu_showcase from '$lib/assets/project_showcase/android_emu_selector.webp'
   import electro_sos_showcase from '$lib/assets/project_showcase/electro_sos.webp';
   import ara_filter_showcase from '$lib/assets/project_showcase/ara_filter.webp';
+	import { getLocale } from '$lib/paraglide/runtime';
 
   interface Projects {
     title: string,
@@ -136,6 +137,16 @@
       mainLanguages: ['Python'],
       os: ['Any OS'],
     },
+    {
+      title: "pvault",
+      icon: "",
+      description: 'A terminal-based password manager built in C with encrypted storage. Features master password authentication, AES-256-GCM encryption, clipboard auto-clear, and a TUI interface.',
+      license: "MIT license",
+      linkCodeberg: "https://codeberg.org/ex-jandal/pvault",
+      linkGithub: "https://github.com/ex-jandal/pvault",
+      mainLanguages: ['C'],
+      os: ['Linux', 'MacOS', 'Windows'],
+    },
   ]
 </script>
 
@@ -143,6 +154,25 @@
 </style>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
+  <a href="https://github.com/ex-jandal" target="_blank" class="bg-gruvbox-dark1/40 mt-5 px-2 py-4 sm:px-4 sm:py-6 flex flex-col rounded-2xl">
+    <span class="block px-6 text-md sm:text-xl">
+      <span class="icon px-0.5"></span>
+      <strong>{(getLocale() == 'ar')? 'سجل الألتزام على قيتهب': 'Github Commit History'}:</strong>
+    </span>
+    <!-- this one does not work in Yemen: https://raw.githubusercontent.com/ex-jandal/ex-jandal/output/github-snake.svg -->
+    <img class="m-auto" src="https://cdn.jsdelivr.net/gh/ex-jandal/ex-jandal@output/github-snake-dark.svg" alt="Github Snake" />
+  </a>
+
+  <a href="https://codeberg.org/ex-jandal" target="_blank" class="bg-gruvbox-dark1/40 mt-5 px-2 py-4 sm:px-4 sm:py-6 flex flex-col rounded-2xl">
+    <span class="block px-6 text-md sm:text-xl">
+      <span class="icon px-0.5"></span>
+      <strong>{(getLocale() == 'ar')? 'سجل الألتزام على كودبريج': 'Codeberg Commit History'}:</strong>
+    </span>
+    <!-- this one does not work in Yemen: https://raw.githubusercontent.com/ex-jandal/ex-jandal/output/codeberg-snake.svg -->
+    <img class="m-auto" src="https://cdn.jsdelivr.net/gh/ex-jandal/ex-jandal@output/codeberg-snake-dark.svg" alt="Codeberg Snake" />
+  </a>
+
+  <div class="h-5"></div>
   <h2 class="frist-h2"><span class="icon"></span> {m['projects.title']()}</h2>
   <div class="grid md:grid-cols-2 grid-cols-1 mt-10 gap-4" dir="ltr">
     {#each projects as item}

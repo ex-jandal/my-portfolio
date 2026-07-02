@@ -53,11 +53,11 @@
     },
     "about_me": {
       "title": "About Me",
-      "text": "I'm a computer science student focused on **cybersecurity** and **networking**, with a strong interest in low-level systems, Linux, and open‑source software. I enjoy learning how things work under the hood — from memory management to network protocols — and applying that knowledge in practical projects."
+      "text": "I'm a **3rd-year cybersecurity student** focused on low-level systems, Linux, and open‑source software. I organize my learning with the **PARA method** in Obsidian and believe in building things to truly understand them — whether it's a memory allocator, a shell, or an ELF loader. I enjoy learning how things work under the hood, from syscalls to memory management, and applying that knowledge in practical projects."
     },
     "programming_langs": {
       "title": "Programming Languages",
-      "langs": "Rust Zig_(0.16) JavaScript TypeScript Lua Python PHP Java C#"
+      "langs": "Rust Zig_(0.16) C JavaScript TypeScript Lua Python PHP Java C#"
     },
     "markup_langs": {
       "title": "Markup Lang",
@@ -71,20 +71,52 @@
       "title": "Skills",
       "list": "Git Docker Tailwindcss SQL SurrealDB"
     },
-    "cybersecurity_networking": {
-      "title": "Cybersecurity & Networking",
-      "point_1": "Foundations of networking (IP, subnetting, routing)",
-      "point_2": "Security principles and threat models",
-      "point_3": "Interest in web penetration testing",
-      "point_4": "Privacy & digital security research"
+    "current_focus": {
+      "title": "Current Focus",
+      "point_1": "Deep-diving OS internals — processes, virtual memory, syscalls",
+      "point_2": "Building systems projects in C (allocator, shell, ELF loader)",
+      "point_3": "Studying OSTEP, CS:APP, xv6, and TLPI",
+      "point_4": "Working toward Reverse Engineering foundations"
     },
     "environment": {
       "title": "Environment",
-      "list": "Arch_Linux Niri Neovim_(NvChad) Tmux CaskaydiaCove_(Nerd_Font)"
+      "list": "Arch_Linux Niri Neovim_(NvChad) Tmux CaskaydiaCove_(Nerd_Font) Obsidian_(Dataview) VMM"
     },
     "philosophy": {
       "title": "Philosophy",
-      "text": "I believe in continuous learning (not just thorw Youtube courses obviously ), simplicity, and building strong foundations. I prefer tools that respect user freedom, transparency, and ***performance**."
+      "text": "I believe in **building things, not just reading about them**. Free resources first, simplicity, and strong foundations. I prefer tools that respect user freedom, transparency, and performance. If you haven't triggered a segfault today, you didn't learn enough."
+    }
+  },
+  "journey": {
+    "title": "Learning Journey",
+    "subtitle": "From OS internals to web security — a sequential roadmap",
+    "phase_0": {
+      "title": "Operating Systems",
+      "status": "Active",
+      "short": "OS internals",
+      "description": "Deep-diving OS internals — processes, virtual memory, syscalls, synchronization, and file systems. Runs alongside Phase 1 and provides the foundation for everything that follows.",
+      "books": "OSTEP CS:APP xv6 TLPI"
+    },
+    "phase_1": {
+      "title": "Reverse Engineering",
+      "status": "Next",
+      "short": "Reverse Engineering",
+      "description": "Read and understand compiled binaries (ELF), master debuggers like GDB and Ghidra, analyze malware-like samples, and build a foundation for exploitation.",
+      "books": ""
+    },
+    "phase_2": {
+      "title": "Binary Exploitation",
+      "status": "Planned",
+      "short": "Binary Exploitation",
+      "description": "Exploit memory corruption vulnerabilities — stack overflows, heap exploits, format strings, and ROP chains to gain code execution.",
+      "books": ""
+    },
+    "phase_3": {
+      "title": "Web Pentesting",
+      "status": "Planned",
+      "short": "Web Pentesting",
+      "description": "Identify and exploit common web vulnerabilities — SQL injection, XSS, SSRF, authentication flaws, and API pentesting.",
+      "books": ""
     }
   },
   "my-dots": {
