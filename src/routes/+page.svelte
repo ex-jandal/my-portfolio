@@ -312,17 +312,12 @@
     </div>
   </div>
 
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'} mt-6"><span class="icon">󰞋</span> {m["root.about_me.title"]()}</h2>
   <p class="pl-2">
     <Markdown isInline source={m["root.about_me.text"]()}/>
   </p>
 
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰧑</span> {m["root.philosophy.title"]()}</h2>
-    <Markdown isInline source={m["root.philosophy.text"]()}/>
-  <p class="pl-2">
-  </p>
-
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰧑</span> {m["root.current_focus.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'} mt-6"><span class="icon">󰧑</span> {m["root.current_focus.title"]()}</h2>
   <ul class="{(getLocale() == 'ar') ? 'pr-2' : 'pl-2'} space-y-1.5 [&>li]:flex [&>li]:items-start [&>li]:gap-2">
     <li><span class="text-gruvbox-bright-green">󰍹</span> {m["root.current_focus.point_1"]()}</li>
     <li><span class="text-gruvbox-blue"></span> {m["root.current_focus.point_2"]()}</li>
@@ -331,42 +326,42 @@
   </ul>
 
 
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["root.programming_langs.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'} mt-6"><span class="icon"></span> {m["root.programming_langs.title"]()}</h2>
   <div class="my-grid">
     {#each langs as l}
       <CardButton icon={l[0]} iconColor={l[1]} text={l[2]} description={l[3]}/>
     {/each}
   </div>
 
-  <!-- <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󱥬</span> {m["root.markup_langs.title"]()}</h2> -->
-  <!-- <div class="my-grid"> -->
-  <!--   {#each marks as m} -->
-  <!--     <CardButton icon={m[0]} iconColor={m[1]} text={m[2]} description={m[3]}/> -->
-  <!--   {/each} -->
-  <!-- </div> -->
-  <!---->
-  <!-- <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰏓</span> {m["root.frontend_frameworks.title"]()}</h2> -->
-  <!-- <div class="my-grid"> -->
-  <!--   {#each frames as f} -->
-  <!--     <CardButton icon={f[0]} iconColor={f[1]} text={f[2]} description={f[3]}/> -->
-  <!--   {/each} -->
-  <!-- </div> -->
-  <!---->
-  <!-- <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span>{m["root.skills.title"]()}</h2> -->
-  <!-- <div class="my-grid"> -->
-  <!--   {#each skills as s} -->
-  <!--     <CardButton icon={s[0]} iconColor={s[1]} text={s[2]} description={s[3]}/> -->
-  <!--   {/each} -->
-  <!-- </div> -->
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'} mt-6"><span class="icon">󱥬</span> {m["root.markup_langs.title"]()}</h2>
+  <div class="my-grid">
+    {#each marks as m}
+      <CardButton icon={m[0]} iconColor={m[1]} text={m[2]} description={m[3]}/>
+    {/each}
+  </div>
 
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰆍</span> {m["root.environment.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'} mt-6"><span class="icon">󰏓</span> {m["root.frontend_frameworks.title"]()}</h2>
+  <div class="my-grid">
+    {#each frames as f}
+      <CardButton icon={f[0]} iconColor={f[1]} text={f[2]} description={f[3]}/>
+    {/each}
+  </div>
+
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'} mt-6"><span class="icon"></span>{m["root.skills.title"]()}</h2>
+  <div class="my-grid">
+    {#each skills as s}
+      <CardButton icon={s[0]} iconColor={s[1]} text={s[2]} description={s[3]}/>
+    {/each}
+  </div>
+
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'} mt-6"><span class="icon">󰆍</span> {m["root.environment.title"]()}</h2>
   <div class="my-grid">
     {#each environment as e}
       <CardButton icon={e[0]} iconColor={e[1]} text={e[2]} description={e[3]}/>
     {/each}
   </div>
 
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󱗗</span> {m["journey.title"]()}</h2>
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'} mt-6"><span class="icon">󱗗</span> {m["journey.title"]()}</h2>
   <p class="pl-2 text-sm text-gruvbox-gray mb-6">{m["journey.subtitle"]()}</p>
   <div class="relative {(getLocale() == 'ar') ? 'pr-8' : 'pl-8'} space-y-0">
     <div class="absolute {(getLocale() == 'ar') ? 'right-3.75' : 'left-3.75'} top-3 bottom-3 w-0.5 bg-gruvbox-orange/30"></div>
@@ -393,6 +388,11 @@
       </div>
     {/each}
   </div>
+
+  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'} mt-6"><span class="icon">󰧑</span> {m["root.philosophy.title"]()}</h2>
+  <p class="pl-2">
+    <Markdown isInline source={m["root.philosophy.text"]()}/>
+  </p>
 </div>
 
 <style>

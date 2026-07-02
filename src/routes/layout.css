@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 2.5rem;
+  /* margin-top: 2.5rem; */
   border-bottom: 1px solid var(--color-gruvbox-bright-orange);
   padding-bottom: 0.4rem;
 }

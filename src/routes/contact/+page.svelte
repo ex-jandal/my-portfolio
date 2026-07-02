@@ -89,91 +89,103 @@
 {/key}
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
-  <h2 class="frist-h2 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m['contact.media.title']()}</h2>
+  <h2 class="mt-0 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m['contact.media.title']()}</h2>
 
-  <div class="pl-2 my-grid">
-    <a class=" bg-[#4794CC] text-gruvbox-light1 px-2 py-1 text-center rounded-md 
-      hover:scale-[101%] hover:bg-gruvbox-dark1 hover:text-[#4794CC] border-2 border-[#4794CC]" 
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <a class="flex flex-row justify-between items-center gap-3 bg-gruvbox-dark0/30 border border-gruvbox-orange rounded-lg p-4
+            hover:bg-gruvbox-dark1/60 hover:border-gruvbox-bright-orange hover:shadow-md
+            transition-all duration-300" 
       href="https://codeberg.org/ex-jandal" target="_blank">
-      <span class="text-xl"></span>
-      <span class="font-bold">{contact_list[0]}</span>
+      <div>
+        <span class="text-xl text-[#4794CC]"></span>
+        <span class="font-bold">{contact_list[0]}</span>
+      </div>
+      <span class="text-gruvbox-gray text-xs">{(getLocale() == 'ar') ? '' : ''}</span>
     </a>
 
-    <a class="block w-full bg-gruvbox-dark0 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
-      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-gruvbox-dark0 border-2 border-gruvbox-dark0" 
-      href="https://github.com/ex-jandal" target="_blank">
-      <span class="text-xl"></span>
-      <span>{contact_list[3]}</span>
-    </a>
-
-    <a class="block w-full bg-purple-600 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
-      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-purple-600 border-2 border-purple-600" 
+    <a class="flex flex-row justify-between items-center gap-3 bg-gruvbox-dark0/30 border border-gruvbox-orange rounded-lg p-4
+            hover:bg-gruvbox-dark1/60 hover:border-gruvbox-bright-orange hover:shadow-md
+            transition-all duration-300" 
       href="https://discord.com/users/884869855042490528" target="_blank">
-      <span class="text-xl"></span>
-      <span>{contact_list[1]}</span>
+      <div>
+        <span class="text-xl text-purple-400"></span>
+        <span class="font-bold">{contact_list[1]}</span>
+      </div>
+      <span class="text-gruvbox-gray text-xs">{(getLocale() == 'ar') ? '' : ''}</span>
     </a>
 
-    <a class="block w-full bg-blue-500 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
-      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-blue-500 border-2 border-blue-500" 
+    <a class="flex flex-row justify-between items-center gap-3 bg-gruvbox-dark0/30 border border-gruvbox-orange rounded-lg p-4
+            hover:bg-gruvbox-dark1/60 hover:border-gruvbox-bright-orange hover:shadow-md
+            transition-all duration-300" 
       href="https://t.me/ab0_jandal" target="_blank">
-      <span class="text-xl"></span>
-      <span>{contact_list[2]}</span>
+      <div>
+        <span class="text-xl text-blue-400"></span>
+        <span class="font-bold">{contact_list[2]}</span>
+      </div>
+      <span class="text-gruvbox-gray text-xs">{(getLocale() == 'ar') ? '' : ''}</span>
     </a>
 
-    <a class="block w-full bg-purple-800 text-gruvbox-light1 px-2 py-1 text-center rounded-md 
-      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-purple-800 border-2 border-purple-800" 
+    <a class="flex flex-row justify-between items-center gap-3 bg-gruvbox-dark0/30 border border-gruvbox-orange rounded-lg p-4
+            hover:bg-gruvbox-dark1/60 hover:border-gruvbox-bright-orange hover:shadow-md
+            transition-all duration-300" 
+      href="https://github.com/ex-jandal" target="_blank">
+      <div>
+        <span class="text-xl text-gruvbox-light4"></span>
+        <span class="font-bold">{contact_list[3]}</span>
+      </div>
+      <span class="text-gruvbox-gray text-xs">{(getLocale() == 'ar') ? '' : ''}</span>
+    </a>
+
+    <a class="flex flex-row justify-between items-center gap-3 bg-gruvbox-dark0/30 border border-gruvbox-orange rounded-lg p-4
+            hover:bg-gruvbox-dark1/60 hover:border-gruvbox-bright-orange hover:shadow-md
+            transition-all duration-300" 
       href="mailto:sultan.majed@proton.me" target="_blank">
-      <span class="text-xl">󰰙</span>
-      <span>{contact_list[4]}</span>
+      <div>
+        <span class="text-xl text-purple-500">󰰙</span>
+        <span class="font-bold">{contact_list[4]}</span>
+      </div>
+      <span class="text-gruvbox-gray text-xs">{(getLocale() == 'ar') ? '' : ''}</span>
     </a>
 
-    <a class="block w-full bg-gruvbox-red text-gruvbox-light1 px-2 py-1 text-center rounded-md 
-      hover:scale-[101%] hover:bg-gruvbox-light1 hover:text-gruvbox-red border-2 border-gruvbox-red" 
+    <a class="flex flex-row justify-between items-center gap-3 bg-gruvbox-dark0/30 border border-gruvbox-orange rounded-lg p-4
+            hover:bg-gruvbox-dark1/60 hover:border-gruvbox-bright-orange hover:shadow-md
+            transition-all duration-300" 
       href="mailto:sultan.m.alsalahi@gmail.com" target="_blank">
-      <span class="text-xl">󰊫</span>
-      <span>{contact_list[5]}</span>
+      <div>
+        <span class="text-xl text-gruvbox-red">󰊫</span>
+        <span class="font-bold">{contact_list[5]}</span>
+      </div>
+      <span class="text-gruvbox-gray text-xs">{(getLocale() == 'ar') ? '' : ''}</span>
     </a>
-    <!-- <p><span class="icon"></span> {contact_list[0]}: <a href="https://codeberg.org/ex-jandal" target="_blank">@ex-jandal</a></p> -->
-    <!-- <p><span class="icon"></span> {contact_list[1]}: <a href="https://discord.com/users/884869855042490528" target="_blank">@ex.jandal</a></p> -->
-    <!-- <p><span class="icon"></span> {contact_list[2]}: <a href="https://t.me/ab0_jandal" target="_blank">@ab0_jandal</a></p> -->
-    <!-- <p><span class="icon"></span> {contact_list[3]}: <a href="https://github.com/ex-jandal" target="_blank">@ex-jandal</a></p> -->
-    <!-- <p><span class="icon">󰇮</span> {contact_list[4]}: <a href="mailto:sultan.majed@proton.me" target="_blank">sultan.majed@proton.me</a></p> -->
-    <!-- <p><span class="icon">󰏲</span> Phone: <a href="tel:+967782424366">+967 78-2424-366</a></p> -->
   </div>
   
-  <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰍡</span> {m['contact.send_message.title']()}</h2>
+  <h2 class="mt-6 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰍡</span> {m['contact.send_message.title']()}</h2>
   {#if status == 200}
     <p class="p-4 my-4 text-center text-gruvbox-dark0 bg-gruvbox-bright-green border-2 border-gruvbox-dark0 rounded-lg">
       {m['contact.send_message.message_status']()}
     </p>
   {/if}
-  <form class="p-2 sm:p-4 flex flex-col gap-4 rounded-lg" onsubmit={sendEmail}>
-    <div class="relative">
-      <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}"></span>
-      <input bind:value={name} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-transparent rounded-md focus:border-gruvbox-aqua" type="text" placeholder="{message_feild[0]}" required />
-    </div>
-    <div class="relative">
-      <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}"></span>
-      <input bind:value={email} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-transparent rounded-md focus:border-gruvbox-aqua" type="email" placeholder="{message_feild[1]}" required />
-    </div>
-    <div class="relative">
-      <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}">󰇮</span>
-      <input bind:value={title} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-transparent rounded-md focus:border-gruvbox-aqua" type="text" placeholder="{message_feild[2]}" required />
-    </div>
-    <div class="relative">
-      <span class="absolute top-3 {(getLocale() == 'ar') ? 'right-4': 'left-4'}">󰍩</span>
-      <textarea bind:value={message} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} pt-3 w-full h-40 bg-transparent rounded-md focus:border-gruvbox-aqua" placeholder="{message_feild[3]}"></textarea>
-    </div>
-    <button class="bg-gruvbox-orange p-2 rounded-md" type="submit">{m['contact.send_message.button']()}</button>
-  </form>
+  <div class="bg-gruvbox-dark0/30 border border-gruvbox-orange rounded-lg p-4">
+    <form class="flex flex-col gap-4" onsubmit={sendEmail}>
+      <div class="relative">
+        <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}"></span>
+        <input bind:value={name} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-gruvbox-dark1/40 border border-gruvbox-dark2 rounded-md focus:border-gruvbox-aqua focus:ring-1 focus:ring-gruvbox-aqua" type="text" placeholder="{message_feild[0]}" required />
+      </div>
+      <div class="relative">
+        <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}"></span>
+        <input bind:value={email} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-gruvbox-dark1/40 border border-gruvbox-dark2 rounded-md focus:border-gruvbox-aqua focus:ring-1 focus:ring-gruvbox-aqua" type="email" placeholder="{message_feild[1]}" required />
+      </div>
+      <div class="relative">
+        <span class="absolute top-2 {(getLocale() == 'ar') ? 'right-4': 'left-4'}">󰇮</span>
+        <input bind:value={title} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} w-full bg-gruvbox-dark1/40 border border-gruvbox-dark2 rounded-md focus:border-gruvbox-aqua focus:ring-1 focus:ring-gruvbox-aqua" type="text" placeholder="{message_feild[2]}" required />
+      </div>
+      <div class="relative">
+        <span class="absolute top-3 {(getLocale() == 'ar') ? 'right-4': 'left-4'}">󰍩</span>
+        <textarea bind:value={message} class="block {(getLocale() == 'ar') ? 'pr-10' : 'pl-10'} pt-3 w-full h-40 bg-gruvbox-dark1/40 border border-gruvbox-dark2 rounded-md focus:border-gruvbox-aqua focus:ring-1 focus:ring-gruvbox-aqua" placeholder="{message_feild[3]}"></textarea>
+      </div>
+      <button class="bg-gruvbox-orange hover:bg-gruvbox-bright-orange p-2 rounded-md transition-all duration-300" type="submit">{m['contact.send_message.button']()}</button>
+    </form>
+  </div>
 </div>
 
-<style>
-  .frist-h2 {
-    margin-top: 0;
-  }
-  /* a { */
-  /*   color: var(--color-gruvbox-bright-blue); */
-  /* } */
-</style>
 

@@ -13,8 +13,8 @@
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 1500, delay: 400 }}>
   <section class="hero">
-    <h2 class="frist-h2 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰟃</span> {m["my-dots.title"]()}</h2>
-    <p class="comment">&af; {m["my-dots.quote"]()}</p>
+    <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰟃</span> {m["my-dots.title"]()}</h2>
+    <p class="italic text-gruvbox-light4">&af; {m["my-dots.quote"]()}</p>
 
     <div class="relative flex justify-center items-center overflow-hidden mt-4 rounded-sm border border-gruvbox-aqua">
       <div class="absolute text-4xl text-gruvbox-bright-aqua"></div>
@@ -27,36 +27,36 @@
     <img class="mt-4 rounded-sm border border-gruvbox-aqua" src="{rofi_showcase}" alt="tmux + nvim showcase"/>
   </section>
 
-  <section class="stack">
-    <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["my-dots.stack.title"]()}</h2>
+  <section>
+    <h2 class="mt-6 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["my-dots.stack.title"]()}</h2>
     <ul class="my-grid">
-      <li class="card"><span class="icon"></span> {stack[0]}</li>
-      <li class="card"><span class="icon">󱘆</span> {stack[1]}</li>
-      <li class="card"><span class="icon"></span> {stack[2]}</li>
-      <li class="card"><span class="icon"></span> {stack[3]}</li>
-      <li class="card"><span class="icon"></span> {stack[4]}</li>
-      <li class="card"><span class="icon">󰎟</span> {stack[5]}</li>
-      <li class="card"><span class="icon">󱓞</span> {stack[6]}</li>
-      <li class="card"><span class="icon"></span> {stack[7]}</li>
-      <li class="card"><span class="icon"></span> {stack[8]}</li>
-      <li class="card"><span class="icon"></span> {stack[9]}</li>
-    </ul>
-  </section>
-
-  <section class="features">
-    <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰛓</span> {m["my-dots.features.title"]()}</h2>
-    <ul>
-      <li class="card"><span class="icon">󰧑</span> {m["my-dots.features.item_1"]()}</li>
-      <li class="card"><span class="icon"></span> {m["my-dots.features.item_2"]()}</li>
-      <li class="card"><span class="icon">󱐋</span> {m["my-dots.features.item_3"]()}</li>
-      <li class="card"><span class="icon"></span> {m["my-dots.features.item_4"]()}</li>
-      <li class="card"><span class="icon">󱠧</span> {m["my-dots.features.item_5.text"]()} (<a href="https://github.com/0xzer0x/go-pray">{m["my-dots.features.item_5.app_name"]()}</a>)</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[0]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon">󱘆</span> {stack[1]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[2]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[3]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[4]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon">󰎟</span> {stack[5]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon">󱓞</span> {stack[6]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[7]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[8]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[9]}</li>
     </ul>
   </section>
 
   <section>
-    <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["my-dots.repository_structure"]()}</h2>
-    <pre class="ascii-art bg-gruvbox-dark0/50 p-4 rounded-sm" dir="ltr">
+    <h2 class="mt-6 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰛓</span> {m["my-dots.features.title"]()}</h2>
+    <ul class="flex flex-col gap-3 {(getLocale() == 'ar') ? 'pr-0' : 'pl-0'}">
+      <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon">󰧑</span> {m["my-dots.features.item_1"]()}</li>
+      <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon"></span> {m["my-dots.features.item_2"]()}</li>
+      <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon">󱐋</span> {m["my-dots.features.item_3"]()}</li>
+      <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon"></span> {m["my-dots.features.item_4"]()}</li>
+      <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon">󱠧</span> {m["my-dots.features.item_5.text"]()} (<a class="text-gruvbox-bright-blue hover:text-gruvbox-blue" href="https://github.com/0xzer0x/go-pray">{m["my-dots.features.item_5.app_name"]()}</a>)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="mt-6 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["my-dots.repository_structure"]()}</h2>
+    <pre class="font-code whitespace-pre bg-gruvbox-dark0/50 p-4 rounded-sm" dir="ltr">
 .
 ├── dot-config
 │   ├── alacritty
@@ -96,12 +96,12 @@
   </section>
 
   <section>
-    <h2 class="{(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰧑</span> {m["my-dots.dots_philosophy.title"]()}</h2>
-    <div class="quote bg-gruvbox-dark0/50">&af; {m["my-dots.dots_philosophy.text"]()}</div>
+    <h2 class="mt-6 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon">󰧑</span> {m["my-dots.dots_philosophy.title"]()}</h2>
+    <div class="border-l-4 border-gruvbox-bright-red bg-gruvbox-dark0/50 p-4 italic text-gruvbox-light4 rounded-sm">&af; {m["my-dots.dots_philosophy.text"]()}</div>
   </section>
 
-  <div class="lastly text-center text-gruvbox-gray border-t mt-5 pt-5 border-gruvbox-dark4">
-    <strong>{m["my-dots.footer.my_name"]()}</strong><br>
+  <div class="text-center text-gruvbox-gray border-t mt-5 pt-5 border-gruvbox-dark4">
+    <strong class="text-gruvbox-yellow">{m["my-dots.footer.my_name"]()}</strong><br>
     {m["my-dots.footer.feild"]()}<br>
     {m["my-dots.footer.tools"]()}<br><br>
     <a href="https://codeberg.org/ex-jandal/my-dots" target="_blank"><span class="icon"></span>Codeberg/my-dots</a><br/>
@@ -109,17 +109,3 @@
   </div>
 </div>
 
-<style>
-  .features li {
-    margin-bottom: 0.75rem;
-    padding: 0.75rem 1rem;
-    list-style: none;
-  }
-  .stack li {
-    list-style: none;
-  }
-
-  .lastly strong {
-    color: var(--color-gruvbox-yellow);
-  }
-</style>

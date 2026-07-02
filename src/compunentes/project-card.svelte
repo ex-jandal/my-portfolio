@@ -169,9 +169,9 @@
   }
 </script>
 
-<dev class="pro-card group rounded-sm flex flex-col gap-4 
-            justify-baseline shadow-lg hover:shadow-gruvbox-bright-red
-            duration-300"
+<div class="group rounded-sm flex flex-col gap-4 
+            justify-baseline shadow-lg hover:shadow-xl hover:shadow-gruvbox-bright-red/30
+            duration-300 border border-gruvbox-orange bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/40"
 >
   <div class="relative h-40 w-full overflow-hidden flex justify-center align-middle items-baseline rounded-md">
     <img class="z-10 scale-105 group-hover:scale-110 duration-300" src="{showcase}" alt=""/>
@@ -180,28 +180,27 @@
 
   <div class="px-5 pb-5 grow flex flex-col justify-between">
     <div>
-      <div class="pro-card_title">
+      <div class="text-xl font-bold">
           <span class="text-gruvbox-bright-aqua text-2xl pl-1">
             {icon}
           </span> 
         <span>{title}</span>
       </div>
 
-      <div class="pro-card_info">
-        <span>󰗑</span>
-        <span>{license}</span>
+      <div class="text-xs pl-3">
+        <span class="bg-gruvbox-dark2 px-2 py-0.5 rounded-full">󰗑 {license}</span>
       </div>
 
       <div class="text-[12px] pt-1 flex flex-row flex-wrap gap-2">
         {#each os as i}
-          <span class="bg-gruvbox-dark2 px-2 rounded-xl">{iconize(i.split(' ')[0])} {i}</span>
+          <span class="bg-gruvbox-dark0/50 px-2 rounded-xl">{iconize(i.split(' ')[0])} {i}</span>
         {/each}
       </div>
 
     </div>
 
     <div class="flex flex-col gap-2 text-sm">
-      <div class="pro-card_description py-2 text-transparent bg-clip-text bg-linear-60 from-gruvbox-light2 to-gruvbox-light4 italic">
+      <div class="py-2 text-transparent bg-clip-text bg-linear-60 from-gruvbox-light2 to-gruvbox-light4 italic text-xs">
         {description}
       </div>
       <div class="flex flex-row flex-wrap gap-2 text-sm">
@@ -246,32 +245,4 @@
       </div>
     </div>
   </div>
-</dev>
-
-<style>
-  code, .badge {
-    background: #161b22;
-    padding: 0.2rem 0.5rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-  }
-  .pro-card {
-    /* background: var(--color-gruvbox-dark0); */
-    border: 1px solid var(--color-gruvbox-orange);
-    /* padding: 1em; */
-  }
-  .pro-card_title {
-    font-size: 20px;
-    font-weight: bolder;
-  }
-  .pro-card_info {
-    font-size: 12px;
-    padding-left: 12px;
-  }
-  .pro-card_description {
-    /* margin-top: 5px; */
-    font-size: 12px;
-    overflow: hidden;
-    font-display: block;
-  }
-</style>
+</div>

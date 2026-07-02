@@ -14,6 +14,10 @@
   import ara_filter_showcase from '$lib/assets/project_showcase/ara_filter.webp';
 	import { getLocale } from '$lib/paraglide/runtime';
 
+  let uniqueLangs = $derived([...new Set(projects.flatMap(p => p.mainLanguages))].length);
+  let mitCount = $derived(projects.filter(p => p.license.includes('MIT')).length);
+  let gplCount = $derived(projects.filter(p => p.license.includes('GPL')).length);
+
   interface Projects {
     title: string,
     icon?: string,
@@ -150,9 +154,6 @@
   ]
 </script>
 
-<style>
-</style>
-
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
   <a href="https://github.com/ex-jandal" target="_blank" class="bg-gruvbox-dark1/40 mt-5 px-2 py-4 sm:px-4 sm:py-6 flex flex-col rounded-2xl">
     <span class="block px-6 text-md sm:text-xl">
@@ -172,8 +173,12 @@
     <img class="m-auto" src="https://cdn.jsdelivr.net/gh/ex-jandal/ex-jandal@output/codeberg-snake-dark.svg" alt="Codeberg Snake" />
   </a>
 
-  <div class="h-5"></div>
-  <h2 class="frist-h2"><span class="icon"></span> {m['projects.title']()}</h2>
+  <h2 class="mt-6"><span class="icon"></span> {m['projects.title']()}</h2>
+  <div class="flex flex-wrap gap-x-4 gap-y-1 {(getLocale() == 'ar') ? 'pr-2' : 'pl-2'} text-sm text-gruvbox-gray mb-4">
+    <span> {projects.length} {(getLocale() == 'ar') ? 'مشروع' : 'projects'}</span>
+    <span> {uniqueLangs} {(getLocale() == 'ar') ? 'لغة' : 'languages'}</span>
+    <span> {mitCount} MIT · {gplCount} GPL-3.0</span>
+  </div>
   <div class="grid md:grid-cols-2 grid-cols-1 mt-10 gap-4" dir="ltr">
     {#each projects as item}
       <ProjectCard {...item}/>

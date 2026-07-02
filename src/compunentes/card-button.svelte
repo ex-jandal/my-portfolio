@@ -68,20 +68,22 @@
 <svelte:window on:popstate={handleBackNavigation} />
 
 <div class="">
-  <button onclick={openPopup} 
+    <button onclick={openPopup} 
     class="
       flex flex-row items-center justify-between
       w-full h-full text-start 
       cursor-pointer p-4 border group border-gruvbox-orange rounded-lg 
-      hover:bg-gruvbox-orange hover:text-gruvbox-black 
-      hover:font-bold transition-all duration-300
+      bg-gruvbox-dark0/30
+      hover:bg-gruvbox-dark1/60 hover:border-gruvbox-bright-orange
+      hover:shadow-md hover:shadow-gruvbox-orange/20
+      transition-all duration-300
     "
   >
     <div class="flex flex-row gap-2 items-center">
-      <span class="mr-2 text-lg text-gruvbox-bright-aqua group-hover:text-gruvbox-black transition-all duration-300">{icon}</span> 
+      <span class="mr-2 text-lg {iconColor} transition-all duration-300">{icon}</span> 
       <p>{text}</p>
     </div>
-    <div class="text-gruvbox-gray text-xs group-hover:text-gruvbox-black transition-all duration-300">
+    <div class="text-gruvbox-gray text-xs transition-all duration-300">
       {getLocale() == 'ar'? '': ''}
     </div>
   </button>
