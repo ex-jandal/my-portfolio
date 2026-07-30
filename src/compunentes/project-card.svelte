@@ -66,6 +66,7 @@
     '.NET': 'from-purple-500 via-purple-600 to-indigo-700',
     Ratatui: 'from-zinc-400 via-zinc-500 to-gray-200',
     Rich: 'from-zinc-400 via-zinc-500 to-gray-200',
+    Pandoc:    'from-orange-700 via-red-800 to-rose-900',
 
     /* ───── Databases ───── */
     Postgres: 'from-blue-400 via-blue-500 to-indigo-600',
@@ -133,6 +134,7 @@
     '.NET': '',
     Ratatui: '',
     Rich: '',
+    Pandoc: '󰏚',
 
     Postgres: '',
     MySQL: '',

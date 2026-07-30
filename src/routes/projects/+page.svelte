@@ -12,6 +12,7 @@
   import android_emu_showcase from '$lib/assets/project_showcase/android_emu_selector.webp'
   import electro_sos_showcase from '$lib/assets/project_showcase/electro_sos.webp';
   import ara_filter_showcase from '$lib/assets/project_showcase/ara_filter.webp';
+  import docgen_showcase from '$lib/assets/project_showcase/docgen.webp';
 	import { getLocale } from '$lib/paraglide/runtime';
 
   let uniqueLangs = $derived([...new Set(projects.flatMap(p => p.mainLanguages))].length);
@@ -120,6 +121,17 @@
       os: ['Linux'],
     },
     {
+      title: "Document Generator",
+      icon: "󰷈",
+      description: 'a vibe-coded util that convert md, latex, html to pdf, odt, docx. that support list of famous themes and also light and dark mode with modern-ish looks and feels.',
+      license: "MIT license",
+      showcase: docgen_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/doc-gen",
+      linkGithub: "https://github.com/ex-jandal/doc-gen",
+      mainLanguages: ['Python', 'Pandoc'],
+      os: ['Linux'],
+    },
+    {
       title: "File Viewer",
       icon: "",
       description: 'Simple file viewer implemented in x86-64 assembly language, designed specifically for Linux. It demonstrates the use of Linux system calls for basic file I/O operations.',
@@ -144,12 +156,12 @@
     {
       title: "pvault",
       icon: "",
-      description: 'A terminal-based password manager built in C with encrypted storage. Features master password authentication, AES-256-GCM encryption, clipboard auto-clear, and a TUI interface.',
-      license: "MIT license",
+      description: 'A terminal-based password manager built in Zig with encrypted storage. Features master password authentication, AES-256-GCM encryption, clipboard auto-clear, and a TUI interface.',
+      license: "GPL-3 license",
       linkCodeberg: "https://codeberg.org/ex-jandal/pvault",
       linkGithub: "https://github.com/ex-jandal/pvault",
-      mainLanguages: ['C'],
-      os: ['Linux', 'MacOS', 'Windows'],
+      mainLanguages: ['Zig'],
+      os: ['Linux'],
     },
   ]
 </script>
