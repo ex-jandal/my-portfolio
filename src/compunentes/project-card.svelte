@@ -68,6 +68,8 @@
     Rich: 'from-zinc-400 via-zinc-500 to-gray-200',
     Pandoc:    'from-orange-700 via-red-800 to-rose-900',
 
+    Qt6: 'from-green-400 via-green-500 to-emerald-600',
+
     /* ───── Databases ───── */
     Postgres: 'from-blue-400 via-blue-500 to-indigo-600',
     MySQL: 'from-sky-500 via-blue-500 to-orange-500',
@@ -135,6 +137,8 @@
     Ratatui: '',
     Rich: '',
     Pandoc: '󰏚',
+
+    Qt6: '',
 
     Postgres: '',
     MySQL: '',

@@ -10,14 +10,10 @@
   import file_veiwer_showcase from '$lib/assets/project_showcase/file_viewer.webp'
   import whatsdown_showcase from '$lib/assets/project_showcase/whatsdown.webp'
   import android_emu_showcase from '$lib/assets/project_showcase/android_emu_selector.webp'
-  import electro_sos_showcase from '$lib/assets/project_showcase/electro_sos.webp';
+  import omc_showcase from '$lib/assets/project_showcase/oh_my_crypto.webp';
   import ara_filter_showcase from '$lib/assets/project_showcase/ara_filter.webp';
   import docgen_showcase from '$lib/assets/project_showcase/docgen.webp';
 	import { getLocale } from '$lib/paraglide/runtime';
-
-  let uniqueLangs = $derived([...new Set(projects.flatMap(p => p.mainLanguages))].length);
-  let mitCount = $derived(projects.filter(p => p.license.includes('MIT')).length);
-  let gplCount = $derived(projects.filter(p => p.license.includes('GPL')).length);
 
   interface Projects {
     title: string,
@@ -99,15 +95,15 @@
       os: ['Any OS'],
     },
     {
-      title: "Electro SOS ",
-      icon: "⏼",
-      description: 'static electricity warning system "It is just advanced stupidity :)"',
+      title: "Oh My Crypto",
+      icon: "󰌾",
+      description: 'A desktop GUI crypto utility written in Zig 0.16.0 with Qt 6 bindings via libqt6zig. Encrypt and decrypt text with seven classical ciphers',
       license: "MIT license",
-      showcase: electro_sos_showcase,
-      linkCodeberg: "https://codeberg.org/ex-jandal/electro-sos",
-      linkGithub: "https://github.com/ex-jandal/electro-sos",
-      mainLanguages: ['Zig', 'C', 'Clap'],
-      os: ['Linux', 'MacOS', 'FreeBSD', 'OpenBSD'],
+      showcase: omc_showcase,
+      linkCodeberg: "https://codeberg.org/ex-jandal/oh-my-crypto",
+      linkGithub: "https://github.com/ex-jandal/oh-my-crypto",
+      mainLanguages: ['Zig', 'Qt6'],
+      os: ['Linux', 'MacOS', 'Windows'],
     },
     {
       title: "Android Emulator Selector",
@@ -164,6 +160,11 @@
       os: ['Linux'],
     },
   ]
+
+  let uniqueLangs = $derived([...new Set(projects.flatMap(p => p.mainLanguages))].length);
+  let mitCount = $derived(projects.filter(p => p.license.includes('MIT')).length);
+  let gplCount = $derived(projects.filter(p => p.license.includes('GPL')).length);
+
 </script>
 
 <div out:slide={{ duration: 400 }} in:slide={{ duration: 400, delay: 400 }}>
