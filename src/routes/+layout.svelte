@@ -100,7 +100,7 @@
   <meta property="og:image" content="{PUBLIC_URL}/images/me-preview.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="me.abujandal.qzz.io">
-  <meta property="og:description" content="Cybersecurity • Arch Linux • Rustaceans">
+  <meta property="og:description" content="Cybersecurity • Arch Linux • Zig Joyer">
   <meta property="og:site_name" content="Sultan Al-Salahi Portfolio">
 
   <meta name="twitter:card" content="summary_large_image">

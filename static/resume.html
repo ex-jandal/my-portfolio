@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:image" content="https://me.soltanmeged.workers.com/images/me-preview.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="me.abujandal.qzz.io">
+<meta property="og:description" content="Cybersecurity • Arch Linux • Zig Joyer">
+<meta property="og:site_name" content="Sultan Al-Salahi Resume">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="me.abujandal.qzz.io">
+<meta property="twitter:url" content="https://me.abujandal.qzz.io">
+<meta name="twitter:title" content="Abu Jandal - The humble servant of Allah">
+<meta name="twitter:description" content="Cybersecurity • Arch Linux • Zig Joyer">
+<meta name="twitter:image" content="https://me.soltanmeged.workers.com/images/me-preview.jpg">
+
+<title>Sultan Majed Al-Salahi — Open-Source Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    background: #e8ecf1;
+  }
+
+  body {
+    font-family: 'Rubik', 'Segoe UI', 'Noto Sans Arabic', Tahoma, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.35;
+    color: #1c2733;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+  }
+
+  .no-print button {
+    font-family: 'Rubik', Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+    color: #fff;
+    background: #1e3a5f;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  .no-print button:hover {
+    background: #2a4f7f;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 13mm 14mm;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .screen-wrap {
+    width: 210mm;
+    margin: 16px auto;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    border-bottom: 2.5px solid #1e3a5f;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+
+  .name-block h1 {
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #16232f;
+    line-height: 1.15;
+  }
+
+  .name-block .role {
+    font-size: 12pt;
+    font-weight: 500;
+    color: #1e3a5f;
+    margin-top: 2px;
+  }
+
+  .contact {
+    text-align: right;
+    font-size: 8.6pt;
+    color: #3a4a5a;
+    line-height: 1.5;
+  }
+
+  .contact a {
+    color: #1e3a5f;
+    text-decoration: none;
+  }
+
+  section {
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-size: 11.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #1e3a5f;
+    border-left: 3px solid #1e3a5f;
+    padding-left: 7px;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: #16232f;
+  }
+
+  p.summary {
+    font-size: 9.6pt;
+    text-align: justify;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul.bullets {
+    list-style: disc;
+    padding-left: 16px;
+    margin-top: 2px;
+  }
+
+  ul.bullets li {
+    font-size: 9.6pt;
+    margin-bottom: 1px;
+  }
+
+  .skill-group {
+    margin-bottom: 5px;
+  }
+
+  .skill-label {
+    font-weight: 600;
+    color: #1e3a5f;
+    font-size: 9.4pt;
+    margin-bottom: 1px;
+  }
+
+  .skill-chips {
+    line-height: 1.55;
+  }
+
+  .chip {
+    display: inline-block;
+    background: #eef2f7;
+    border: 1px solid #c6d2e0;
+    border-radius: 999px;
+    padding: 0 7px;
+    font-size: 8.5pt;
+    color: #1c2733;
+    margin: 0 2px 2px 0;
+  }
+
+  .project {
+    margin-bottom: 5px;
+  }
+
+  .project-head {
+    margin-bottom: 1px;
+  }
+
+  .project-name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .stack-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .proj-date {
+    font-size: 8.6pt;
+    font-weight: 400;
+    color: #7a8a99;
+  }
+
+  .repo-link {
+    font-size: 7.6pt;
+    font-weight: 400;
+    color: #7a8a99;
+    text-decoration: underline;
+  }
+
+  .project-head .stack {
+    font-size: 8.6pt;
+    font-weight: 400;
+    color: #55677a;
+    font-style: italic;
+  }
+
+  .edu-item {
+    margin-bottom: 5px;
+  }
+
+  .edu-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .edu-head .date {
+    font-size: 9pt;
+    color: #55677a;
+    white-space: nowrap;
+  }
+
+  .edu-sub {
+    font-size: 9.4pt;
+    color: #3a4a5a;
+  }
+
+  .page-ar {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .page-ar header {
+    flex-direction: row-reverse;
+    border-bottom: 2.5px solid #1e3a5f;
+  }
+
+  .page-ar .contact {
+    text-align: left;
+  }
+
+  .page-ar h2 {
+    text-align: right;
+    border-left: none;
+    border-right: 3px solid #1e3a5f;
+    padding-left: 0;
+    padding-right: 7px;
+  }
+
+  .page-ar .chip {
+    margin: 0 0 2px 2px;
+  }
+
+  .page-ar ul.bullets {
+    padding-left: 0;
+    padding-right: 16px;
+  }
+
+  .page-ar .project-name-row,
+  .page-ar .edu-head {
+    flex-direction: row-reverse;
+  }
+
+  .page-ar p.summary {
+    text-align: right;
+  }
+
+  .page-ar .stack {
+    white-space: normal;
+  }
+
+  @media print {
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    html {
+      background: #ffffff;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .screen-wrap {
+      width: auto;
+      margin: 0;
+      box-shadow: none;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 0;
+      box-shadow: none;
+      page-break-after: always;
+      overflow: hidden;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    .no-print {
+      display: none;
+    }
+  }
+
+  @media screen {
+    body {
+      padding: 8px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<button class="no-print" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="screen-wrap">
+
+  <div class="page page-en">
+
+    <header>
+      <div class="name-block">
+        <h1>Sultan Majed Al-Salahi</h1>
+        <div class="role">Open-Source Software Developer</div>
+      </div>
+      <div class="contact">
+        Sana'a, Yemen<br>
+        <a href="tel:00967782424366">+967 782 424 366</a><br>
+        <a href="mailto:sultan.m.alsalahi@gmail.com">sultan.m.alsalahi@gmail.com</a><br>
+        <a href="https://github.com/ex-jandal">github.com/ex-jandal</a><br>
+        <a href="https://me.soltanmeged.workers.dev">me.soltanmeged.workers.dev</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">3rd-year cybersecurity student and open-source software developer with hands-on projects across Laravel, Spring Boot, Svelte, Vue.js, Rust, and Zig — from real-time WebSocket messaging apps to cryptographic proxy tooling. Proficient in Linux, REST API design, SQL, and Git, with a deep interest in low-level systems from syscalls to memory management.</p>
+    </section>
+
+    <br/>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <div class="skill-label">Advanced</div>
+        <div class="skill-chips">
+          <span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">Svelte</span><span class="chip">HTML+CSS</span><span class="chip">TailwindCSS</span><span class="chip">Linux</span><span class="chip">Git</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Intermediate</div>
+        <div class="skill-chips">
+          <span class="chip">Zig</span><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">C#</span><span class="chip">Blazor</span><span class="chip">Vue.js</span><span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Languages</div>
+        <div class="skill-chips">
+          <span class="chip">Arabic (native)</span><span class="chip">English (professional)</span>
+        </div>
+      </div>
+    </section>
+
+    <br/>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <h3>PG-Chatting App</h3>
+            <span class="stack-meta"><span class="stack">Laravel + Svelte · WebSocket · MIT</span><span class="proj-date">2026</span></span>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/PG-chatting-app" target="_blank" rel="noopener">github.com/ex-jandal/PG-chatting-app</a>
+        </div>
+        <ul class="bullets">
+          <li>an open-source real-time messaging application with WebSocket-based instant delivery.</li>
+          <li>Implemented secure authentication flows and an admin dashboard for platform management.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <h3>Karka-deh</h3>
+            <span class="stack-meta"><span class="stack">Vue.js + Spring Boot + PostgreSQL · GPL-3.0</span><span class="proj-date">2025</span></span>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/karka-deh" target="_blank" rel="noopener">github.com/ex-jandal/karka-deh</a>
+        </div>
+        <ul class="bullets">
+          <li>a full-stack open-source article platform with create, read, and comment workflows.</li>
+          <li>Backed persistence with PostgreSQL and automated builds with Gradle.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <h3>QD Knowledge Manager</h3>
+            <span class="stack-meta"><span class="stack">Blazor (.NET) · MIT</span><span class="proj-date">2025–2026</span></span>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/qd-knowledge-manager" target="_blank" rel="noopener">github.com/ex-jandal/qd-knowledge-manager</a>
+        </div>
+        <ul class="bullets">
+          <li>an open-source note manager from scratch, organizing notes through the filesystem directory structure.</li>
+          <li>Implemented full Markdown rendering with code syntax highlighting.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <h3>Proxy-Security-Guard</h3>
+            <span class="stack-meta"><span class="stack">Rust · MIT</span><span class="proj-date">2026</span></span>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/proxy-security-guard" target="_blank" rel="noopener">github.com/ex-jandal/proxy-security-guard</a>
+        </div>
+        <ul class="bullets">
+          <li>a high-performance, security-focused proxy written entirely in Rust.</li>
+          <li>Enforced data integrity using HMAC-SHA-256 and authenticated files with Ed25519 signatures.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <h3>Oh My Crypto</h3>
+            <span class="stack-meta"><span class="stack">Zig 0.16 + Qt6 · MIT</span><span class="proj-date">2026</span></span>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/oh-my-crypto" target="_blank" rel="noopener">github.com/ex-jandal/oh-my-crypto</a>
+        </div>
+        <ul class="bullets">
+          <li>an educational encryption/decryption tool implementing six classic cipher algorithms.</li>
+          <li>Supports text-file input and output saving with an Ayu Dark UI theme.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <br/>
+
+    <section>
+      <h2>Education</h2>
+
+      <div class="edu-item">
+        <div class="edu-head">
+          <h3>Al-Razi University</h3>
+          <span class="date">2024 &ndash; 2028</span>
+        </div>
+        <div class="edu-sub">B.Sc. in Cybersecurity and Networking &middot; Expected graduation 2028</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-head">
+          <h3>Omar bin Abdulaziz School</h3>
+          <span class="date">2020 &ndash; 2023</span>
+        </div>
+        <div class="edu-sub">Scientific Secondary School Diploma</div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="page page-ar">
+
+    <header>
+      <div class="contact">
+        صنعاء، اليمن<br>
+        <a href="tel:00967782424366" dir="ltr">+967 782 424 366</a><br>
+        <a href="mailto:sultan.m.alsalahi@gmail.com" dir="ltr">sultan.m.alsalahi@gmail.com</a><br>
+        <a href="https://github.com/ex-jandal" dir="ltr">github.com/ex-jandal</a><br>
+        <a href="https://me.soltanmeged.workers.dev" dir="ltr">me.soltanmeged.workers.dev</a>
+      </div>
+      <div class="name-block">
+        <h1>سلطان ماجد الصلاحي</h1>
+        <div class="role">مطوّر برمجيات مفتوحة المصدر</div>
+      </div>
+    </header>
+
+    <section>
+      <h2>نبذة</h2>
+      <p class="summary">طالب في السنة الثالثة في تخصص الأمن السيبراني ومطور برمجيات مفتوحة المصدر، لديه خبرة عملية في مشاريع باستخدام Laravel وSpring Boot وSvelte وVue.js وRust وZig، بدءًا من تطبيقات المراسلة الفورية المعتمدة على WebSocket ووصولًا إلى أدوات أدوات بروكسي. متمكن من Linux وتصميم واجهات REST API وSQL وGit، ولديه اهتمام عميق بالأنظمة منخفضة المستوى، بدءًا من استدعاءات النظام وصولًا إلى إدارة الذاكرة.
+</p>
+    </section>
+
+    <br/>
+
+    <section>
+      <h2>المهارات</h2>
+      <div class="skill-group">
+        <div class="skill-label">مستوى متقدّم</div>
+        <div class="skill-chips">
+          <span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">Svelte</span><span class="chip">HTML+CSS</span><span class="chip">TailwindCSS</span><span class="chip">Linux</span><span class="chip">Git</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">مستوى متوسط</div>
+        <div class="skill-chips">
+          <span class="chip">Zig</span><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">C#</span><span class="chip">Blazor</span><span class="chip">Vue.js</span><span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">اللغات</div>
+        <div class="skill-chips">
+          <span class="chip">العربية (اللغة الأم)</span><span class="chip">الإنجليزية (مستوى مهني)</span>
+        </div>
+      </div>
+    </section>
+
+    <br/>
+
+    <section>
+      <h2>المشاريع</h2>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <span class="stack-meta"><span class="stack">Laravel + Svelte · WebSocket · MIT</span><span class="proj-date">2026</span></span>
+            <h3>تطبيق مراسلات PG</h3>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/PG-chatting-app" target="_blank" rel="noopener">github.com/ex-jandal/PG-chatting-app</a>
+        </div>
+        <ul class="bullets">
+          <li>برنامج مراسلات مفتوح المصدر مع رسائل فورية عبر WebSocket.</li>
+          <li>مصادقة آمنة ولوحة تحكم لإدارة المنصة.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <span class="stack-meta"><span class="stack">Vue.js + Spring Boot + PostgreSQL · GPL-3.0</span><span class="proj-date">2025</span></span>
+            <h3>كركدية</h3>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/karka-deh" target="_blank" rel="noopener">github.com/ex-jandal/karka-deh</a>
+        </div>
+        <ul class="bullets">
+          <li>منصة مقالات مفتوحة المصدر تدعم إنشاء المقالات وقراءتها والتعليق عليها.</li>
+          <li>قاعدة بيانات PostgreSQL مع نظام بناء Gradle للواجهة الخلفية.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <span class="stack-meta"><span class="stack">Blazor (.NET) · MIT</span><span class="proj-date">2025–2026</span></span>
+            <h3>مدير المعرفة QD</h3>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/qd-knowledge-manager" target="_blank" rel="noopener">github.com/ex-jandal/qd-knowledge-manager</a>
+        </div>
+        <ul class="bullets">
+          <li>مدير ملاحظات مفتوح المصدر مصمّم من الصفر، ينظّم الملاحظات عبر بنية المجلدات في نظام الملفات.</li>
+          <li>دعم كامل لصيغة Markdown مع تلوين صيغة الأكواد.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <span class="stack-meta"><span class="stack">Rust · MIT</span><span class="proj-date">2026</span></span>
+            <h3>Proxy-Security-Guard</h3>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/proxy-security-guard" target="_blank" rel="noopener">github.com/ex-jandal/proxy-security-guard</a>
+        </div>
+        <ul class="bullets">
+          <li>بروكسي عالي الأداء ومركّز على الأمان مبني بالكامل بلغة Rust.</li>
+          <li>فحص نزاهة البيانات عبر HMAC-SHA-256 وتوثيق الملفات بتوقيعات Ed25519.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name-row">
+            <span class="stack-meta"><span class="stack">Zig 0.16 + Qt6 · MIT</span><span class="proj-date">2026</span></span>
+            <h3>Oh My Crypto</h3>
+          </div>
+          <a class="repo-link" href="https://github.com/ex-jandal/oh-my-crypto" target="_blank" rel="noopener">github.com/ex-jandal/oh-my-crypto</a>
+        </div>
+        <ul class="bullets">
+          <li>أداة تعليمية لتشفير وفك تشفير النصوص عبر ست خوارزميات قديمة.</li>
+          <li>تدعم قراءة الملفات النصية وحفظ النتائج، بواجهة Ayu Dark.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <br/>
+
+    <section>
+      <h2>التعليم</h2>
+
+      <div class="edu-item">
+        <div class="edu-head">
+          <span class="date">2024 – 2028</span>
+          <h3>جامعة الرازي</h3>
+        </div>
+        <div class="edu-sub">بكالوريوس أمن سيبراني وشبكات · التخرج المتوقع 2028</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-head">
+          <span class="date">2020 – 2023</span>
+          <h3>مدرسة عمر بن عبد العزيز</h3>
+        </div>
+        <div class="edu-sub">شهادة الثانوية العامة — علمي</div>
+      </div>
+    </section>
+
+  </div>
+
+</div>
+
+</body>
+</html>
