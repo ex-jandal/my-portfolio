@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-@import './CascidaCodeFont.css';
-@import './Rubik.css';
+
+/* @import './CascidaCodeFont.css'; */
+/* @import './Rubik.css'; */
 
 h2, h3 {
   color: var(--color-gruvbox-light0);
@@ -108,15 +111,15 @@ footer {
   font-weight: 400;
 }
 
-@font-face {
-  src: url('$lib/assets/Rakkas/Rakkas-Regular.ttf') format("truetype");
-  font-family: 'Rakkas';
-  font-style: normal;
-  font-weight: 400;
-}
+/* @font-face { */
+/*   src: url('$lib/assets/Rakkas/Rakkas-Regular.ttf') format("truetype"); */
+/*   font-family: 'Rakkas'; */
+/*   font-style: normal; */
+/*   font-weight: 400; */
+/* } */
 
 .ascii-art {
-  font-family: 'CascidaCode', 'NerdIcons';
+  font-family: 'Cascadia Code', 'NerdIcons';
   white-space: pre;
 }
 
@@ -178,9 +181,9 @@ footer {
 
 @theme {
   --default-font-family: 'Rubik', 'NerdIcons', monospace;
-  --font-main: 'Rubik', 'NerdIcons', monospace; /* CascidaCode font*/
-  --font-code: 'CascidaCode', 'NerdIcons', monospace;
-  --font-quote: 'Rakkas', serif;
+  --font-main: 'Rubik', 'NerdIcons', monospace; /* Cascadia Code font*/
+  --font-code: 'Cascadia Code', 'NerdIcons', monospace;
+  --font-quote: 'Rubik', serif;
   --font-arabic: 'Rubik', 'NerdIcons';
   --font-icons: 'NerdIcons';
   /* Absolute Zero Backgrounds */
