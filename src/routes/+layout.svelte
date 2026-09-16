@@ -100,14 +100,14 @@
   <meta property="og:image" content="{PUBLIC_URL}/images/me-preview.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="me.abujandal.qzz.io">
-  <meta property="og:description" content="Cybersecurity • Arch Linux • Zig Joyer">
+  <meta property="og:description" content="Cybersecurity • NixOS • Zig Joyer">
   <meta property="og:site_name" content="Sultan Al-Salahi Portfolio">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="me.abujandal.qzz.io">
   <meta property="twitter:url" content="https://me.abujandal.qzz.io">
   <meta name="twitter:title" content="Abu Jandal - The humble servant of Allah">
-  <meta name="twitter:description" content="Cybersecurity • Arch Linux • Rustaceans">
+  <meta name="twitter:description" content="Cybersecurity • NixOS • Rustaceans">
   <meta name="twitter:image" content="{PUBLIC_URL}/images/me-preview.jpg">
 
   <link rel="icon" href={aj_logo} />

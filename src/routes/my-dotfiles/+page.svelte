@@ -29,17 +29,16 @@
 
   <section>
     <h2 class="mt-6 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["my-dots.stack.title"]()}</h2>
-    <ul class="my-grid">
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[0]}</li>
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon">󱘆</span> {stack[1]}</li>
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[2]}</li>
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[3]}</li>
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[4]}</li>
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon">󰎟</span> {stack[5]}</li>
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon">󱓞</span> {stack[6]}</li>
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[7]}</li>
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[8]}</li>
-      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[9]}</li>
+<ul class="my-grid">
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[0]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[1]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[2]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon">󰈺</span> {stack[3]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[4]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[5]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon"></span> {stack[6]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon">󰊠</span> {stack[7]}</li>
+      <li class="border border-gruvbox-orange p-4 rounded list-none bg-gruvbox-dark0/30 hover:bg-gruvbox-dark1/60 transition-all duration-300"><span class="icon">󰛖</span> {stack[8]}</li>
     </ul>
   </section>
 
@@ -50,7 +49,7 @@
       <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon"></span> {m["my-dots.features.item_2"]()}</li>
       <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon">󱐋</span> {m["my-dots.features.item_3"]()}</li>
       <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon"></span> {m["my-dots.features.item_4"]()}</li>
-      <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon">󱠧</span> {m["my-dots.features.item_5.text"]()} (<a class="text-gruvbox-bright-blue hover:text-gruvbox-blue" href="https://github.com/0xzer0x/go-pray">{m["my-dots.features.item_5.app_name"]()}</a>)</li>
+      <li class="border border-gruvbox-orange p-3 rounded list-none bg-gruvbox-dark0/30"><span class="icon"></span> {m["my-dots.features.item_5"]()}</li>
     </ul>
   </section>
 
@@ -58,40 +57,68 @@
     <h2 class="mt-6 {(getLocale() == 'ar') ? 'pr-4': 'pl-4'}"><span class="icon"></span> {m["my-dots.repository_structure"]()}</h2>
     <pre class="font-code whitespace-pre bg-gruvbox-dark0/50 p-4 rounded-sm" dir="ltr">
 .
-├── dot-config
-│   ├── alacritty
-│   ├── btop
-│   ├── clipse
-│   ├── fastfetch
-│   ├── fish
-│   ├── fontconfig
-│   ├── foot
-│   ├── fuzzel
-│   ├── go-pray
-│   ├── gtk-3.0
-│   ├── gtk-4.0
-│   ├── hypr
-│   ├── kde-material-you-colors
-│   ├── kitty
-│   ├── Kvantum
-│   ├── mako
-│   ├── matugen
-│   ├── mpv
-│   ├── niri
-│   ├── nvim
-│   ├── qt5ct
-│   ├── qt6ct
-│   ├── qutebrowser
-│   ├── ra-multiplex
-│   ├── rofi
-│   ├── starship.toml
-│   ├── swaylock
-│   ├── systemd
-│   ├── tmux
-│   └── waybar
-└── README
-
-31 directories, 2 files
+├── flake.nix
+├── flake.lock
+├── arch
+│   └── (reference inventory from the old Arch system)
+├── assets
+│   ├── dnscrypt
+│   ├── fish
+│   ├── ghostty
+│   ├── kitty
+│   ├── mpv
+│   ├── niri
+│   ├── noctalia
+│   ├── nvim
+│   ├── rofi
+│   ├── tmux
+│   └── yazi
+├── home
+│   ├── default.nix
+│   ├── packages.nix
+│   ├── packages
+│   │   └── packet-tracer-901.nix
+│   └── modules
+│       ├── alacritty.nix
+│       ├── cava.nix
+│       ├── fastfetch.nix
+│       ├── fish.nix
+│       ├── fontconfig.nix
+│       ├── foot.nix
+│       ├── ghostty.nix
+│       ├── git.nix
+│       ├── gtk-qt.nix
+│       ├── kitty.nix
+│       ├── lspmux.nix
+│       ├── mpv.nix
+│       ├── niri.nix
+│       ├── noctalia.nix
+│       ├── nvim.nix
+│       ├── obs-studio.nix
+│       ├── proxychains.nix
+│       ├── qutebrowser.nix
+│       ├── rofi.nix
+│       ├── starship.nix
+│       ├── tmux.nix
+│       ├── xmcl.nix
+│       ├── yazi.nix
+│       ├── zathura.nix
+│       └── zellij.nix
+├── hosts
+│   └── nixos
+│       ├── default.nix
+│       ├── hardware.nix
+│       ├── packages.nix
+│       └── modules
+│           ├── boot.nix
+│           ├── fonts.nix
+│           ├── network.nix
+│           ├── noctalia.nix
+│           ├── power-management.nix
+│           └── services.nix
+└── shells
+    ├── cc.nix
+    └── python.nix
     </pre>
   </section>
 
@@ -104,8 +131,8 @@
     <strong class="text-gruvbox-yellow">{m["my-dots.footer.my_name"]()}</strong><br>
     {m["my-dots.footer.feild"]()}<br>
     {m["my-dots.footer.tools"]()}<br><br>
-    <a href="https://codeberg.org/ex-jandal/my-dots" target="_blank"><span class="icon"></span>Codeberg/my-dots</a><br/>
-    <a href="https://github.com/ex-jandal/my-dots" target="_blank"><span class="icon"></span>Github/my-dots</a>
+    <a href="https://codeberg.org/ex-jandal/just-flake" target="_blank"><span class="icon"></span>Codeberg/just-flake</a><br/>
+    <a href="https://github.com/ex-jandal/just-flake" target="_blank"><span class="icon"></span>Github/just-flake</a>
   </div>
 </div>
 

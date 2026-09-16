@@ -32,7 +32,7 @@
       },
       "feild_5": {
         "name": "Distro",
-        "value": "Arch Linux"
+        "value": "NixOS"
       },
       "feild_6": {
         "name": "WM",
@@ -80,7 +80,7 @@
     },
     "environment": {
       "title": "Environment",
-      "list": "Arch_Linux Niri Neovim_(NvChad) Tmux CaskaydiaCove_(Nerd_Font) Obsidian_(Dataview) VMM"
+      "list": "NixOS Niri Neovim_(NvChad) Tmux CaskaydiaCove_(Nerd_Font) Obsidian_(Dataview) VMM"
     },
     "philosophy": {
       "title": "Philosophy",
@@ -121,21 +121,18 @@
   },
   "my-dots": {
     "title": "Dotfiles",
-    "quote": "// Minimal, productive, and aesthetic Arch Linux workflow",
+    "quote": "// Minimal, productive, and aesthetic NixOS workflow",
     "stack": {
       "title": "Stack",
-      "list": "Arch_Linux Niri_(Wayland) Fish_Shell Neovim Waybar Mako Rofi Tmux Gruvbox_Hard CaskaydiaCove_Nerd_Font"
+      "list": "NixOS Niri_(Wayland) Neovim_(NvChad) Fish Starship Noctalia Tmux Ghostty CaskaydiaCove_Nerd_Font"
     },
     "features": {
       "title": "Features",
-      "item_1": "Keyboard-driven workflow (minimal mouse usage)",
-      "item_2": "Consistent Gruvbox theming across the system",
-      "item_3": "Fast startup & low resource usage",
-      "item_4": "Modular and clean configuration structure",
-      "item_5": {
-        "text": "Integrated CLI prayer-time utilities",
-        "app_name": "go-pray"
-      } 
+      "item_1": "Keyboard-driven Niri workflow (minimal mouse usage)",
+      "item_2": "Noctalia-driven unified theming across the system",
+      "item_3": "Atomic rollbacks & NixOS generations",
+      "item_4": "Declarative Flake + Home-Manager modules",
+      "item_5": "Reproducible dev environments (nix develop)"
     },
     "repository_structure": "Repository Structure",
     "dots_philosophy": {
@@ -145,7 +142,7 @@
     "footer": {
       "my_name": "Sultan Al-Salahi",
       "feild": "Cybersecurity & Networking student",
-      "tools": "Arch Linux • Niri • Neovim"
+      "tools": "NixOS • Niri • Neovim"
     }
   },
   "projects": {

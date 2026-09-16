@@ -18,7 +18,7 @@ created: 2026-06-21
 | Attribute           | Detail                                          |
 | ------------------- | ----------------------------------------------- |
 | Education           | 3rd-year cybersecurity student                  |
-| OS / Daily Driver   | Arch Linux (3 years experience)                 |
+| OS / Daily Driver   | NixOS                                   |
 | Shell               | fish                                            |
 | Virtualization      | VMM (Kali, Parrot, etc. experience)             |
 | Time Available      | Full-time student                               |
@@ -46,7 +46,7 @@ created: 2026-06-21
 | Zig                   | Medium    | CLI tool with mutex, async/await, posix-terminal opts                |
 | C                     | Basic     | Understands structs, allocations/deallocations, build systems        |
 | Assembly (x86-64 ELF) | Basic     | Built a file viewer in NASM (print file contents)                    |
-| Bash / Fish           | Competent | Daily-drives Arch, comfortable with shell                            |
+| Bash / Fish           | Competent | Daily-drives NixOS, comfortable with shell                           |
 | HTML / CSS            | Strong    | Built portfolio and websites                                         |
 | JavaScript            | Strong    | Svelte-based apps                                                    |
 | Svelte                | Strong    | Portfolio at me.soltanmeged.workers.dev                              |
@@ -55,7 +55,7 @@ created: 2026-06-21
 
 | Domain            | Level      | Details                                                          |
 | ----------------- | ---------- | ---------------------------------------------------------------- |
-| Linux Internals   | Power User | Arch daily driver (3yr), VMM, filesystem, processes, permissions |
+| Linux Internals   | Power User | NixOS daily driver, VMM, filesystem, processes, permissions      |
 | Networking L1/L2  | Solid      | Cabling, VLANs, switch/router/endpoint configuration             |
 | Build Systems     | Familiar   | Understands how build systems work (Make, CMake, Zig build)      |
 | Concurrency       | Basic      | Mutexes, async/await (Zig)                                       |

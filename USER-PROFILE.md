@@ -21,7 +21,7 @@ topic: personal
 
 | Tool              | Detail                        |
 | ----------------- | ----------------------------- |
-| OS                | Arch Linux (3 years)          |
+| OS                | NixOS                           |
 | Shell             | fish                          |
 | Virtualization    | VMM                           |
 | Notes             | Obsidian + Dataview plugin    |

@@ -88,8 +88,8 @@
   import surreal_desc_en from'$lib/assets/description/surreal_en.md?raw';
   import surreal_desc_ar from'$lib/assets/description/surreal_ar.md?raw';
 
-  import arch_desc_en from'$lib/assets/description/arch_en.md?raw';
-  import arch_desc_ar from'$lib/assets/description/arch_ar.md?raw';
+  import nixos_desc_en from'$lib/assets/description/nixos_en.md?raw';
+  import nixos_desc_ar from'$lib/assets/description/nixos_ar.md?raw';
 
   import niri_desc_en from'$lib/assets/description/niri_en.md?raw';
   import niri_desc_ar from'$lib/assets/description/niri_ar.md?raw';
@@ -215,7 +215,7 @@
     .map((i) => i.replaceAll("_", " "));
 
   let environment = [
-    ['', 'text-gruvbox-blue', environment_list[0], (getLocale() == 'ar'? arch_desc_ar: arch_desc_en)], 
+    ['', 'text-gruvbox-blue', environment_list[0], (getLocale() == 'ar'? nixos_desc_ar: nixos_desc_en)], 
     ['󱘆', 'text-gruvbox-orange', environment_list[1], (getLocale() == 'ar'? niri_desc_ar: niri_desc_en)], 
     ['', 'text-gruvbox-green', environment_list[2], (getLocale() == 'ar'? nvim_desc_ar: nvim_desc_en)], 
     ['', 'text-gruvbox-bright-green', environment_list[3], (getLocale() == 'ar'? tmux_desc_ar: tmux_desc_en)], 
